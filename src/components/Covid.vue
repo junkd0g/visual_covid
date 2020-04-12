@@ -1,17 +1,17 @@
 <template>
 
   <div>
-       <Covid />
+       <Total />
   </div>
 
 </template>
 
 <script>
-    import Covid from './Curve'
+    import Total from './Total'
 
     export default {
       components: {
-        Covid
+        Total
       }
     }
 
