@@ -7,10 +7,7 @@
         <b-dropdown-item  v-for="item in info" :key="item.position"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
       <label id="textOP-1"> {{ okman1.countryOne.country }}</label>
-    </div>
 
-
-    <div>
       <b-dropdown id="dropdown-2" text="Dropdown Button" class="m-md-2">
         <b-dropdown-item  v-for="item in info" :key="item.position" v-on:click="updateTwo(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
@@ -19,7 +16,8 @@
 
        
        From 22/01/2020
-       <curve-compare 
+       <curve-compare
+        :key="okman1"
         v-bind:countryOneData="okman1.countryOne.data"
         v-bind:countryTwoData="okman1.countryTwo.data"
         v-bind:countryOneName="okman1.countryOne.country"
@@ -29,7 +27,8 @@
       </curve-compare >
 
       From first death
-      <curve-compare 
+      <curve-compare
+        :key="okman2"
         v-bind:countryOneData="okman2.countryOne.data"
         v-bind:countryTwoData="okman2.countryTwo.data"
         v-bind:countryOneName="okman2.countryOne.country"
@@ -37,7 +36,8 @@
       >
       </curve-compare >
       Deaths per day after first death
-      <curve-compare 
+      <curve-compare
+        :key="okman3"
         v-bind:countryOneData="okman3.countryOne.data"
         v-bind:countryTwoData="okman3.countryTwo.data"
         v-bind:countryOneName="okman3.countryOne.country"
@@ -66,23 +66,17 @@
           okman2 : {},
           okman3 : {},
           info : [],
-          c1 : '',
-          c2 : '',
+          v1 : '',
+          v2 : '',
         }
       },
       methods: {
-        
-        updateOne: function (msg) {
-          var select = document.getElementById('textOP-1');
-          select.textContent = msg
-           
-          var v1 = "Italy"
-          var v2 = msg
 
+        requestCurve(countryOnerq,countryTworq){
           axios.defaults.baseURL = 'http://localhost:9080/'
           axios.post(`compare`, {
-            countryOne : v1,
-            countryTwo : v2,
+            countryOne : countryOnerq,
+            countryTwo : countryTworq,
           })
           .then(response  => (
               this.okman1 = response.data
@@ -91,8 +85,8 @@
           });
 
           axios.post(`compare/firstdeath`, {
-            countryOne : v1,
-            countryTwo : v2,
+            countryOne : countryOnerq,
+            countryTwo : countryTworq,
           })
           .then(response  => (
               this.okman2 = response.data
@@ -101,69 +95,32 @@
           });
 
           axios.post(`compare/perday`, {
-            countryOne : v1,
-            countryTwo : v2,
+            countryOne : countryOnerq,
+            countryTwo : countryTworq,
           })
           .then(response  => (
               this.okman3 = response.data
           )).catch(function (error) {   
             alert(error);
           });
-
-
-
-
-
-
-
-
-
-
-
-
+        },
+        
+        updateOne: function (msg) {
+          var select = document.getElementById('textOP-1');
+          select.textContent = msg
+          this.requestCurve(msg,this.v2)
         },
         updateTwo: function (msg) {
           var select = document.getElementById('textOP-2');
           select.textContent = msg
+          this.requestCurve(this.v1,msg)
         }
       },
       mounted(){
-        var c1 = "S. Korea"
-        var c2 = "Greece"
 
-        axios.defaults.baseURL = 'http://localhost:9080/'
-        axios.post(`compare`, {
-            countryOne : c1,
-            countryTwo : c2,
-          })
-          .then(response  => (
-              this.okman1 = response.data
-          )
-        ).catch(function (error) {   
-          alert(error);
-        });
-
-        axios.post(`compare/firstdeath`, {
-            countryOne : c1,
-            countryTwo : c2,
-          })
-          .then(response  => (
-              this.okman2 = response.data
-          )
-        ).catch(function (error) {   
-          alert(error);
-        });
-
-        axios.post(`compare/perday`, {
-            countryOne : c1,
-            countryTwo : c2,
-          })
-          .then(response  => (
-              this.okman3 = response.data
-          )
-        ).catch(function (error) {   
-          alert(error);
-        });
+        this.v1 = "UK"
+        this.v2 = "Italy"
+        this.requestCurve(this.v1,this.v2)
 
         axios.get('http://localhost:9080/countries/all')
           .then(response => (this.info = response.data.countries))
