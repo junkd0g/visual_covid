@@ -1,13 +1,20 @@
 <template>
 
   <div>
-      
+
     <div>
       <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
-        <b-dropdown-item>First Action</b-dropdown-item>
-        <b-dropdown-item>Second Action</b-dropdown-item>
-        <b-dropdown-item>Third Action</b-dropdown-item>
+        <b-dropdown-item  v-for="item in info" :key="item.position"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
+      <label id="textOP-1"> {{ okman1.countryOne.country }}</label>
+    </div>
+
+
+    <div>
+      <b-dropdown id="dropdown-2" text="Dropdown Button" class="m-md-2">
+        <b-dropdown-item  v-for="item in info" :key="item.position" v-on:click="updateTwo(item)">{{ item }} </b-dropdown-item>
+      </b-dropdown>
+      <label id="textOP-2"> {{ okman1.countryTwo.country }}</label>
     </div>
 
        
@@ -58,20 +65,71 @@
           okman1 : {},
           okman2 : {},
           okman3 : {},
-          info : []
+          info : [],
+          c1 : '',
+          c2 : '',
+        }
+      },
+      methods: {
+        
+        updateOne: function (msg) {
+          var select = document.getElementById('textOP-1');
+          select.textContent = msg
+           
+          var v1 = "Italy"
+          var v2 = msg
+
+          axios.defaults.baseURL = 'http://localhost:9080/'
+          axios.post(`compare`, {
+            countryOne : v1,
+            countryTwo : v2,
+          })
+          .then(response  => (
+              this.okman1 = response.data
+          )).catch(function (error) {   
+            alert(error);
+          });
+
+          axios.post(`compare/firstdeath`, {
+            countryOne : v1,
+            countryTwo : v2,
+          })
+          .then(response  => (
+              this.okman2 = response.data
+          )).catch(function (error) {   
+            alert(error);
+          });
+
+          axios.post(`compare/perday`, {
+            countryOne : v1,
+            countryTwo : v2,
+          })
+          .then(response  => (
+              this.okman3 = response.data
+          )).catch(function (error) {   
+            alert(error);
+          });
+
+
+
+
+
+
+
+
+
+
+
+
+        },
+        updateTwo: function (msg) {
+          var select = document.getElementById('textOP-2');
+          select.textContent = msg
         }
       },
       mounted(){
         var c1 = "S. Korea"
         var c2 = "Greece"
-        c1 = "Italy"
-        c2 = "Spain"
-        //c2 = "UK"
-        ////c1 = "USA"
-        //c1 = "Germany"
-        //c1 = "Cyprus"
-        //c1 = "Russia"
-       // c1 = "Argentina"
 
         axios.defaults.baseURL = 'http://localhost:9080/'
         axios.post(`compare`, {
