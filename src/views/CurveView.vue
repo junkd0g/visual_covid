@@ -1,8 +1,7 @@
 <template>
 
   <div>
-
-      <Covid />
+      <Curve />
   </div>
 
 </template>
@@ -10,11 +9,11 @@
 <script>
     
 
-   import Covid from './Covid'
+   import Curve from './../components/Curve'
 
     export default {
      components: {
-        Covid
+        Curve
       }
    }
 

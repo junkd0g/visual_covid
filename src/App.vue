@@ -1,34 +1,12 @@
 <template>
   <div id="app">
-    <HelloWorld />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/curve">Curve</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
-
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-
-
-
-
-
-</script>
 
 <style>
 #app {
@@ -37,6 +15,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
