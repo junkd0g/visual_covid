@@ -13,17 +13,11 @@ Vue.use(VueRouter)
   {
     path: '/Curve',
     name: 'Curve',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/CurveView.vue')
   },
   {
     path: '/News',
     name: 'News',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/News.vue')
   }
 ]
