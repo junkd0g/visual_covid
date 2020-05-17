@@ -55,13 +55,14 @@
       mounted(){
         var c1 = "S. Korea"
         var c2 = "Greece"
-        //c2 = "Italy"
-        //c2 = "Spain"
+        c1 = "Italy"
+        c2 = "Spain"
         //c2 = "UK"
-        //c1 = "USA"
+        ////c1 = "USA"
         //c1 = "Germany"
         //c1 = "Cyprus"
-        c1 = "Russia"
+        //c1 = "Russia"
+       // c1 = "Argentina"
 
         axios.defaults.baseURL = 'http://localhost:9080/'
         axios.post(`compare`, {

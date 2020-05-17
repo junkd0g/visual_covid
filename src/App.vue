@@ -10,6 +10,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
@@ -20,6 +23,11 @@ export default {
     HelloWorld
   }
 }
+
+
+
+
+
 </script>
 
 <style>
