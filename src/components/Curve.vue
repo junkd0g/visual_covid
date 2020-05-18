@@ -8,8 +8,8 @@
       </b-dropdown>
       <label id="textOP-1"> {{ okman1.countryOne.country }}</label>
 
-      <b-dropdown id="dropdown-2" text="Dropdown Button" class="m-md-2">
-        <b-dropdown-item  v-for="item in info" :key="item.position" v-on:click="updateTwo(item)">{{ item }} </b-dropdown-item>
+      <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+        <b-dropdown-item  id="marika" v-for="item in info" :key="item.position" v-on:click="updateTwo(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
       <label id="textOP-2"> {{ okman1.countryTwo.country }}</label>
     </div>
@@ -66,8 +66,8 @@
           okman2 : {},
           okman3 : {},
           info : [],
-          v1 : '',
-          v2 : '',
+          v1 : 'UK',
+          v2 : 'Italy',
         }
       },
       methods: {
@@ -108,18 +108,18 @@
         updateOne: function (msg) {
           var select = document.getElementById('textOP-1');
           select.textContent = msg
-          this.requestCurve(msg,this.v2)
+          this.v1 = msg
+          this.requestCurve(this.v1,this.v2)
         },
         updateTwo: function (msg) {
           var select = document.getElementById('textOP-2');
           select.textContent = msg
-          this.requestCurve(this.v1,msg)
+          this.v2 = msg
+          this.requestCurve(this.v1,this.v2)
         }
       },
       mounted(){
 
-        this.v1 = "UK"
-        this.v2 = "Italy"
         this.requestCurve(this.v1,this.v2)
 
         axios.get('http://localhost:9080/countries/all')
@@ -134,6 +134,9 @@
 </script>
 
 
-<style scoped>
-
+<style>
+  .m-md-2 .dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+  }
 </style>

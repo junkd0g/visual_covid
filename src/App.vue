@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+      <nprogress-container></nprogress-container>
+
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/curve">Curve</router-link> |
