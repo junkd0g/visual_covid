@@ -6,45 +6,79 @@
       <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
         <b-dropdown-item  v-for="item in info" :key="item.position"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
-      <label id="textOP-1"> {{ okman1.countryOne.country }}</label>
+      <label id="textOP-1"> {{ deathsFrom22.countryOne.country }}</label>
 
       <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
         <b-dropdown-item  id="marika" v-for="item in info" :key="item.position" v-on:click="updateTwo(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
-      <label id="textOP-2"> {{ okman1.countryTwo.country }}</label>
+      <label id="textOP-2"> {{ deathsFrom22.countryTwo.country }}</label>
     </div>
 
+
+    <div class="box">
+        <div>
+          Deaths from 22/01/2020
+          <curve-compare
+            :key="deathsFrom22"
+            v-bind:countryOneData="deathsFrom22.countryOne.data"
+            v-bind:countryTwoData="deathsFrom22.countryTwo.data"
+            v-bind:countryOneName="deathsFrom22.countryOne.country"
+            v-bind:countryTwoName="deathsFrom22.countryTwo.country"
+          />
+        </div>
+        <div>
+          From first death
+          <curve-compare
+            :key="deathsFromFirst"
+            v-bind:countryOneData="deathsFromFirst.countryOne.data"
+            v-bind:countryTwoData="deathsFromFirst.countryTwo.data"
+            v-bind:countryOneName="deathsFromFirst.countryOne.country"
+            v-bind:countryTwoName="deathsFromFirst.countryTwo.country"
+          />
+        </div>
+        <div>
+          Deaths per day after first death
+          <curve-compare
+            :key="deathsPerDay"
+            v-bind:countryOneData="deathsPerDay.countryOne.data"
+            v-bind:countryTwoData="deathsPerDay.countryTwo.data"
+            v-bind:countryOneName="deathsPerDay.countryOne.country"
+            v-bind:countryTwoName="deathsPerDay.countryTwo.country"
+          />
+        </div>
+        <div>
+          Recovered patients
+          <curve-compare
+            :key="recovery"
+            v-bind:countryOneData="recovery.countryOne.data"
+            v-bind:countryTwoData="recovery.countryTwo.data"
+            v-bind:countryOneName="recovery.countryOne.country"
+            v-bind:countryTwoName="recovery.countryTwo.country"
+          />
+        </div>
+        <div>
+          Cases from 22/01/2020
+          <curve-compare
+            :key="cases"
+            v-bind:countryOneData="cases.countryOne.data"
+            v-bind:countryTwoData="cases.countryTwo.data"
+            v-bind:countryOneName="cases.countryOne.country"
+            v-bind:countryTwoName="cases.countryTwo.country"
+          />
+        </div>
+        <div>
+          Unique cases per day from 22/01/2020
+          <curve-compare
+            :key="casesUnique"
+            v-bind:countryOneData="casesUnique.countryOne.data"
+            v-bind:countryTwoData="casesUnique.countryTwo.data"
+            v-bind:countryOneName="casesUnique.countryOne.country"
+            v-bind:countryTwoName="casesUnique.countryTwo.country"
+          />
+        </div>
+        
+    </div>
        
-       From 22/01/2020
-       <curve-compare
-        :key="okman1"
-        v-bind:countryOneData="okman1.countryOne.data"
-        v-bind:countryTwoData="okman1.countryTwo.data"
-        v-bind:countryOneName="okman1.countryOne.country"
-        v-bind:countryTwoName="okman1.countryTwo.country"
-      >
-
-      </curve-compare >
-
-      From first death
-      <curve-compare
-        :key="okman2"
-        v-bind:countryOneData="okman2.countryOne.data"
-        v-bind:countryTwoData="okman2.countryTwo.data"
-        v-bind:countryOneName="okman2.countryOne.country"
-        v-bind:countryTwoName="okman2.countryTwo.country"
-      >
-      </curve-compare >
-      Deaths per day after first death
-      <curve-compare
-        :key="okman3"
-        v-bind:countryOneData="okman3.countryOne.data"
-        v-bind:countryTwoData="okman3.countryTwo.data"
-        v-bind:countryOneName="okman3.countryOne.country"
-        v-bind:countryTwoName="okman3.countryTwo.country"
-      >
-
-      </curve-compare >
 
 
   </div>
@@ -62,9 +96,12 @@
       data(){
         return {
           
-          okman1 : {},
-          okman2 : {},
-          okman3 : {},
+          deathsFrom22 : {},
+          deathsFromFirst : {},
+          deathsPerDay : {},
+          recovery: {},
+          cases: {},
+          casesUnique: {},
           info : [],
           v1 : 'UK',
           v2 : 'Italy',
@@ -79,7 +116,7 @@
             countryTwo : countryTworq,
           })
           .then(response  => (
-              this.okman1 = response.data
+              this.deathsFrom22 = response.data
           )).catch(function (error) {   
             alert(error);
           });
@@ -89,7 +126,7 @@
             countryTwo : countryTworq,
           })
           .then(response  => (
-              this.okman2 = response.data
+              this.deathsFromFirst = response.data
           )).catch(function (error) {   
             alert(error);
           });
@@ -99,7 +136,34 @@
             countryTwo : countryTworq,
           })
           .then(response  => (
-              this.okman3 = response.data
+              this.deathsPerDay = response.data
+          )).catch(function (error) {   
+            alert(error);
+          });
+          axios.post(`compare/recovery`, {
+            countryOne : countryOnerq,
+            countryTwo : countryTworq,
+          })
+          .then(response  => (
+              this.recovery = response.data
+          )).catch(function (error) {   
+            alert(error);
+          });
+          axios.post(`compare/cases`, {
+            countryOne : countryOnerq,
+            countryTwo : countryTworq,
+          })
+          .then(response  => (
+              this.cases = response.data
+          )).catch(function (error) {   
+            alert(error);
+          });
+          axios.post(`compare/cases/unique`, {
+            countryOne : countryOnerq,
+            countryTwo : countryTworq,
+          })
+          .then(response  => (
+              this.casesUnique = response.data
           )).catch(function (error) {   
             alert(error);
           });
@@ -137,6 +201,16 @@
 <style>
   .m-md-2 .dropdown-menu {
     max-height: 400px;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
+  .box {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .box>* {
+    flex: 1 1 80px;
+  }
+
 </style>

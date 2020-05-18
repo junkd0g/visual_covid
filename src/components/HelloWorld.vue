@@ -1,7 +1,6 @@
 <template>
 
   <div>
-
       <Covid />
   </div>
 

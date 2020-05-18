@@ -13,14 +13,14 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/Curve',
-    name: 'Curve',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CurveView.vue')
+    path: '/Compare',
+    name: 'Compare',
+    component: () => import('../views/CurveView.vue')
   },
   {
     path: '/News',
     name: 'News',
-    component: () => import(/* webpackChunkName: "about" */ '../views/News.vue')
+    component: () => import('../views/News.vue')
   }
 ]
 
