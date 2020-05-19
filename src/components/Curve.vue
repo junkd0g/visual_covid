@@ -3,15 +3,13 @@
   <div>
 
     <div>
-      <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+      <b-dropdown id="dropdown-1" :text="deathsFromFirst.countryOne.country" class="m-md-2">
         <b-dropdown-item  v-for="item in info" :key="item.position"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
-      <label id="textOP-1"> {{ deathsFrom22.countryOne.country }}</label>
 
-      <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+      <b-dropdown id="dropdown-1" :text="deathsFromFirst.countryTwo.country" class="m-md-2">
         <b-dropdown-item  id="marika" v-for="item in info" :key="item.position" v-on:click="updateTwo(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
-      <label id="textOP-2"> {{ deathsFrom22.countryTwo.country }}</label>
     </div>
 
 
@@ -67,7 +65,7 @@
           />
         </div>
         <div>
-          Unique cases per day from 22/01/2020
+          Unique cases per day from first case
           <curve-compare
             :key="casesUnique"
             v-bind:countryOneData="casesUnique.countryOne.data"
@@ -75,6 +73,9 @@
             v-bind:countryOneName="casesUnique.countryOne.country"
             v-bind:countryTwoName="casesUnique.countryTwo.country"
           />
+        </div>
+        <div>
+            Over
         </div>
         
     </div>
@@ -118,7 +119,7 @@
           .then(response  => (
               this.deathsFrom22 = response.data
           )).catch(function (error) {   
-            alert(error);
+            console.log(error);
           });
 
           axios.post(`compare/firstdeath`, {
@@ -128,7 +129,7 @@
           .then(response  => (
               this.deathsFromFirst = response.data
           )).catch(function (error) {   
-            alert(error);
+            console.log(error);
           });
 
           axios.post(`compare/perday`, {
@@ -138,7 +139,7 @@
           .then(response  => (
               this.deathsPerDay = response.data
           )).catch(function (error) {   
-            alert(error);
+            console.log(error);
           });
           axios.post(`compare/recovery`, {
             countryOne : countryOnerq,
@@ -147,7 +148,7 @@
           .then(response  => (
               this.recovery = response.data
           )).catch(function (error) {   
-            alert(error);
+            console.log(error);
           });
           axios.post(`compare/cases`, {
             countryOne : countryOnerq,
@@ -156,7 +157,7 @@
           .then(response  => (
               this.cases = response.data
           )).catch(function (error) {   
-            alert(error);
+            console.log(error);
           });
           axios.post(`compare/cases/unique`, {
             countryOne : countryOnerq,
@@ -165,19 +166,15 @@
           .then(response  => (
               this.casesUnique = response.data
           )).catch(function (error) {   
-            alert(error);
+            console.log(error);
           });
         },
         
         updateOne: function (msg) {
-          var select = document.getElementById('textOP-1');
-          select.textContent = msg
           this.v1 = msg
           this.requestCurve(this.v1,this.v2)
         },
         updateTwo: function (msg) {
-          var select = document.getElementById('textOP-2');
-          select.textContent = msg
           this.v2 = msg
           this.requestCurve(this.v1,this.v2)
         }
@@ -189,7 +186,7 @@
         axios.get('http://localhost:9080/countries/all')
           .then(response => (this.info = response.data.countries))
           .catch(function (error) {   
-            alert(error)
+            console.log(error)
         });
       
       }

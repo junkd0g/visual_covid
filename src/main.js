@@ -7,9 +7,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'nprogress/nprogress.css';
+import VueMeta from 'vue-meta'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.use(VueMeta)
 
 Vue.config.productionTip = false
 
@@ -24,15 +26,11 @@ Vue.use({
   }
 })
 
-//new Vue({
-  //el: '#app',
-  //router,
-  //template: '<App/>',
-  //components: { App }
-//})
-
-
 new Vue({
   router,
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Covid-19 info portal',
+  },
   render: h => h(App),
 }).$mount('#app')

@@ -3,7 +3,8 @@
       <nprogress-container></nprogress-container>
 
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Total Statistics</router-link> |
+      <router-link to="/diagrams">Total Statistics Diagrams</router-link> |
       <router-link to="/compare">Compare</router-link> |
       <router-link to="/news">News</router-link>
     </div>

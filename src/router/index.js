@@ -10,7 +10,8 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+
   },
   {
     path: '/Compare',
@@ -21,6 +22,11 @@ Vue.use(VueRouter)
     path: '/News',
     name: 'News',
     component: () => import('../views/News.vue')
+  },
+  {
+    path: '/Diagrams',
+    name: 'Diagrams',
+    component: () => import('../views/TotalDiagramsView.vue')
   }
 ]
 

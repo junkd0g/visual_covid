@@ -15,20 +15,6 @@
 </template>
 
 <script>
-    import { mdbLineChart, mdbContainer } from "mdbvue";
-
-    export default {
-        name: "ChartPage",
-        components: {
-            mdbLineChart,
-            mdbContainer
-        }
-    }
-
-</script>
-
-<script>
-  import axios from 'axios'
   import { mdbLineChart, mdbContainer } from "mdbvue";
 
   export default {
