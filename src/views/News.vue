@@ -14,7 +14,7 @@
                 <div class="panel panel-danger">
                   <div class="panel-heading">
                     <a :href="item.url" target="_blank"> 
-                      <h3 class="panel-title"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                      <h3 class="panel-title"><i class="fa" aria-hidden="true"></i>
                         {{ item.title }}
                       </h3>
                     </a>

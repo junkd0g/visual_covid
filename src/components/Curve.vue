@@ -74,9 +74,6 @@
             v-bind:countryTwoName="casesUnique.countryTwo.country"
           />
         </div>
-        <div>
-            Over
-        </div>
         
     </div>
        

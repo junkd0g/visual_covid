@@ -1,12 +1,15 @@
 <template>
 
   <div>
-      
-    <GeneralStat />
-    <br>
+    
+    <div class="gs">
+      <GeneralStat />
+    </div>
 
-    <div class="" id="statiscalNumber">
-      <b-table id="my-table" class="table table-fixed" striped :items="sdeaths" :fields="fields"/>
+    <div class="gsTable">
+      <div id="statiscalNumber">
+        <b-table id="my-table" class="table table-fixed" striped :items="sdeaths" :fields="fields"/>
+      </div>
     </div>
   </div>
 
@@ -90,5 +93,16 @@
 </script>
 
 <style scoped>
-
+.gs{
+  width: 100%;
+  height: 200px;
+  left: 30%;
+  z-index: 15;
+}
+.gsTable{
+  position: absolute;
+  z-index: 15;
+  top: 40%;
+  width:100%;
+}
 </style>
