@@ -1,11 +1,14 @@
 <template>
   <div id="app">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-      <nprogress-container></nprogress-container>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <nprogress-container></nprogress-container>
 
     <div class="topnav" id="myTopnav">
-      <router-link to="/" class="active">Total Statistics</router-link>
+      <router-link to="/" class="active">  <i class="fa fa-home"></i></router-link>
+      <router-link to="/country">Country</router-link>
       <router-link to="/diagrams">Total Statistics Diagrams</router-link>
       <router-link to="/compare">Compare</router-link>
       <router-link to="/news">News</router-link>

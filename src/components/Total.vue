@@ -1,16 +1,23 @@
 <template>
 
   <div>
-    
-    <div class="gs">
-      <GeneralStat />
-    </div>
+    <br><br>
+    <div class="box">
+      
+      <div>
+        <GeneralStat />
+      </div>
 
-    <div class="gsTable">
+      <div>
+       <Today />
+      </div>
+      
       <div id="statiscalNumber">
         <b-table id="my-table" class="table table-fixed" striped :items="sdeaths" :fields="fields"/>
       </div>
+    
     </div>
+
   </div>
 
 </template>
@@ -18,10 +25,12 @@
 <script>
   import axios from 'axios'
   import GeneralStat from './GeneralStat'
+  import Today from './Today'
 
   export default {
     components: {
-      GeneralStat
+      GeneralStat,
+      Today
     },
     data() {
       return {
@@ -93,16 +102,12 @@
 </script>
 
 <style scoped>
-.gs{
-  width: 100%;
-  height: 200px;
-  left: 30%;
-  z-index: 15;
-}
-.gsTable{
-  position: absolute;
-  z-index: 15;
-  top: 40%;
-  width:100%;
-}
+.box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .box>* {
+    flex: 1 1;
+  }
 </style>

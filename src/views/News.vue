@@ -3,34 +3,20 @@
   <div>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
-
-    <br><br>
-    <div v-for="item in newsData" :key="item"> 
-      <div class="w3-container">
-        <div class="row">
-          <div class="col-md-4"></div>
-            <div class="container">
-              <div class="col-md-4">
-                <div class="panel panel-danger">
-                  <div class="panel-heading">
-                    <a :href="item.url" target="_blank"> 
-                      <h3 class="panel-title"><i class="fa" aria-hidden="true"></i>
-                        {{ item.title }}
-                      </h3>
-                    </a>
-                  </div>
-                  <div class="panel-body">
-                    <a class="twitter-timeline" data-width="100%" :href="item.sourceURL" target="_blank">
-                      {{ item.source }}
-                    </a> 
-                  </div>
-                </div>
-                <hr class="new4">
-              </div>
-            </div>
+    
+    <div class="box">
+      <div v-for="item in newsData" :key="item"> 
+        <div class="w3-container w3-content">
+          <div class="w3-panel w3-white w3-card w3-display-container newsStand">
+              <p class="lilika"><b> {{ item.source}} </b></p>
+              <p> {{ item.title }}</p>
+              <a class="w3-bar-item  marika openLink" :href="item.url" target="_blank">
+                  <i style="font-size:24px" class="fa">&#xf08e;</i>
+              </a>
           </div>
         </div>
-      </div>    
+      </div>
+    </div>
 
   </div>
 </template>
@@ -73,19 +59,29 @@
   .box>* {
     flex: 1 1 ;
   }
-  a:hover {
-    color: #20c997;
-  }
+  .marika{
+    font-size:22px;
+    color: #42b983;
+    padding-left: 15px;
+    padding-right: 15px;
 
-  hr.new4 {
-    border: 1px solid;
-  }
+}
+.marika:hover{
+    color: #3366FF;
+}
+.lilika{
+    font-size:18px;
+    color: #42b983;
+    padding-left: 15px;
+    padding-right: 15px;
 
-  .description{
-    position:absolute;
-    top: 150px;
-    right: 150px;
-    width: 600px;
-  }
+}
+.newsStand{
+    width: 500px;
+    height: 150px;
+}
 
+.openLink{
+    text-align:right;position: absolute;bottom: 0; right: 0;
+}
 </style>
