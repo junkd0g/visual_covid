@@ -29,7 +29,7 @@
               Pantients active with covid-19: <span class="gNumber"> {{ item.active }} </span><br>
               Pantients with critical condition : <span class="gNumber"> {{ item.critical }} </span><br>
               Cases per one million people: <span class="gNumber"> {{ item.casesPerOneMillion }} </span><br>
-              Total covi-19 test: <span class="gNumber"> {{ item.tests }} </span><br>
+              Total covid-19 test: <span class="gNumber"> {{ item.tests }} </span><br>
               Tests per one million people: <span class="gNumber"> {{ item.testsPerOneMillion }} </span><br>
             </div>
           </div>
@@ -146,7 +146,7 @@
     },
     mounted(){
 
-        axios.defaults.baseURL = 'http://localhost:9080/'
+        axios.defaults.baseURL = 'http://localhost:9080/api/'
         axios.post(`sort`, {
             type: 'deaths'
         })

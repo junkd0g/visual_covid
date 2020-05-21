@@ -1,6 +1,7 @@
 <template>
 
   <div>
+      <navi/>
       <Curve />
   </div>
 
@@ -10,10 +11,12 @@
     
 
    import Curve from './../components/Curve'
+   import Navi from '@/components/Nav'
 
     export default {
      components: {
-        Curve
+        Curve,
+        Navi
       }
    }
 

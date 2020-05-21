@@ -57,8 +57,8 @@
           Cases from 22/01/2020
           <curve-compare
             :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataDeaths"
-            v-bind:countryTwoData="rData.countryTwo.dataDeaths"
+            v-bind:countryOneData="rData.countryOne.dataCases"
+            v-bind:countryTwoData="rData.countryTwo.dataCases"
             v-bind:countryOneName="v1"
             v-bind:countryTwoName="v2"
           />
@@ -101,7 +101,7 @@
 
         requestCurve(countryOnerq,countryTworq){
           axios.defaults.baseURL = 'http://localhost:9080/'
-          axios.post(`compare/all`, {
+          axios.post(`api/compare/all`, {
             countryOne : countryOnerq,
             countryTwo : countryTworq,
           })
@@ -125,7 +125,7 @@
 
         this.requestCurve(this.v1,this.v2)
 
-        axios.get('http://localhost:9080/countries/all')
+        axios.get('http://localhost:9080/api/countries/all')
           .then(response => (this.info = response.data.countries))
           .catch(function (error) {   
             console.log(error)

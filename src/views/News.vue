@@ -3,7 +3,7 @@
   <div>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
-    
+    <navi/>
     <div class="box">
       <div v-for="item in newsData" :key="item"> 
         <div class="w3-container w3-content">
@@ -24,8 +24,12 @@
 <script>
 
     import axios from 'axios'
-  
+    import Navi from '@/components/Nav'
+
     export default {
+      components: {
+        Navi
+      },
       data(){
         return {
           newsData : {},
@@ -33,7 +37,7 @@
       },
       methods: {
         requestCurve(){
-          axios.get('http://localhost:9080/news')
+          axios.get('http://localhost:9080/api/news')
             .then(response  => (
               this.newsData = response.data.data))
             .catch(function (error) {   

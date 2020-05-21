@@ -49,7 +49,7 @@
     },
     mounted(){
 
-        axios.defaults.baseURL = 'http://localhost:9080/'
+        axios.defaults.baseURL = 'http://localhost:9080/api/'
         axios.post(`sort`, {
             type: 'deaths'
         })

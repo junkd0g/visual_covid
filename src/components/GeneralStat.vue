@@ -31,7 +31,7 @@
             }
         },
         mounted(){
-            axios.get('http://localhost:9080/total')
+            axios.get('http://localhost:9080/api/total')
             .then(response => (this.info = response))
             .catch(function (error) {   
                 console.log(error);

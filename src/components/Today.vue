@@ -31,7 +31,7 @@ import axios from 'axios'
       },
       methods: {
         requestCurve(){
-          axios.get('http://localhost:9080/news')
+          axios.get('http://localhost:9080/api/news')
             .then(response  => (
               this.newsData = response.data.data))
             .catch(function (error) {   
