@@ -1,9 +1,9 @@
 <template>
 
   <div>
+
     <br><br>
     <div class="box">
-      
       <div>
         <GeneralStat />
       </div>
@@ -11,10 +11,32 @@
       <div>
        <Today />
       </div>
-      
+
       <div id="statiscalNumber">
         <b-table id="my-table" class="table table-fixed" striped :items="sdeaths" :fields="fields"/>
       </div>
+
+      <div id="mobileStatiscalNumberID" class="box mobileStatiscalNumber">
+        <div v-for="item in sdeaths" :key="item">
+          <div class="w3-container w3-content">
+            <div class="w3-panel w3-white w3-card w3-display-container country">
+              <p class="lilika"><b> {{ item.country }} </b></p>
+              Total covid-19 cases: <span class="gNumber"> {{ item.cases }} </span><br>
+              Today's covid-19 cases: <span class="gNumber"> {{ item.todayCases }} </span><br>
+              Total deaths associated with covid 19: <span class="gNumber"> {{ item.deaths }} </span><br>
+              Today's deaths associated with covid 19: <span class="gNumber"> {{ item.todayDeaths }} </span><br>
+              Recovered patients : <span class="gNumber"> {{ item.recovered }} </span><br>
+              Pantients active with covid-19: <span class="gNumber"> {{ item.active }} </span><br>
+              Pantients with critical condition : <span class="gNumber"> {{ item.critical }} </span><br>
+              Cases per one million people: <span class="gNumber"> {{ item.casesPerOneMillion }} </span><br>
+              Total covi-19 test: <span class="gNumber"> {{ item.tests }} </span><br>
+              Tests per one million people: <span class="gNumber"> {{ item.testsPerOneMillion }} </span><br>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
     
     </div>
 
@@ -26,6 +48,7 @@
   import axios from 'axios'
   import GeneralStat from './GeneralStat'
   import Today from './Today'
+  import { isMobile } from 'mobile-device-detect';
 
   export default {
     components: {
@@ -34,6 +57,11 @@
     },
     data() {
       return {
+        window: {
+            width: 0,
+            height: 0,
+            isMobile: true,
+        },
         fields: [
           {
             key: 'country',
@@ -84,6 +112,38 @@
         scases: [],
       }
     },
+    created() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+        this.window.isMobile = this.showMobile()
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize);
+    },
+    methods: {
+      handleResize() {
+        this.window.width = window.innerWidth;
+        this.window.height = window.innerHeight;
+        this.window.isMobile = this.showMobile()
+        var x = document.getElementById("statiscalNumber");
+        var y = document.getElementById("mobileStatiscalNumberID");
+
+        if (this.window.isMobile == true) {
+          x.style.display = "none";
+          y.style.display = "block";
+        }else{
+          y.style.display = "none";
+          x.style.display = "block";
+        }
+      },
+      showMobile(){
+        if (this.window.width < 800 || isMobile) {
+          return true
+        }else{
+          return false
+        }
+      }
+    },
     mounted(){
 
         axios.defaults.baseURL = 'http://localhost:9080/'
@@ -106,8 +166,29 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  .box>* {
+}
+
+.box>* {
     flex: 1 1;
-  }
+}
+
+.newsStand{
+    width: 500px;
+}
+.country{
+    width: 500px;
+    height: 280px;
+}
+
+.gNumber {
+  color: #42b983;
+  font-weight: bold;
+}
+.lilika{
+    font-size:18px;
+    color: #42b983;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
 </style>

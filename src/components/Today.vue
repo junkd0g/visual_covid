@@ -4,7 +4,7 @@
 
     <div class="w3-container w3-content newsStand">
         <p class="w3-opacity"><b>Today news </b></p> 
-        <div class="w3-panel w3-white w3-card w3-display-container">
+        <div class="w3-panel w3-white w3-card w3-display-container newsStand">
             <p class="lilika"><b>{{ newsData[index].source}}</b></p>
             <p> {{ newsData[index].title }}</p>
             <i class="fa fa-arrow-circle-left marika" v-on:click="updateBackwards" v-on:keyup="keymonitorBackward"></i>
@@ -68,7 +68,7 @@ import axios from 'axios'
 
 <style scoped>
 .marika{
-    font-size:22px;
+    font-size:28px;
     color: #42b983;
     padding-left: 15px;
     padding-right: 15px;

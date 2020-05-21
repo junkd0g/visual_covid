@@ -12,6 +12,7 @@
     "bootstrap-vue": "^2.9.0",
     "core-js": "^3.6.4",
     "mdbvue": "^6.6.0",
+    "mobile-device-detect": "^0.3.3",
     "vue": "^2.6.11",
     "vue-meta": "^2.3.3",
     "vue-nprogress": "^0.1.5",
