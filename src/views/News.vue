@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
     <navi/>
-    <div class="box">
+    <div class="box vivika" >
       <div v-for="item in newsData" :key="item"> 
         <div class="w3-container w3-content">
           <div class="w3-panel w3-white w3-card w3-display-container newsStand">
@@ -58,4 +58,37 @@
   @import '../scss/_box.scss';
   @import '../scss/_card.scss';
 
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 800px) {
+    .marika{
+      font-size:22px;
+      color: #42b983;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .marika:hover{
+      color: #3366FF;
+    }
+
+    .lilika{
+      font-size:18px;
+      color: #42b983;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .newsStand{
+      margin:0 auto;
+      width: 350px;
+      height: 150px;
+    }
+
+
+    .openLink{
+      text-align:right;position: absolute;bottom: 0; right: 0;
+    }
+  }
 </style>
+

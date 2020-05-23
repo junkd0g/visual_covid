@@ -2,18 +2,18 @@
   <div class="home">
     <navi/>
 
-    <HelloWorld />
+    <TotalDiagrams />
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/TotalDiagrams.vue'
+import TotalDiagrams from '@/components/TotalDiagrams.vue'
 import Navi from '@/components/Nav'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    TotalDiagrams,
     Navi
   }
 }

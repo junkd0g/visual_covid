@@ -10,11 +10,11 @@
       <b-dropdown id="dropdown-1" :text="v1" class="m-md-2">
         <b-dropdown-item  v-for="item in info" :key="item.position"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
-    </div>
+    </div> <br>
 
     <div class="box">
-      <div>
-        <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+      <div class="dd">
+        <p class="w3-opacity"><b>General country's data</b></p>
         <div class="w3-container w3-content newsStand">
           <div class="w3-panel w3-white w3-card w3-display-container">
             <p class="lilika"><b><span class="gNumber"> {{ infoCountry.country }} </span> </b></p>
@@ -33,7 +33,7 @@
       </div>
 
 
-        <div>
+        <div class="dd">
           <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
             <curve-compare
               :key="rData"
@@ -44,8 +44,8 @@
             />
         </div>
 
-        <div>
-          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+        <div class="dd">
+          <p class="w3-opacity"><b>Deaths from first death</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataDeathsFromFirst"
@@ -55,8 +55,8 @@
           />
         </div>
 
-        <div>
-          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+        <div class="dd">
+          <p class="w3-opacity"><b>Deaths per day</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataDeathsPerDay"
@@ -66,8 +66,8 @@
           />
         </div>
 
-        <div>
-          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+        <div class="dd">
+          <p class="w3-opacity"><b>Cases from 22/01/2020</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataCases"
@@ -77,22 +77,22 @@
           />
         </div>
 
-        <div>
-          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+        <div class="dd">
+          <p class="w3-opacity"><b>Cases per day</b></p>
           <curve-compare
             :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataRecoverd"
+            v-bind:countryOneData="rData.countryOne.dataCasesFromFirst"
             v-bind:countryTwoData="vc"
             v-bind:countryOneName="v1"
             v-bind:countryTwoName="''"
           />
         </div>
 
-        <div>
-          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+        <div class="dd">
+          <p class="w3-opacity"><b>Recovered pantients</b></p>
           <curve-compare
             :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataCasesFromFirst"
+            v-bind:countryOneData="rData.countryOne.dataRecoverd"
             v-bind:countryTwoData="vc"
             v-bind:countryOneName="v1"
             v-bind:countryTwoName="''"
@@ -180,5 +180,16 @@
     max-height: 400px;
     overflow-y: scroll;
   }
+  .dd + .dd{
+   margin-bottom:40px;
+}
 
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 800px) {
+.newsStand{
+    width: 380px;
+    height: 290px;
+  }
+}
 </style>

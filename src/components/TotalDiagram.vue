@@ -4,10 +4,10 @@
 
     <mdb-container>
       <mdb-horizontal-bar-chart
-      :data="horizontalBarChartData"
-      :options="horizontalBarChartOptions"
-      :width="600"
-      :height="300"
+        :data="horizontalBarChartData"
+        :options="horizontalBarChartOptions"
+        :width="dimension.width"
+        :height="dimension.height"
       >
       </mdb-horizontal-bar-chart>
     </mdb-container>
@@ -18,6 +18,7 @@
 
 <script>
   import { mdbHorizontalBarChart, mdbContainer } from "mdbvue";
+  import { isMobile } from 'mobile-device-detect';
 
   export default {
     name: "ChartPage",
@@ -30,9 +31,34 @@
       deathsNumber: Array,
       typeOfDiagram: String
     },
+    created() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize);
+    },
+    methods: {
+      handleResize() {
+    
+
+        if (isMobile == true) {
+          this.dimension.height = 280
+          this.dimension.width = 310
+        }else{
+          this.dimension.height = 300
+          this.dimension.width = 600
+
+        }
+      }
+    },
     data() {
         return {
-            horizontalBarChartData: {
+          dimension :{
+            height: 300,
+            width: 600,
+          },
+          horizontalBarChartData: {
               labels: this.countries,
               datasets: [
                 {

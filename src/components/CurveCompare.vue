@@ -8,8 +8,9 @@
               <mdb-line-chart
                 :data="lineChartData"
                 :options="lineChartOptions"
-                :width="600"
-                :height="300"
+                :width="dimension.width"
+                :height="dimension.height"
+                :key="dimension"
               ></mdb-line-chart>
             </mdb-container>
           </div>
@@ -22,6 +23,7 @@
 
 <script>
   import { mdbLineChart, mdbContainer } from "mdbvue";
+  import { isMobile } from 'mobile-device-detect';
 
   export default {
     name: "ChartPage",
@@ -35,6 +37,27 @@
       countryOneName: String,
       countryTwoName: String,
     },
+    created() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize);
+    },
+    methods: {
+      handleResize() {
+    
+
+        if (isMobile == true) {
+          this.dimension.height = 280
+          this.dimension.width = 310
+        }else{
+          this.dimension.height = 300
+          this.dimension.width = 600
+
+        }
+      }
+    },
     data() {
       var displayLength;
       if (this.countryOneData.length > this.countryTwoData.length){
@@ -43,6 +66,10 @@
         displayLength =  this.countryTwoData.length
       }
       return {
+        dimension :{
+          height: 300,
+          width: 600,
+        },
         lineChartData: {
           labels: Array.from(Array(displayLength).keys()),
           datasets: [{
@@ -93,4 +120,14 @@
     width: 670px;
     height: 400px;
   }
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 800px) {
+.newsStand{
+    width: 380px;
+    height: 290px;
+  }
+}
 </style>

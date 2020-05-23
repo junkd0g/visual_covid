@@ -1,19 +1,19 @@
 <template>
   <div class="home">
     <navi/>
-    <HelloWorld />
+    <Covid />
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import Covid from '@/components/Covid.vue'
 import Navi from '@/components/Nav'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    Covid,
     Navi
   }
-}
+} 
 </script>

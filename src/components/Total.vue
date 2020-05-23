@@ -16,7 +16,7 @@
         <b-table id="my-table" class="table table-fixed" striped :items="sdeaths" :fields="fields"/>
       </div>
 
-      <div id="mobileStatiscalNumberID" class="mobileStatiscalNumber">
+      <div id="mobileStatiscalNumberID" class="newsStand">
         <div v-for="item in sdeaths" :key="item">
           <div class="w3-container w3-content country">
             <div class="w3-panel w3-white w3-card w3-display-container">
@@ -123,24 +123,15 @@
     methods: {
       handleResize() {
         this.window.width = window.innerWidth;
-        this.window.height = window.innerHeight;
-        this.window.isMobile = this.showMobile()
         var x = document.getElementById("statiscalNumber");
         var y = document.getElementById("mobileStatiscalNumberID");
 
-        if (this.window.isMobile == true) {
+        if (isMobile == true || this.window.width < 800) {
           x.style.display = "none";
           y.style.display = "block";
         }else{
           y.style.display = "none";
           x.style.display = "block";
-        }
-      },
-      showMobile(){
-        if (this.window.width < 800 || isMobile) {
-          return true
-        }else{
-          return false
         }
       }
     },
@@ -182,5 +173,17 @@
     padding-left: 15px;
     padding-right: 15px;
 
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 800px) {
+.newsStand{
+    width: 380px;
+    height: 290px;
+  }
+}
+body{
+  background-color: blue;
 }
 </style>

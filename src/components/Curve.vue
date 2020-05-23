@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <div>
+    <div><br>
       <b-dropdown id="dropdown-1" :text="v1" class="m-md-2">
         <b-dropdown-item  v-for="item in info" :key="item.position"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
       </b-dropdown>
@@ -13,7 +13,7 @@
 
 
     <div class="box">
-        <div>
+        <div><br>
           Deaths from 22/01/2020
           <curve-compare
             :key="rData"
@@ -22,8 +22,8 @@
             v-bind:countryOneName="v1"
             v-bind:countryTwoName="v2"
           />
-        </div>
-        <div>
+        </div> <br>  <br>
+        <div><br>
           From first death
           <curve-compare
             :key="rData"
@@ -32,8 +32,8 @@
             v-bind:countryOneName="v1"
             v-bind:countryTwoName="v2"
           />
-        </div>
-        <div>
+        </div> <br>  <br>
+        <div><br>
           Deaths per day after first death
           <curve-compare
             :key="rData"
@@ -42,8 +42,8 @@
             v-bind:countryOneName="v1"
             v-bind:countryTwoName="v2"
           />
-        </div>
-        <div>
+        </div> <br>  <br>
+        <div><br>
           Recovered patients
           <curve-compare
             :key="rData"
@@ -52,8 +52,8 @@
             v-bind:countryOneName="v1"
             v-bind:countryTwoName="v2"
           />
-        </div>
-        <div>
+        </div> <br>  <br>
+        <div><br>
           Cases from 22/01/2020
           <curve-compare
             :key="rData"
@@ -62,8 +62,8 @@
             v-bind:countryOneName="v1"
             v-bind:countryTwoName="v2"
           />
-        </div>
-        <div>
+        </div> <br>  <br>
+        <div><br>
           Unique cases per day from first case
           <curve-compare
             :key="rData"
@@ -138,11 +138,21 @@
 
 
 <style>
-  @import '../scss/_box.scss';
-
+#dropdown-1 + #dropdown-1{
+   margin-left:20px;
+}
   .m-md-2 .dropdown-menu {
     max-height: 400px;
     overflow-y: scroll;
+  }
+  .box {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .box>* {
+    flex: 1 1 80px;
   }
 
 </style>
