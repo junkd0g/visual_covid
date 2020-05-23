@@ -50,4 +50,8 @@
 .newsStand{
     width: 500px;
 }
+.gNumber {
+  color: #42b983;
+  font-weight: bold;
+}
 </style>

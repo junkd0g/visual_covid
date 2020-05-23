@@ -162,15 +162,7 @@
 </script>
 
 <style scoped>
-.box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.box>* {
-    flex: 1 1;
-}
+@import '../scss/_box.scss';
 
 .newsStand{
     width: 500px;

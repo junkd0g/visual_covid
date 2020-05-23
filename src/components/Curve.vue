@@ -138,18 +138,11 @@
 
 
 <style>
+  @import '../scss/_box.scss';
+
   .m-md-2 .dropdown-menu {
     max-height: 400px;
     overflow-y: scroll;
-  }
-  .box {
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .box>* {
-    flex: 1 1 80px;
   }
 
 </style>

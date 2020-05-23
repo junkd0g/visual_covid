@@ -55,37 +55,7 @@
 </script>
 
 <style>
-   .box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .box>* {
-    flex: 1 1 ;
-  }
-  .marika{
-    font-size:22px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
+  @import '../scss/_box.scss';
+  @import '../scss/_card.scss';
 
-}
-.marika:hover{
-    color: #3366FF;
-}
-.lilika{
-    font-size:18px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-.newsStand{
-    width: 500px;
-    height: 150px;
-}
-
-.openLink{
-    text-align:right;position: absolute;bottom: 0; right: 0;
-}
 </style>

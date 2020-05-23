@@ -113,19 +113,5 @@
 </script>
 
 <style scoped>
-  .box {
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .box>* {
-    flex: 1 1 80px;
-  }
-
-  .newsStand{
-    width: 670px;
-    height: 400px;
-  }
-
+  @import '../scss/_bigcard.scss';
 </style>

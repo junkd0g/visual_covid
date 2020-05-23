@@ -12,121 +12,93 @@
       </b-dropdown>
     </div>
 
-
     <div class="box">
       <div>
+        <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
         <div class="w3-container w3-content newsStand">
           <div class="w3-panel w3-white w3-card w3-display-container">
-            <p class="lilika"><b> {{ info.country }} </b></p>
-            Total covid-19 cases: <span class="gNumber"> {{ info.cases }} </span><br>
-            Today's covid-19 cases: <span class="gNumber"> {{ info.todayCases }} </span><br>
-            Total deaths associated with covid 19: <span class="gNumber"> {{ info.deaths }} </span><br>
-            Today's deaths associated with covid 19: <span class="gNumber"> {{ info.todayDeaths }} </span><br>
-            Recovered patients : <span class="gNumber"> {{ info.recovered }} </span><br>
-            Pantients active with covid-19: <span class="gNumber"> {{ info.active }} </span><br>
-            Pantients with critical condition : <span class="gNumber"> {{ info.critical }} </span><br>
-            Cases per one million people: <span class="gNumber"> {{ info.casesPerOneMillion }} </span><br>
-            Total covid-19 test: <span class="gNumber"> {{ info.tests }} </span><br>
-            Tests per one million people: <span class="gNumber"> {{ info.testsPerOneMillion }} </span><br><br><br>
+            <p class="lilika"><b><span class="gNumber"> {{ infoCountry.country }} </span> </b></p>
+            Total covid-19 cases: <span class="gNumber"> {{ infoCountry.cases }} </span><br>
+            Today's covid-19 cases: <span class="gNumber"> {{ infoCountry.todayCases }} </span><br>
+            Total deaths associated with covid 19: <span class="gNumber"> {{ infoCountry.deaths }} </span><br>
+            Today's deaths associated with covid 19: <span class="gNumber"> {{ infoCountry.todayDeaths }} </span><br>
+            Recovered patients : <span class="gNumber"> {{ infoCountry.recovered }} </span><br>
+            Pantients active with covid-19: <span class="gNumber"> {{ infoCountry.active }} </span><br>
+            Pantients with critical condition : <span class="gNumber"> {{ infoCountry.critical }} </span><br>
+            Cases per one million people: <span class="gNumber"> {{ infoCountry.casesPerOneMillion }} </span><br>
+            Total covid-19 test: <span class="gNumber"> {{ infoCountry.tests }} </span><br>
+            Tests per one million people: <span class="gNumber"> {{ infoCountry.testsPerOneMillion }} </span><br><br><br>
           </div>
         </div>
       </div>
 
 
         <div>
-           <div class="w3-container w3-content newsStand">
-              <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p> 
-              <div class="w3-panel w3-white w3-card w3-display-container">
-                <curve-compare
-                  :key="rData"
-                  v-bind:countryOneData="rData.countryOne.dataDeaths"
-                  v-bind:countryTwoData="vc"
-                  v-bind:countryOneName="v1"
-                 v-bind:countryTwoName="''"
-                />
-              </div>
-            </div> 
+          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+            <curve-compare
+              :key="rData"
+              v-bind:countryOneData="rData.countryOne.dataDeaths"
+              v-bind:countryTwoData="vc"
+              v-bind:countryOneName="v1"
+              v-bind:countryTwoName="''"
+            />
         </div>
 
         <div>
-           <div class="w3-container w3-content newsStand">
-              <p class="w3-opacity"><b>From first death</b></p> 
-              <div class="w3-panel w3-white w3-card w3-display-container">
-                <curve-compare
-                  :key="rData"
-                  v-bind:countryOneData="rData.countryOne.dataDeathsFromFirst"
-                  v-bind:countryTwoData="vc"
-                  v-bind:countryOneName="v1"
-                 v-bind:countryTwoName="''"
-                />
-              </div>
-            </div> 
+          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+          <curve-compare
+            :key="rData"
+            v-bind:countryOneData="rData.countryOne.dataDeathsFromFirst"
+            v-bind:countryTwoData="vc"
+            v-bind:countryOneName="v1"
+            v-bind:countryTwoName="''"
+          />
         </div>
 
         <div>
-           <div class="w3-container w3-content newsStand">
-              <p class="w3-opacity"><b>Deaths per day after first death</b></p> 
-              <div class="w3-panel w3-white w3-card w3-display-container">
-                <curve-compare
-                  :key="rData"
-                  v-bind:countryOneData="rData.countryOne.dataDeathsPerDay"
-                  v-bind:countryTwoData="vc"
-                  v-bind:countryOneName="v1"
-                 v-bind:countryTwoName="''"
-                />
-              </div>
-            </div> 
+          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+          <curve-compare
+            :key="rData"
+            v-bind:countryOneData="rData.countryOne.dataDeathsPerDay"
+            v-bind:countryTwoData="vc"
+            v-bind:countryOneName="v1"
+            v-bind:countryTwoName="''"
+          />
         </div>
 
         <div>
-           <div class="w3-container w3-content newsStand">
-              <p class="w3-opacity"><b>Cases from 22/01/2020</b></p> 
-              <div class="w3-panel w3-white w3-card w3-display-container">
-                <curve-compare
-                  :key="rData"
-                  v-bind:countryOneData="rData.countryOne.dataCases"
-                  v-bind:countryTwoData="vc"
-                  v-bind:countryOneName="v1"
-                 v-bind:countryTwoName="''"
-                />
-              </div>
-            </div> 
+          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+          <curve-compare
+            :key="rData"
+            v-bind:countryOneData="rData.countryOne.dataCases"
+            v-bind:countryTwoData="vc"
+            v-bind:countryOneName="v1"
+            v-bind:countryTwoName="''"
+          />
         </div>
 
         <div>
-           <div class="w3-container w3-content newsStand">
-              <p class="w3-opacity"><b>Recovered patients</b></p> 
-              <div class="w3-panel w3-white w3-card w3-display-container">
-                <curve-compare
-                  :key="rData"
-                  v-bind:countryOneData="rData.countryOne.dataRecoverd"
-                  v-bind:countryTwoData="vc"
-                  v-bind:countryOneName="v1"
-                 v-bind:countryTwoName="''"
-                />
-              </div>
-            </div> 
+          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+          <curve-compare
+            :key="rData"
+            v-bind:countryOneData="rData.countryOne.dataRecoverd"
+            v-bind:countryTwoData="vc"
+            v-bind:countryOneName="v1"
+            v-bind:countryTwoName="''"
+          />
         </div>
 
         <div>
-           <div class="w3-container w3-content newsStand">
-              <p class="w3-opacity"><b>Unique cases per day from first case</b></p> 
-              <div class="w3-panel w3-white w3-card w3-display-container">
-                <curve-compare
-                  :key="rData"
-                  v-bind:countryOneData="rData.countryOne.dataCasesFromFirst"
-                  v-bind:countryTwoData="vc"
-                  v-bind:countryOneName="v1"
-                 v-bind:countryTwoName="''"
-                />
-              </div>
-            </div> 
+          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+          <curve-compare
+            :key="rData"
+            v-bind:countryOneData="rData.countryOne.dataCasesFromFirst"
+            v-bind:countryTwoData="vc"
+            v-bind:countryOneName="v1"
+            v-bind:countryTwoName="''"
+          />
         </div>
-        
-       
     </div>
-       
-
 
   </div>
 
@@ -148,6 +120,7 @@
           v2 : 'Italy',
           rData : {},
           info : {},
+          infoCountry : {},
           vc : [],
         }
       },
@@ -165,10 +138,10 @@
             console.log(error);
           });
 
-          axios.post(`country`, {
+          axios.post(`api/country`, {
             country : countryOnerq})
           .then(response  => (
-              this.info = response.data
+              this.infoCountry = response.data
           )).catch(function (error) {   
             console.log(error);
           }); 
@@ -192,10 +165,6 @@
           .catch(function (error) {   
             console.log(error)
         });
-
-        //line
-
-
       
       }
     }
@@ -204,23 +173,12 @@
 
 
 <style>
+  @import '../scss/_box.scss';
+  @import '../scss/_bigcard.scss';
+
   .m-md-2 .dropdown-menu {
     max-height: 400px;
     overflow-y: scroll;
-  }
-  .box {
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .box>* {
-    flex: 1 1 80px;
-  }
-
-  .newsStand{
-    width: 670px;
-    height: 400px;
   }
 
 </style>

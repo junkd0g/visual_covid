@@ -1,14 +1,20 @@
 <template>
 
   <div>
-      <mdb-container>
-        <mdb-line-chart
-            :data="lineChartData"
-            :options="lineChartOptions"
-            :width="600"
-            :height="300"
-        ></mdb-line-chart>
-    </mdb-container>
+    <div>
+        <div class="w3-container w3-content newsStand">
+          <div class="w3-panel w3-white w3-card w3-display-container">
+            <mdb-container>
+              <mdb-line-chart
+                :data="lineChartData"
+                :options="lineChartOptions"
+                :width="600"
+                :height="300"
+              ></mdb-line-chart>
+            </mdb-container>
+          </div>
+        </div>
+    </div>
 
   </div>
 
@@ -81,3 +87,10 @@
     },
   }
 </script>
+
+<style scoped>
+.newsStand{
+    width: 670px;
+    height: 400px;
+  }
+</style>
