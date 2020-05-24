@@ -13,6 +13,7 @@
     </div> <br>
 
     <div class="box">
+      
       <div class="dd">
         <p class="w3-opacity"><b>General country's data</b></p>
         <div class="w3-container w3-content newsStand">
@@ -27,12 +28,12 @@
             Pantients with critical condition : <span class="gNumber"> {{ infoCountry.critical }} </span><br>
             Cases per one million people: <span class="gNumber"> {{ infoCountry.casesPerOneMillion }} </span><br>
             Total covid-19 test: <span class="gNumber"> {{ infoCountry.tests }} </span><br>
-            Tests per one million people: <span class="gNumber"> {{ infoCountry.testsPerOneMillion }} </span><br><br><br>
+            Tests per one million people: <span class="gNumber"> {{ infoCountry.testsPerOneMillion }} </span><br>
           </div>
         </div>
       </div>
 
-
+        
         <div class="dd">
           <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
             <curve-compare
@@ -45,6 +46,7 @@
         </div>
 
         <div class="dd">
+          <br>
           <p class="w3-opacity"><b>Deaths from first death</b></p>
           <curve-compare
             :key="rData"
@@ -181,7 +183,7 @@
     overflow-y: scroll;
   }
   .dd + .dd{
-   margin-bottom:40px;
+   margin-bottom:50px;
 }
 
 @media only screen 

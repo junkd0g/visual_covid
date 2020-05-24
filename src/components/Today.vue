@@ -2,8 +2,8 @@
 
   <div class="outer">
 
-    <div class="w3-container w3-content newsStandToday">
-        <p class="w3-opacity"><b>Today news </b></p> 
+    <div class="w3-container w3-content">
+        <p class="w3-opacity"><b>Today's news </b></p> 
         <div class="w3-panel w3-white w3-card w3-display-container" >
             <p class="lilika"><b>{{ newsData[index].source}}</b></p>
             <p> {{ newsData[index].title }}</p>

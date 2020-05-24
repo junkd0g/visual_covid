@@ -47,11 +47,17 @@
   color: #42b983;
   font-weight: bold;
 }
+
 .newsStand{
-    width: 500px;
+    width: 380px;
 }
-.gNumber {
-  color: #42b983;
-  font-weight: bold;
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 800px) {
+.newsStand{
+    width: 380px;
+    height: 290px;
+  }
 }
 </style>

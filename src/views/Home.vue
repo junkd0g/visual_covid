@@ -1,18 +1,18 @@
 <template>
   <div class="home">
     <navi/>
-    <Covid />
+    <Total />
   </div>
 </template>
 
 <script>
-import Covid from '@/components/Covid.vue'
+import Total from '@/components/Total.vue'
 import Navi from '@/components/Nav'
 
 export default {
   name: 'Home',
   components: {
-    Covid,
+    Total,
     Navi
   }
 } 
