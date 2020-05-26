@@ -2,7 +2,7 @@
 
   <div>
     <div>
-        <div class="w3-container w3-content newsStand">
+        <div class="w3-container w3-content newsStandBig">
           <div class="w3-panel w3-white w3-card w3-display-container">
             <mdb-container>
               <mdb-line-chart
@@ -114,20 +114,3 @@
     },
   }
 </script>
-
-<style scoped>
-.newsStand{
-    width: 670px;
-    height: 400px;
-  }
-
-
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 800px) {
-.newsStand{
-    width: 380px;
-    height: 290px;
-  }
-}
-</style>

@@ -135,24 +135,3 @@
     }
 
 </script>
-
-
-<style>
-#dropdown-1 + #dropdown-1{
-   margin-left:20px;
-}
-  .m-md-2 .dropdown-menu {
-    max-height: 400px;
-    overflow-y: scroll;
-  }
-  .box {
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .box>* {
-    flex: 1 1 80px;
-  }
-
-</style>

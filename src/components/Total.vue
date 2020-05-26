@@ -151,33 +151,3 @@
     }
   }
 </script>
-
-<style scoped>
-@import '../scss/_box.scss';
-
-.newsStand{
-    width: 500px;
-}
-
-.gNumber {
-  color: #42b983;
-  font-weight: bold;
-}
-.lilika{
-    font-size:18px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 800px) {
-.newsStand{
-    width: 380px;
-    height: 290px;
-  }
-}
-
-</style>

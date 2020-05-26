@@ -2,7 +2,7 @@
 
   <div class="outer">
 
-    <div class="w3-container w3-content">
+    <div class="w3-container w3-content newsStand">
         <p class="w3-opacity"><b>Today's news </b></p> 
         <div class="w3-panel w3-white w3-card w3-display-container" >
             <p class="lilika"><b>{{ newsData[index].source}}</b></p>
@@ -65,30 +65,3 @@ import axios from 'axios'
    }
 
 </script>
-
-<style scoped>
-.marika{
-    font-size:28px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-.marika:hover{
-    color: #3366FF;
-}
-.lilika{
-    font-size:18px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-.newsStand{
-    width: 500px;
-}
-
-.openLink{
-    text-align:right;position: absolute;bottom: 0; right: 0;
-}
-</style>

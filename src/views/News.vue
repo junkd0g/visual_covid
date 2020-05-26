@@ -10,7 +10,7 @@
           <div class="w3-panel w3-white w3-card w3-display-container newsStand">
               <p class="lilika"><b> {{ item.source}} </b></p>
               <p> {{ item.title }}</p>
-              <a class="w3-bar-item  marika openLink" :href="item.url" target="_blank">
+              <a class="w3-bar-item marika2 openLink" :href="item.url" target="_blank">
                   <i style="font-size:24px" class="fa">&#xf08e;</i>
               </a>
           </div>
@@ -53,42 +53,3 @@
    }
 
 </script>
-
-<style>
-  @import '../scss/_box.scss';
-  @import '../scss/_card.scss';
-
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 800px) {
-    .marika{
-      font-size:22px;
-      color: #42b983;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    .marika:hover{
-      color: #3366FF;
-    }
-
-    .lilika{
-      font-size:18px;
-      color: #42b983;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    .newsStand{
-      margin:0 auto;
-      width: 350px;
-      height: 150px;
-    }
-
-
-    .openLink{
-      text-align:right;position: absolute;bottom: 0; right: 0;
-    }
-  }
-</style>
-

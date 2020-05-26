@@ -43,4 +43,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+@import './scss/dark.scss';
 </style>

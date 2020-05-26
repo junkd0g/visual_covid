@@ -41,23 +41,3 @@
     }
 
 </script>
-
-<style scoped>
-.gNumber {
-  color: #42b983;
-  font-weight: bold;
-}
-
-.newsStand{
-    width: 380px;
-}
-
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 800px) {
-.newsStand{
-    width: 380px;
-    height: 290px;
-  }
-}
-</style>
