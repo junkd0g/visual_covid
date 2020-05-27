@@ -6,12 +6,55 @@
     flex-wrap: wrap;
 }
 
-.body{
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
     background-color: #000000;
 }
+.body{
+    background-color: #000000;
+    color: white;
 
-.w3-panel{
-    background-color: w3-black;
+}
+
+.modeText{
+    color: #ffffff;
+}
+
+.backgroundColor{
+    color: #000000;
+
+}
+
+.statiscalNumberTable{
+    color: #ffffff;
+}
+
+table, th, td {
+    color: #ffffff;
+}   
+
+.mainPanel{
+    background-color: #141d26;
+    color: #ffffff;
+}
+
+.totalChar{
+    background-color: #141d26;
+    color: #ffffff;
+}
+
+.marika3{
+    font-size: 44px;
+    color: #cc0000;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.marika3:hover{
+    color: #3366FF;
 }
 
 .box>* {
@@ -22,21 +65,25 @@
     width: 500px;
 }
 
+.newsStandSmall{
+    width: 500px;
+}
+
 .gNumber {
-  color: #42b983;
+  color:  #cc0000;
   font-weight: bold;
 }
 
 .lilika{
     font-size:18px;
-    color: #42b983;
+    color:  #cc0000;
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .marika{
     font-size:28px;
-    color: #42b983;
+    color: #cc0000;
     padding-left: 15px;
     padding-right: 15px;
 
@@ -70,7 +117,7 @@
 
 .marika2{
     font-size:22px;
-    color: #42b983;
+    color:  #cc0000;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -99,7 +146,7 @@ and (max-device-width : 800px) {
   
     .marika2{
         font-size:22px;
-        color: #42b983;
+        color: #cc0000;
         padding-left: 15px;
         padding-right: 15px;
     }

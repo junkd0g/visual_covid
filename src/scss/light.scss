@@ -1,3 +1,10 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background-color: #fff;
+}
 .box {
     display: flex;
     flex-direction: row;
@@ -10,6 +17,14 @@
 
 .newsStand{
     width: 500px;
+}
+.backgroundColor{
+    color: #fff;
+
+}
+
+.mainPanel{
+    background-color: #fff;
 }
 
 .gNumber {
@@ -32,6 +47,17 @@
 
 }
 .marika:hover{
+    color: #3366FF;
+}
+
+.marika3{
+    font-size: 44px;
+    color: #42b983;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.marika3:hover{
     color: #3366FF;
 }
 
@@ -65,7 +91,7 @@
 
 .marika2:hover{
     color: #3366FF;
-}
+}   
 
 @media only screen 
 and (min-device-width : 375px) 

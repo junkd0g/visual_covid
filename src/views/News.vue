@@ -7,7 +7,7 @@
     <div class="box vivika" >
       <div v-for="item in newsData" :key="item"> 
         <div class="w3-container w3-content">
-          <div class="w3-panel w3-white w3-card w3-display-container newsStand">
+          <div style="height:150px;" class="w3-panel mainPanel w3-card w3-display-container newsStand">
               <p class="lilika"><b> {{ item.source}} </b></p>
               <p> {{ item.title }}</p>
               <a class="w3-bar-item marika2 openLink" :href="item.url" target="_blank">
@@ -46,9 +46,7 @@
         }
       },
       mounted(){
-
         this.requestCurve()
-      
       }
    }
 

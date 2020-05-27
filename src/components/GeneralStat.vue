@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
                              
     <div class="w3-container w3-content newsStand">
-        <p class="w3-opacity"><b>Statistics Today</b></p> 
-        <div class="w3-panel w3-white w3-card w3-display-container">
+        <p class="modeText"><b>Statistics Today</b></p> 
+        <div class="w3-panel w3-card w3-display-container mainPanel">
             <br>
             Total covid-19 cases: <span class="gNumber">{{ info.data.totalCases }} </span><br>
             Total deaths associated with covid-19: <span class="gNumber"> {{ info.data.totalDeaths }} </span><br>

@@ -3,12 +3,12 @@
   <div class="outer">
 
     <div class="w3-container w3-content newsStand">
-        <p class="w3-opacity"><b>Today's news </b></p> 
-        <div class="w3-panel w3-white w3-card w3-display-container" >
+        <p class="modeText"><b>Today's news </b></p> 
+        <div class="w3-panel mainPanel w3-card w3-display-container" >
             <p class="lilika"><b>{{ newsData[index].source}}</b></p>
             <p> {{ newsData[index].title }}</p>
-            <i class="fa fa-arrow-circle-left marika" v-on:click="updateBackwards" v-on:keyup="keymonitorBackward"></i>
-            <i class="fa fa-arrow-circle-right marika" v-on:click="updateForward" v-on:keyup="keymonitorForward"></i>
+            <i class="fa fa-arrow-circle-left marika3" v-on:click="updateBackwards" v-on:keyup="keymonitorBackward"></i>
+            <i class="fa fa-arrow-circle-right marika3" v-on:click="updateForward" v-on:keyup="keymonitorForward"></i>
             <a class="w3-bar-item  marika openLink" :href="newsData[index].url" target="_blank">
                 <i style="font-size:24px" class="fa">&#xf08e;</i>
             </a>

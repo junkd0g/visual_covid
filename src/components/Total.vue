@@ -12,14 +12,14 @@
        <Today />
       </div>
 
-      <div id="statiscalNumber">
-        <b-table id="my-table" class="table table-fixed" striped :items="sdeaths" :fields="fields"/>
+      <div id="statiscalNumber" >
+        <b-table id="my-table" class="table table-fixed statiscalNumberTable" striped :items="sdeaths" :fields="fields"/>
       </div>
 
       <div id="mobileStatiscalNumberID">
         <div v-for="item in sdeaths" :key="item">
           <div class="w3-container w3-content newsStand">
-            <div class="w3-panel w3-white w3-card w3-display-container">
+            <div class="w3-panel w3-card w3-display-container mainPanel">
               <p class="lilika"><b> {{ item.country }} </b></p>
               Total covid-19 cases: <span class="gNumber"> {{ item.cases }} </span><br>
               Today's covid-19 cases: <span class="gNumber"> {{ item.todayCases }} </span><br>

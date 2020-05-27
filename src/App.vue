@@ -1,18 +1,15 @@
 <template>
-  <div id="app">
+  <div id="app"  v-bind:class="{ 'theme-dark' : nightMode }">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <nprogress-container></nprogress-container>
-
-  
     <router-view/>
-
   </div>
-</template>
 
+</template>
 <script>
+
 export default {
   methods: {
     navBar(){
@@ -25,24 +22,10 @@ export default {
     }
   }
 }
-
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style scoped>
+  @import "./scss/main.scss";
+  @import "./scss/main_header.scss";
 
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-@import './scss/dark.scss';
 </style>

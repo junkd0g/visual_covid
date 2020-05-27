@@ -15,9 +15,9 @@
     <div class="box">
       
       <div class="dd">
-        <p class="w3-opacity"><b>General country's data</b></p>
+        <p class="modeText"><b>General country's data</b></p>
         <div class="w3-container w3-content newsStandBig">
-          <div class="w3-panel w3-white w3-card w3-display-container">
+          <div class="w3-panel  w3-card w3-display-container mainPanel">
             <p class="lilika"><b><span class="gNumber"> {{ infoCountry.country }} </span> </b></p>
             Total covid-19 cases: <span class="gNumber"> {{ infoCountry.cases }} </span><br>
             Today's covid-19 cases: <span class="gNumber"> {{ infoCountry.todayCases }} </span><br>
@@ -35,7 +35,7 @@
 
         
         <div class="dd">
-          <p class="w3-opacity"><b>Deaths from 22/01/2020</b></p>
+          <p class="modeText"><b>Deaths from 22/01/2020</b></p>
             <curve-compare
               :key="rData"
               v-bind:countryOneData="rData.countryOne.dataDeaths"
@@ -47,7 +47,7 @@
 
         <div class="dd">
           <br>
-          <p class="w3-opacity"><b>Deaths from first death</b></p>
+          <p class="modeText"><b>Deaths from first death</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataDeathsFromFirst"
@@ -58,7 +58,7 @@
         </div>
 
         <div class="dd">
-          <p class="w3-opacity"><b>Deaths per day</b></p>
+          <p class="modeText"><b>Deaths per day</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataDeathsPerDay"
@@ -69,7 +69,7 @@
         </div>
 
         <div class="dd">
-          <p class="w3-opacity"><b>Cases from 22/01/2020</b></p>
+          <p class="modeText"><b>Cases from 22/01/2020</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataCases"
@@ -80,7 +80,7 @@
         </div>
 
         <div class="dd">
-          <p class="w3-opacity"><b>Cases per day</b></p>
+          <p class="modeText"><b>Cases per day</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataCasesFromFirst"
@@ -91,7 +91,7 @@
         </div>
 
         <div class="dd">
-          <p class="w3-opacity"><b>Recovered pantients</b></p>
+          <p class="modeText"><b>Recovered pantients</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataRecoverd"

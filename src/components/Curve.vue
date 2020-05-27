@@ -14,7 +14,7 @@
 
     <div class="box">
         <div><br>
-          Deaths from 22/01/2020
+          <p class="modeText"><b>Deaths from 22/01/2020</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataDeaths"
@@ -24,7 +24,7 @@
           />
         </div> <br>  <br>
         <div><br>
-          From first death
+         <p class="modeText"> <b>From first death</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataDeathsFromFirst"
@@ -34,7 +34,7 @@
           />
         </div> <br>  <br>
         <div><br>
-          Deaths per day after first death
+          <p class="modeText"><b>Deaths per day after first death</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataDeathsPerDay"
@@ -44,7 +44,7 @@
           />
         </div> <br>  <br>
         <div><br>
-          Recovered patients
+          <p class="modeText"><b>Recovered patients</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataRecoverd"
@@ -54,7 +54,7 @@
           />
         </div> <br>  <br>
         <div><br>
-          Cases from 22/01/2020
+          <p class="modeText"><b>Cases from 22/01/2020</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataCases"
@@ -64,7 +64,7 @@
           />
         </div> <br>  <br>
         <div><br>
-          Unique cases per day from first case
+          <p class="modeText"><b>Unique cases per day from first case</b></p>
           <curve-compare
             :key="rData"
             v-bind:countryOneData="rData.countryOne.dataCasesFromFirst"

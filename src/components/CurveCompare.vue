@@ -3,8 +3,8 @@
   <div>
     <div>
         <div class="w3-container w3-content newsStandBig">
-          <div class="w3-panel w3-white w3-card w3-display-container">
-            <mdb-container>
+          <div class="w3-panel w3-card w3-display-containermainPanel mainPanel">
+            <mdb-container class="totalChar">
               <mdb-line-chart
                 :data="lineChartData"
                 :options="lineChartOptions"
@@ -25,7 +25,7 @@
   import { mdbLineChart, mdbContainer } from "mdbvue";
   import { isMobile } from 'mobile-device-detect';
 
-  export default {
+export default {
     name: "ChartPage",
     components: {
       mdbLineChart,
@@ -74,8 +74,8 @@
           labels: Array.from(Array(displayLength).keys()),
           datasets: [{
             label: this.countryOneName,
-            backgroundColor: "rgba(255, 99, 132, 0.1)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: "rgba(204, 0, 0, 0.1)",
+            borderColor: "rgba(204, 0, 0, 1.0)",
             borderWidth: 0.7,
             data : this.countryOneData
           },
