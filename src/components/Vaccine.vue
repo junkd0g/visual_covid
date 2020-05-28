@@ -2,9 +2,9 @@
 
   <div class="outer">
 
-    <div class="w3-container w3-content">
-        <p class="modeText"><b>Today's news </b></p> 
-        <div class="w3-panel mainPanel w3-card w3-display-container totalStand" >
+    <div class="w3-container w3-content newsStand">
+        <p class="modeText"><b>Vaccine latest news </b></p> 
+        <div class="w3-panel mainPanel w3-card w3-display-container" >
             <p class="lilika"><b>{{ newsData[index].source}}</b></p>
             <p> {{ newsData[index].title }}</p>
             <i class="fa fa-arrow-circle-left marika3" v-on:click="updateBackwards" v-on:keyup="keymonitorBackward"></i>
@@ -31,7 +31,7 @@ import axios from 'axios'
       },
       methods: {
         requestCurve(){
-          axios.get('http://localhost:9080/api/news')
+          axios.get('http://localhost:9080/api/news/vaccine')
             .then(response  => (
               this.newsData = response.data.data))
             .catch(function (error) {   

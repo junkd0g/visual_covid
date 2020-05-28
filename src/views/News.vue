@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
     <navi/>
-    <div class="box vivika" >
+    <div class="box" >
       <div v-for="item in newsData" :key="item"> 
         <div class="w3-container w3-content">
           <div style="height:150px;" class="w3-panel mainPanel w3-card w3-display-container newsStand">

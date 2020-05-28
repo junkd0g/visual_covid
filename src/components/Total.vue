@@ -12,6 +12,14 @@
        <Today />
       </div>
 
+      <div>
+       <Vaccine />
+      </div>
+
+      <div>
+       <Treatment />
+      </div>
+
       <div id="statiscalNumber" >
         <b-table id="my-table" class="table table-fixed statiscalNumberTable" striped :items="sdeaths" :fields="fields"/>
       </div>
@@ -48,12 +56,16 @@
   import axios from 'axios'
   import GeneralStat from './GeneralStat'
   import Today from './Today'
+  import Vaccine from './Vaccine'
+  import Treatment from './Treatment'
   import { isMobile } from 'mobile-device-detect';
 
   export default {
     components: {
       GeneralStat,
-      Today
+      Today,
+      Vaccine,
+      Treatment
     },
     data() {
       return {

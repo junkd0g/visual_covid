@@ -23,6 +23,11 @@
 
 }
 
+.totalStand{
+	width: 500px;
+	height: 350px;
+}
+
 .mainPanel{
     background-color: #fff;
 }
@@ -98,12 +103,12 @@ and (min-device-width : 375px)
 and (max-device-width : 800px) {
 
     .newsStand{
-        width: 380px;
+        width: 350px;
         height: 290px;
     }
 
     .newsStandBig{
-        width: 380px;
+        width: 350px;
         height: 290px;  
     }
 
@@ -123,6 +128,11 @@ and (max-device-width : 800px) {
     }
 }
 @media(prefers-color-scheme: dark) {
+
+	.totalStand{
+		width: 500px;
+		height: 350px;
+	}
 	.box {
 		background-color: #000000;
 	
@@ -256,12 +266,12 @@ and (max-device-width : 800px) {
 	and (max-device-width : 800px) {
 	
 		.newsStand{
-			width: 380px;
+			width: 350px;
 			height: 290px;
 		}
 	
 		.newsStandBig{
-			width: 380px;
+			width: 350px;
 			height: 290px;  
 		}
 	
