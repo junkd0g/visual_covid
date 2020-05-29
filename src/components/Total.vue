@@ -9,16 +9,29 @@
       </div>
 
       <div>
-       <Today />
+        <Today
+          :key="newsData"
+          v-bind:pData="newsData.news.data"
+          v-bind:label="'Latest covid-19 news'"
+        />
       </div>
 
       <div>
-       <Vaccine />
+        <Today
+          :key="newsData"
+          v-bind:pData="newsData.vaccine.data"
+          v-bind:label="'Latest covid-19 vaccine news'"
+        />
       </div>
 
       <div>
-       <Treatment />
+        <Today
+          :key="newsData"
+          v-bind:pData="newsData.treament.data"
+          v-bind:label="'Latest covid019 treatment news'"
+        />
       </div>
+
 
       <div id="statiscalNumber" >
         <b-table id="my-table" class="table table-fixed statiscalNumberTable" striped :items="sdeaths" :fields="fields"/>
@@ -55,20 +68,21 @@
 <script>
   import axios from 'axios'
   import GeneralStat from './GeneralStat'
-  import Today from './Today'
-  import Vaccine from './Vaccine'
-  import Treatment from './Treatment'
+  import Today from './TodayNews'
+  //import Vaccine from './Vaccine'
+  //import Treatment from './Treatment'
   import { isMobile } from 'mobile-device-detect';
 
   export default {
     components: {
       GeneralStat,
       Today,
-      Vaccine,
-      Treatment
+      //Vaccine,
+      //Treatment
     },
     data() {
       return {
+        newsData : {},
         window: {
             width: 0,
             height: 0,
@@ -145,9 +159,18 @@
           y.style.display = "none";
           x.style.display = "block";
         }
-      }
+      },
+      requestNews(){
+        axios.get('http://localhost:9080/api/news/all')
+          .then(response  => (
+            this.newsData = response.data))
+          .catch(function (error) {   
+            console.log(error)
+        })
+      },
     },
     mounted(){
+        this.requestNews()
 
         axios.defaults.baseURL = 'http://localhost:9080/api/'
         axios.post(`sort`, {
