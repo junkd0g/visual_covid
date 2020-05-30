@@ -54,6 +54,8 @@
               Tests per one million people: <span class="gNumber"> {{ item.testsPerOneMillion }} </span><br>
             </div>
           </div>
+          <br>
+          <br>
         </div>
 
       </div>
