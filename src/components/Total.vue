@@ -59,9 +59,6 @@
         </div>
 
       </div>
-
-
-
   </div>
 
 </template>
@@ -71,6 +68,10 @@
   import GeneralStat from './GeneralStat'
   import Today from './TodayNews'
   import { isMobile } from 'mobile-device-detect';
+  import FEData from '../lib/FEData.js';
+
+  var fedata= new FEData();
+
 
   export default {
     components: {
@@ -79,52 +80,7 @@
     },
     data() {
       return {
-        fields : [
-        {
-          key: 'country',
-          sortable: true
-        },
-        {
-          key: 'cases',
-          sortable: true
-        },
-        {
-          key: 'todayCases',
-          sortable: true,
-        },
-        {
-          key: 'deaths',
-          sortable: true
-        },
-        {
-          key: 'todayDeaths',
-          sortable: true
-        },
-        {
-          key: 'recovered',
-          sortable: true,
-        },
-        {
-          key: 'active',
-          sortable: true
-        },
-        {
-          key: 'critical',
-          sortable: true
-        },
-        {
-          key: 'casesPerOneMillion',
-          sortable: true,
-        },
-        {
-          key: 'tests',
-          sortable: true
-        },
-        {
-          key: 'testsPerOneMillion',
-          sortable: true,
-        }
-      ],
+        fields : fedata.tableData(),
         newsData : {},
         window: {
             width: 0,

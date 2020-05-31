@@ -1,22 +1,19 @@
 <template>
 
   <div>
-    <div>
-        <div class="w3-container w3-content newsStandBig">
-          <div class="w3-panel w3-card w3-display-containermainPanel mainPanel">
-            <mdb-container class="totalChar">
-              <mdb-line-chart
-                :data="lineChartData"
-                :options="lineChartOptions"
-                :width="dimension.width"
-                :height="dimension.height"
-                :key="dimension"
-              ></mdb-line-chart>
-            </mdb-container>
-          </div>
-        </div>
+    <div class="w3-container w3-content newsStandBig">
+      <div class="w3-panel w3-card w3-display-containermainPanel mainPanel">
+        <mdb-container class="totalChar">
+          <mdb-line-chart
+            :data="lineChartData"
+            :options="lineChartOptions"
+            :width="dimension.width"
+            :height="dimension.height"
+            :key="dimension"
+          />
+        </mdb-container>
+      </div>
     </div>
-
   </div>
 
 </template>

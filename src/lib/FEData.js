@@ -1,6 +1,6 @@
 export default class FEData {
 
-    tableData(){
+    tableData() {
       return  [
         {
           key: 'country',

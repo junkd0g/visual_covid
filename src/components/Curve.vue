@@ -13,71 +13,103 @@
 
 
     <div class="box">
-        <div><br>
-          <p class="modeText"><b>Deaths from 22/01/2020</b></p>
-          <curve-compare
-            :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataDeaths"
-            v-bind:countryTwoData="rData.countryTwo.dataDeaths"
-            v-bind:countryOneName="v1"
-            v-bind:countryTwoName="v2"
-          />
-        </div> <br>  <br>
-        <div><br>
-         <p class="modeText"> <b>From first death</b></p>
-          <curve-compare
-            :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataDeathsFromFirst"
-            v-bind:countryTwoData="rData.countryTwo.dataDeathsFromFirst"
-            v-bind:countryOneName="v1"
-            v-bind:countryTwoName="v2"
-          />
-        </div> <br>  <br>
-        <div><br>
-          <p class="modeText"><b>Deaths per day after first death</b></p>
-          <curve-compare
-            :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataDeathsPerDay"
-            v-bind:countryTwoData="rData.countryTwo.dataDeathsPerDay"
-            v-bind:countryOneName="v1"
-            v-bind:countryTwoName="v2"
-          />
-        </div> <br>  <br>
-        <div><br>
-          <p class="modeText"><b>Recovered patients</b></p>
-          <curve-compare
-            :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataRecoverd"
-            v-bind:countryTwoData="rData.countryTwo.dataRecoverd"
-            v-bind:countryOneName="v1"
-            v-bind:countryTwoName="v2"
-          />
-        </div> <br>  <br>
-        <div><br>
-          <p class="modeText"><b>Cases from 22/01/2020</b></p>
-          <curve-compare
-            :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataCases"
-            v-bind:countryTwoData="rData.countryTwo.dataCases"
-            v-bind:countryOneName="v1"
-            v-bind:countryTwoName="v2"
-          />
-        </div> <br>  <br>
-        <div><br>
-          <p class="modeText"><b>Unique cases per day from first case</b></p>
-          <curve-compare
-            :key="rData"
-            v-bind:countryOneData="rData.countryOne.dataCasesFromFirst"
-            v-bind:countryTwoData="rData.countryTwo.dataCasesFromFirst"
-            v-bind:countryOneName="v1"
-            v-bind:countryTwoName="v2"
-          />
-        </div>
-        
+      <div><br>
+        <p class="modeText">
+          <b>
+            Deaths from 22/01/2020
+          </b>
+        </p>
+        <curve-compare
+          :key="rData"
+          v-bind:countryOneData="rData.countryOne.dataDeaths"
+          v-bind:countryTwoData="rData.countryTwo.dataDeaths"
+          v-bind:countryOneName="v1"
+          v-bind:countryTwoName="v2"
+        />
+      </div> 
+
+      <div>
+        <br>
+        <p class="modeText"> 
+          <b>
+            From first death
+          </b>
+        </p>
+        <curve-compare
+          :key="rData"
+          v-bind:countryOneData="rData.countryOne.dataDeathsFromFirst"
+          v-bind:countryTwoData="rData.countryTwo.dataDeathsFromFirst"
+          v-bind:countryOneName="v1"
+          v-bind:countryTwoName="v2"
+        />
+      </div>
+
+      <div>
+        <br>
+        <p class="modeText">
+          <b>
+            Deaths per day after first death
+          </b>
+        </p>
+        <curve-compare
+          :key="rData"
+          v-bind:countryOneData="rData.countryOne.dataDeathsPerDay"
+          v-bind:countryTwoData="rData.countryTwo.dataDeathsPerDay"
+          v-bind:countryOneName="v1"
+          v-bind:countryTwoName="v2"
+        />
+      </div>
+
+      <div>
+        <br>
+        <p class="modeText">
+          <b>
+            Recovered patients
+          </b>
+        </p>
+        <curve-compare
+          :key="rData"
+          v-bind:countryOneData="rData.countryOne.dataRecoverd"
+          v-bind:countryTwoData="rData.countryTwo.dataRecoverd"
+          v-bind:countryOneName="v1"
+          v-bind:countryTwoName="v2"
+        />
+      </div>
+
+      <div>
+        <br>
+        <p class="modeText">
+          <b>
+            Cases from 22/01/2020
+          </b>
+        </p>
+        <curve-compare
+          :key="rData"
+          v-bind:countryOneData="rData.countryOne.dataCases"
+          v-bind:countryTwoData="rData.countryTwo.dataCases"
+          v-bind:countryOneName="v1"
+          v-bind:countryTwoName="v2"
+        />
+      </div>
+
+      <div>
+        <br>
+        <p class="modeText">
+          <b>
+            Unique cases per day from first case
+          </b>
+        </p>
+        <curve-compare
+          :key="rData"
+          v-bind:countryOneData="rData.countryOne.dataCasesFromFirst"
+          v-bind:countryTwoData="rData.countryTwo.dataCasesFromFirst"
+          v-bind:countryOneName="v1"
+          v-bind:countryTwoName="v2"
+        />
+      </div>
+  
     </div>
-       
-
-
+ 
   </div>
 
 </template>

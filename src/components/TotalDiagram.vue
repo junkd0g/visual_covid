@@ -1,17 +1,14 @@
 <template>
 
   <div>
-
     <mdb-container class="totalChar" >
       <mdb-horizontal-bar-chart
         :data="horizontalBarChartData"
         :options="horizontalBarChartOptions"
         :width="dimension.width"
         :height="dimension.height"
-      >
-      </mdb-horizontal-bar-chart>
+      />
     </mdb-container>
-
   </div>
 
 </template>
