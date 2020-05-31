@@ -91,7 +91,7 @@
     margin-left:20px;
 }
 .marika2{
-    font-size:22px;
+    font-size:28px;
     color: #42b983;
     padding-left: 15px;
     padding-right: 15px;
@@ -120,7 +120,7 @@ and (max-device-width : 800px) {
     }
   
     .marika2{
-        font-size:22px;
+        font-size:28px;
         color: #42b983;
         padding-left: 15px;
         padding-right: 15px;
@@ -231,6 +231,10 @@ and (max-device-width : 800px) {
 	}
 	
 	.openLink{
+		font-size:28px;
+		color:  #cc0000;
+		padding-left: 15px;
+		padding-right: 15px;
 		text-align:right;position: absolute;bottom: 0; right: 0;
 	}
 	
@@ -251,13 +255,6 @@ and (max-device-width : 800px) {
 	
 	#dropdown-1 + #dropdown-1{
 		margin-left:20px;
-	}
-	
-	.marika2{
-		font-size:22px;
-		color:  #cc0000;
-		padding-left: 15px;
-		padding-right: 15px;
 	}
 	
 	.marika2:hover{
@@ -283,7 +280,7 @@ and (max-device-width : 800px) {
 		}
 	  
 		.marika2{
-			font-size:22px;
+			font-size:28px;
 			color: #cc0000;
 			padding-left: 15px;
 			padding-right: 15px;

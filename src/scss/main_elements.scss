@@ -1,0 +1,50 @@
+@import url('https://rsms.me/inter/inter.css');
+
+
+#app {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background-color: #fff;
+}
+.box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box>* {
+    flex: 1 1 ;
+}
+
+.totalStand{
+	width: 500px;
+	height: 150px;
+}
+
+.newsStand{
+    width: 500px;
+}
+
+.openLink{
+    text-align:right;position: absolute;bottom: 0; right: 0;
+}
+
+.newsStandBig{
+    width: 670px;
+    height: 400px;
+}
+
+.m-md-2 .dropdown-menu {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.dd + .dd{
+   margin-bottom:50px;
+}
+
+#dropdown-1 + #dropdown-1{
+    margin-left:20px;
+}

@@ -31,9 +31,9 @@
           v-bind:label="'Latest covid019 treatment news'"
         />
       </div>
-
-
-      <div id="statiscalNumber" >
+    
+    </div>
+     <div id="statiscalNumber" >
         <b-table id="my-table" class="table table-fixed statiscalNumberTable" striped :items="sdeaths" :fields="fields"/>
       </div>
 
@@ -60,8 +60,7 @@
 
       </div>
 
-    
-    </div>
+
 
   </div>
 
@@ -71,71 +70,67 @@
   import axios from 'axios'
   import GeneralStat from './GeneralStat'
   import Today from './TodayNews'
-  //import Vaccine from './Vaccine'
-  //import Treatment from './Treatment'
   import { isMobile } from 'mobile-device-detect';
 
   export default {
     components: {
       GeneralStat,
       Today,
-      //Vaccine,
-      //Treatment
     },
     data() {
       return {
+        fields : [
+        {
+          key: 'country',
+          sortable: true
+        },
+        {
+          key: 'cases',
+          sortable: true
+        },
+        {
+          key: 'todayCases',
+          sortable: true,
+        },
+        {
+          key: 'deaths',
+          sortable: true
+        },
+        {
+          key: 'todayDeaths',
+          sortable: true
+        },
+        {
+          key: 'recovered',
+          sortable: true,
+        },
+        {
+          key: 'active',
+          sortable: true
+        },
+        {
+          key: 'critical',
+          sortable: true
+        },
+        {
+          key: 'casesPerOneMillion',
+          sortable: true,
+        },
+        {
+          key: 'tests',
+          sortable: true
+        },
+        {
+          key: 'testsPerOneMillion',
+          sortable: true,
+        }
+      ],
         newsData : {},
         window: {
             width: 0,
             height: 0,
             isMobile: true,
         },
-        fields: [
-          {
-            key: 'country',
-            sortable: true
-          },
-          {
-            key: 'cases',
-            sortable: true
-          },
-          {
-            key: 'todayCases',
-            sortable: true,
-          },
-          {
-            key: 'deaths',
-            sortable: true
-          },
-          {
-            key: 'todayDeaths',
-            sortable: true
-          },
-          {
-            key: 'recovered',
-            sortable: true,
-          },
-          {
-            key: 'active',
-            sortable: true
-          },
-          {
-            key: 'critical',
-            sortable: true
-          },
-          {
-            key: 'casesPerOneMillion',
-            sortable: true,
-          },
-          {
-            key: 'tests',
-            sortable: true
-          },
-          {
-            key: 'testsPerOneMillion',
-            sortable: true,
-          }
-        ],
         sdeaths: [],
         scases: [],
       }
@@ -143,18 +138,16 @@
     created() {
         window.addEventListener('resize', this.handleResize);
         this.handleResize();
-        this.window.isMobile = this.showMobile()
     },
     destroyed() {
         window.removeEventListener('resize', this.handleResize);
     },
     methods: {
       handleResize() {
-        this.window.width = window.innerWidth;
         var x = document.getElementById("statiscalNumber");
         var y = document.getElementById("mobileStatiscalNumberID");
 
-        if (isMobile == true || this.window.width < 800) {
+        if (isMobile == true || window.innerWidth < 800) {
           x.style.display = "none";
           y.style.display = "block";
         }else{
