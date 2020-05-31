@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
   <router-view/>
-  </div>
+ </div>
 
 </template>
 <script>
@@ -27,5 +27,4 @@ export default {
 <style scoped>
   @import "./scss/main.scss";
   @import "./scss/main_header.scss";
-
 </style>

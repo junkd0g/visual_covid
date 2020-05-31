@@ -16,6 +16,9 @@
 <script>
   import { mdbHorizontalBarChart, mdbContainer } from "mdbvue";
   import { isMobile } from 'mobile-device-detect';
+  import FEData from '../lib/FEData.js';
+
+  var fedata= new FEData();
 
   export default {
     name: "ChartPage",
@@ -37,74 +40,24 @@
     },
     methods: {
       handleResize() {
-    
-
         if (isMobile == true) {
           this.dimension.height = 280
           this.dimension.width = 310
         }else{
           this.dimension.height = 300
           this.dimension.width = 600
-
         }
       }
     },
     data() {
-        return {
-          dimension :{
-            height: 300,
-            width: 600,
-          },
-          horizontalBarChartData: {
-              labels: this.countries,
-              datasets: [
-                {
-                  label: this.typeOfDiagram,
-                  data: this.deathsNumber,
-                  backgroundColor: [
-                    "#cc0000",
-                    "#6200ee",
-                    "#3700b3",
-                    "#045757",
-                    "#f6c90e",
-                    "#0a91ab"
-                ],
-                borderColor: [
-                  "#fff",
-                  "#fff",
-                  "#fff",
-                  "#fff",
-                  "#fff",
-                  "#fff",
-                ],
-                borderWidth: 1
-              }
-            ]
-          },
-          horizontalBarChartOptions: {
-            responsive: false,
-            maintainAspectRatio: false,
-            scales: {
-              xAxes: [
-                {
-                  barPercentage: 1,
-                  gridLines: {
-                    display: true,
-                    color: "rgba(0, 0, 0, 0.1)"
-                  }
-                }
-              ],
-              yAxes: [
-                {
-                  gridLines: {
-                    display: true,
-                    color: "rgba(0, 0, 0, 0.1)"
-                  }
-                }
-              ]
-            }
-          },
-        }
+      return {
+        dimension :{
+          height: 300,
+          width: 600,
+        },
+        horizontalBarChartData: fedata. horizontalBarChartData(this.countries, this.typeOfDiagram, this.deathsNumber),
+        horizontalBarChartOptions: fedata.horizontalBarChartOptionsData(),
+      }
     },
   }
 </script>

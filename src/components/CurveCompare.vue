@@ -21,8 +21,11 @@
 <script>
   import { mdbLineChart, mdbContainer } from "mdbvue";
   import { isMobile } from 'mobile-device-detect';
+  import FEData from '../lib/FEData.js';
 
-export default {
+  var fedata= new FEData();
+
+  export default {
     name: "ChartPage",
     components: {
       mdbLineChart,
@@ -43,8 +46,6 @@ export default {
     },
     methods: {
       handleResize() {
-    
-
         if (isMobile == true) {
           this.dimension.height = 280
           this.dimension.width = 310
@@ -56,58 +57,14 @@ export default {
       }
     },
     data() {
-      var displayLength;
-      if (this.countryOneData.length > this.countryTwoData.length){
-        displayLength = this.countryOneData.length;
-      }else{
-        displayLength =  this.countryTwoData.length
-      }
       return {
         dimension :{
           height: 300,
           width: 600,
         },
-        lineChartData: {
-          labels: Array.from(Array(displayLength).keys()),
-          datasets: [{
-            label: this.countryOneName,
-            backgroundColor: "rgba(204, 0, 0, 0.1)",
-            borderColor: "rgba(204, 0, 0, 1.0)",
-            borderWidth: 0.7,
-            data : this.countryOneData
-          },
-          {
-            label: this.countryTwoName,
-            backgroundColor: "rgba(151,187,205,0.2)",
-            borderColor: "rgba(151,187,205,1)",
-            borderWidth: 0.8,
-            data : this.countryTwoData
-          }
-         ]
-        },
-        lineChartOptions: {
-          responsive: false,
-          maintainAspectRatio: false,
-          scales: {
-            xAxes: [
-              {
-                gridLines: {
-                  display: true,
-                  color: "rgba(0, 0, 0, 0.1)"
-                }
-              }
-            ],
-            yAxes: [
-              {
-                gridLines: {
-                  display: true,
-                  color: "rgba(0, 0, 0, 0.1)"
-                }
-              }
-            ]
-          }
-        }
+        lineChartData: fedata.lineChartData(this.countryOneData, this.countryTwoData, this.countryOneName, this.countryTwoName),
+        lineChartOptions: fedata.lineChartOptionsData()
       }
-    },
+    }
   }
 </script>

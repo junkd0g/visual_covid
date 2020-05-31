@@ -48,8 +48,6 @@
                 this.index--
             }
         }
-      },
-      mounted(){
       }
    }
 

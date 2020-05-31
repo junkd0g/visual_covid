@@ -1,22 +1,17 @@
 <template>
   <div >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-
     <div class="topnav" id="myTopnav">
       <router-link to="/" >
         <i class="fa fa-home"></i>
       </router-link>
-      <router-link to="/country">
-        Country
-      </router-link>
       <router-link to="/diagrams">
-        Total Statistics Diagrams
+        Global Diagrams
+      </router-link>
+      <router-link to="/country">
+        Country Data
       </router-link>
       <router-link to="/compare">
-        Compare
+        Compare Countries
       </router-link>
       <router-link to="/news">
         News

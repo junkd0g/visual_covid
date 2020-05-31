@@ -72,7 +72,6 @@
 
   var fedata= new FEData();
 
-
   export default {
     components: {
       GeneralStat,
@@ -82,11 +81,6 @@
       return {
         fields : fedata.tableData(),
         newsData : {},
-        window: {
-            width: 0,
-            height: 0,
-            isMobile: true,
-        },
         sdeaths: [],
         scases: [],
       }
