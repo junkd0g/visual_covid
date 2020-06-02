@@ -2,7 +2,11 @@
 
   <div>
 
-    <br><br>
+    <br>
+    <div>
+      <World />
+    </div>
+    <br>
     <div class="box">
       <div>
         <GeneralStat />
@@ -67,6 +71,8 @@
   import axios from 'axios'
   import GeneralStat from './GeneralStat'
   import Today from './TodayNews'
+  import World from './WorldCalculate'
+
   import { isMobile } from 'mobile-device-detect';
   import FEData from '../lib/FEData.js';
 
@@ -76,6 +82,7 @@
     components: {
       GeneralStat,
       Today,
+      World,
     },
     data() {
       return {

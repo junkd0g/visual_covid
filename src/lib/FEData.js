@@ -74,33 +74,6 @@ export default class FEData {
     }
   }
 
-  lineChartData(countryOneData,countryTwoData,countryOneName,countryTwoName){
-    var displayLength;
-      if (countryOneData.length > countryTwoData.length){
-        displayLength = countryOneData.length;
-      }else{
-        displayLength = countryTwoData.length
-     }
-    return {
-      labels: Array.from(Array(displayLength).keys()),
-      datasets: [{
-        label: countryOneName,
-        backgroundColor: "rgba(204, 0, 0, 0.1)",
-        borderColor: "rgba(204, 0, 0, 1.0)",
-        borderWidth: 0.7,
-        data : countryOneData
-      },
-      {
-        label: countryTwoName,
-        backgroundColor: "rgba(151,187,205,0.2)",
-        borderColor: "rgba(151,187,205,1)",
-        borderWidth: 0.8,
-        data : countryTwoData
-      }
-     ]
-    }
-  }
-
   horizontalBarChartOptionsData() {
     return {
       responsive: false,
@@ -155,4 +128,83 @@ export default class FEData {
       ]
     }
   }
+
+  lineChartData(countryOneData,countryTwoData,countryOneName,countryTwoName){
+    var displayLength;
+      if (countryOneData.length > countryTwoData.length){
+        displayLength = countryOneData.length;
+      }else{
+        displayLength = countryTwoData.length
+     }
+    return {
+      labels: Array.from(Array(displayLength).keys()),
+      datasets: [{
+        label: countryOneName,
+        backgroundColor: "rgba(204, 0, 0, 0.1)",
+        borderColor: "rgba(204, 0, 0, 1.0)",
+        borderWidth: 0.7,
+        data : countryOneData
+      },
+      {
+        label: countryTwoName,
+        backgroundColor: "rgba(151,187,205,0.2)",
+        borderColor: "rgba(151,187,205,1)",
+        borderWidth: 0.8,
+        data : countryTwoData
+      }
+     ]
+    }
+  }
+
+  worldDataSets(cases, deaths, recovered){
+    return[
+      {
+        label: "Cases",
+        backgroundColor: "rgba(50, 102, 168, 0.1)",
+        borderColor: "rgba(50, 102, 168, 1)",
+        borderWidth: 1.0,
+        data: cases
+      },
+      {
+        label: "Deaths",
+        backgroundColor: "rgba(161, 13, 25,0.3)",
+        borderColor: "rgba(161, 13, 25,1)",
+        borderWidth: 1.0,
+        data: deaths
+      },
+      {
+        label: "Recovered",
+        backgroundColor: "rgba(50, 168, 109,0.2)",
+        borderColor: "rgba(50, 168, 109,1)",
+        borderWidth: 1.0,
+        data: recovered
+      }
+    ]
+  }
+
+  worldLineChartOptions(){
+    return {
+      responsive: false,
+      maintainAspectRatio: false,
+      scales: {
+        xAxes: [
+          {
+            gridLines: {
+              display: true,
+              color: "rgba(0, 0, 0, 0.1)"
+            }
+          }
+        ],
+        yAxes: [
+          {
+            gridLines: {
+              display: true,
+              color: "rgba(0, 0, 0, 0.1)"
+            }
+          }
+        ]
+      }
+    }
+  }
+
 }
