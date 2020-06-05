@@ -1,0 +1,5 @@
+support
+
+<div id="statiscalNumber" >
+        <b-table id="my-table" class="table table-fixed statiscalNumberTable" striped :items="sdeaths" :fields="fields"/>
+      </div>
