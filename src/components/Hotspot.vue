@@ -1,6 +1,6 @@
 <template>
   <div>
-  <p class="modeText"><b> World daily updates  </b></p>
+  <p class="modeText"><b> {{ title }}  </b></p>
     <mdb-container>
         <mdb-line-chart
           :data="lineChartData"
@@ -15,6 +15,7 @@
 
 <script>
   import { mdbLineChart, mdbContainer } from "mdbvue";
+  import axios from 'axios'
   import { isMobile } from 'mobile-device-detect';
   import FEData from '../lib/FEData.js';
   var fedata= new FEData();
@@ -33,32 +34,46 @@
         window.removeEventListener('resize', this.handleResize);
     },
     methods: {
+        requestWorld(){
+          axios.get('http://localhost:9080/api/hotspot')
+            .then(response  => (
+              this.worldData = response.data))
+          .catch(function (error) {   
+            console.log(error)
+          })
+        },
         handleResize() {
             if (isMobile == true) {
                 this.dimension.height = 280
                 this.dimension.width = 310
             }else{
-                this.dimension.height = this.desktopHeight
-                this.dimension.width = this.desktopWidth
+                this.dimension.height = 400
+                this.dimension.width = 600
             }
         }
     },
     props: {
-        cases: Array,
-        deaths: Array,
-        recovered: Array,
-        desktopHeight: Number,
-        desktopWidth: Number
+        most: Array,
+        second: Array,
+        third: Array,
+        title: String,
+        country: String,
+        countryTwo: String,
+        countryThree: String,
+    },
+    mounted() {
+        this.requestWorld()
     },
     data() {
       return {
         dimension :{
-          height: this.desktopHeight,
-          width: this.desktopWidth,
+          height: 500,
+          width: 1100,
         },
+        worldData : {},
         lineChartData: {
-          labels: Array.from(Array(this.cases.length).keys()),
-          datasets: fedata.worldDataSets(this.cases, this.deaths, this.recovered, "cases", "deaths", "recovered"),
+          labels: Array.from(Array(this.most.length).keys()),
+          datasets: fedata.worldDataSets(this.most, this.second, this.third, this.country, this.countryTwo, this.countryThree),
         },
         lineChartOptions: fedata.worldLineChartOptions()
       };

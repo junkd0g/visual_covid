@@ -6,8 +6,11 @@
     <div>
       <World />
     </div>
-    <br>
+    <br><div>
+        <Hotspot />
+      </div>
     <div class="box">
+
       <div>
         <GeneralStat />
       </div>
@@ -37,10 +40,6 @@
       </div>
     
     </div>
-     <div id="statiscalNumber" >
-        <b-table id="my-table" class="table table-fixed statiscalNumberTable" striped :items="sdeaths" :fields="fields"/>
-      </div>
-
       <div id="mobileStatiscalNumberID">
         <div v-for="item in sdeaths" :key="item">
           <div class="w3-container w3-content newsStand">
@@ -72,6 +71,7 @@
   import GeneralStat from './GeneralStat'
   import Today from './TodayNews'
   import World from './WorldCalculate'
+  import Hotspot from './HotspotCalculate'
 
   import { isMobile } from 'mobile-device-detect';
   import FEData from '../lib/FEData.js';
@@ -83,6 +83,7 @@
       GeneralStat,
       Today,
       World,
+      Hotspot
     },
     data() {
       return {

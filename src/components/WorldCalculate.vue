@@ -5,6 +5,8 @@
         v-bind:cases="worldData.casesDaily"
         v-bind:deaths="worldData.deathsDaily"
         v-bind:recovered="worldData.recoveredDaily"
+        v-bind:desktopHeight=500
+        v-bind:desktopWidth=1000
     />
   </div>
 </template>

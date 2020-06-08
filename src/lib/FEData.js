@@ -156,24 +156,24 @@ export default class FEData {
     }
   }
 
-  worldDataSets(cases, deaths, recovered){
+  worldDataSets(cases, deaths, recovered, labelOne, labelTwo, labelThree){
     return[
       {
-        label: "Cases",
+        label: labelOne,
         backgroundColor: "rgba(50, 102, 168, 0.1)",
         borderColor: "rgba(50, 102, 168, 1)",
         borderWidth: 1.0,
         data: cases
       },
       {
-        label: "Deaths",
+        label: labelTwo,
         backgroundColor: "rgba(161, 13, 25,0.3)",
         borderColor: "rgba(161, 13, 25,1)",
         borderWidth: 1.0,
         data: deaths
       },
       {
-        label: "Recovered",
+        label: labelThree,
         backgroundColor: "rgba(50, 168, 109,0.2)",
         borderColor: "rgba(50, 168, 109,1)",
         borderWidth: 1.0,
