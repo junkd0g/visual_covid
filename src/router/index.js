@@ -9,7 +9,6 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Dashboard',
     component: Dashboard,
-
   },
   {
     path: '/Compare',

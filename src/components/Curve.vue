@@ -118,7 +118,6 @@
         }
       },
       methods: {
-
         requestCurve(countryOnerq,countryTworq){
           axios.defaults.baseURL = 'http://localhost:9080/'
           axios.post(`api/compare/all`, {
@@ -142,16 +141,12 @@
         }
       },
       mounted(){
-
         this.requestCurve(this.v1,this.v2)
-
         axios.get('http://localhost:9080/api/countries/all')
           .then(response => (this.info = response.data.countries))
           .catch(function (error) {   
             console.log(error)
         });
-      
       }
     }
-
 </script>

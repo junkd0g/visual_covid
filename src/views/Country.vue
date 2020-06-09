@@ -107,67 +107,63 @@
 </template>
 
 <script>
-    import CurveCompare from '@/components/CurveCompare'
-    import Navi from '@/components/Nav'
-    import axios from 'axios'
+  import CurveCompare from '@/components/CurveCompare'
+  import Navi from '@/components/Nav'
+  import axios from 'axios'
 
-    export default {
-      components: {
-        CurveCompare,
-        Navi
-      },
-      data(){
-        return {
-          v1 : this.$route.params.id ? this.$route.params.id :'UK',
-          v2 : 'Italy',
-          rData : {},
-          info : {},
-          infoCountry : {},
-          vc : [],
-        }
-      },
-      methods: {
-
-        requestCurve(countryOnerq,countryTworq){
-          axios.defaults.baseURL = 'http://localhost:9080/'
-          axios.post(`api/compare/all`, {
-            countryOne : countryOnerq,
-            countryTwo : countryTworq,
-          })
-          .then(response  => (
-              this.rData = response.data
-          )).catch(function (error) {   
-            console.log(error);
-          });
-
-          axios.post(`api/country`, {
-            country : countryOnerq})
-          .then(response  => (
-              this.infoCountry = response.data
-          )).catch(function (error) {   
-            console.log(error);
-          }); 
-        },
-        
-        updateOne: function (msg) {
-          this.v1 = msg
-          this.requestCurve(this.v1,this.v2)
-        },
-        updateTwo: function (msg) {
-          this.v2 = msg
-          this.requestCurve(this.v1,this.v2)
-        }
-      },
-      mounted(){
-        this.requestCurve(this.v1,this.v2)
-
-        axios.get('http://localhost:9080/api/countries/all')
-          .then(response => (this.info = response.data.countries))
-          .catch(function (error) {   
-            console.log(error)
+  export default {
+    components: {
+      CurveCompare,
+      Navi
+    },
+    data(){
+      return {
+        v1 : this.$route.params.id,
+        v2 : 'Italy',
+        rData : {},
+        info : {},
+        infoCountry : {},
+        vc : [],
+      }
+    },
+    methods: {
+      requestCurve(countryOnerq,countryTworq){
+        axios.defaults.baseURL = 'http://localhost:9080/'
+        axios.post(`api/compare/all`, {
+          countryOne : countryOnerq,
+          countryTwo : countryTworq,
+        })
+        .then(response  => (
+         this.rData = response.data
+        )).catch(function (error) {   
+          console.log(error);
         });
-      
+
+        axios.post(`api/country`, {
+          country : countryOnerq})
+        .then(response  => (
+          this.infoCountry = response.data
+        )).catch(function (error) {   
+          console.log(error);
+        }); 
+      },
+      updateOne: function (msg) {
+        this.v1 = msg
+        this.requestCurve(this.v1,this.v2)
+      },
+      updateTwo: function (msg) {
+        this.v2 = msg
+        this.requestCurve(this.v1,this.v2)
+      }
+    },
+    mounted(){
+      this.requestCurve(this.v1,this.v2)
+
+      axios.get('http://localhost:9080/api/countries/all')
+        .then(response => (this.info = response.data.countries))
+        .catch(function (error) {   
+          console.log(error)
+        });
       }
     }
-
 </script>

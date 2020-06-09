@@ -1,7 +1,6 @@
 <template>
 
   <div>
-
     <navi/>
     <div class="box" >
       <div v-for="item in newsData" :key="item"> 
@@ -21,7 +20,6 @@
 </template>
 
 <script>
-
     import axios from 'axios'
     import Navi from '@/components/Nav'
 

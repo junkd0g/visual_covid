@@ -1,6 +1,6 @@
 <template>
   <div>
-  <p class="modeText"><b> World daily updates  </b></p>
+    <p class="modeText"><b> World daily updates  </b></p>
     <mdb-container>
         <mdb-line-chart
           :data="lineChartData"
@@ -11,7 +11,6 @@
     </mdb-container>
   </div>
 </template>
-
 
 <script>
   import { mdbLineChart, mdbContainer } from "mdbvue";
@@ -33,22 +32,22 @@
         window.removeEventListener('resize', this.handleResize);
     },
     methods: {
-        handleResize() {
-            if (isMobile == true) {
-                this.dimension.height = 280
-                this.dimension.width = 310
-            }else{
-                this.dimension.height = this.desktopHeight
-                this.dimension.width = this.desktopWidth
-            }
+      handleResize() {
+        if (isMobile == true) {
+          this.dimension.height = 280
+          this.dimension.width = 310
+        }else{
+          this.dimension.height = this.desktopHeight
+          this.dimension.width = this.desktopWidth
         }
+      }
     },
     props: {
-        cases: Array,
-        deaths: Array,
-        recovered: Array,
-        desktopHeight: Number,
-        desktopWidth: Number
+      cases: Array,
+      deaths: Array,
+      recovered: Array,
+      desktopHeight: Number,
+      desktopWidth: Number
     },
     data() {
       return {
