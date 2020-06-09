@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="outer">
         <div>
             <div class="w3-container w3-content newsStand">
                 <div class="w3-panel w3-card w3-display-container mainPanel">
@@ -22,6 +22,7 @@
                     <a class="w3-bar-item openLink" :href="'/country/'+countries[index].country" target="_blank">
                         <i class="fa">&#xf08e;</i>
                     </a>
+                    <br>
                 </div>
             </div>
         </div>

@@ -7,22 +7,9 @@
       <div>
         <World />
       </div>
-      <div>
-        <DesktopBriefCountry 
-          :key="sdeaths"
-          v-bind:countries="sdeaths"
-        />
-      </div>
-    </div>
-    <br>
     <div>
       <Hotspot />
     </div>
-    <div class="box">
-
-      <div>
-        <GeneralStat />
-      </div>
 
       <div>
         <Today
@@ -45,6 +32,15 @@
           :key="newsData"
           v-bind:pData="newsData.treament.data"
           v-bind:label="'Latest covid019 treatment news'"
+        />
+      </div>
+      <div>
+        <GeneralStat />
+      </div>
+      <div>
+        <DesktopBriefCountry 
+          :key="sdeaths"
+          v-bind:countries="sdeaths"
         />
       </div>
     
