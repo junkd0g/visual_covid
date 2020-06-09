@@ -1,9 +1,9 @@
 <template>
 
-  <div class="outer">
+  <div>
     <div class="w3-container w3-content newsStand">
       <p class="modeText"><b> {{ labelNews }} </b></p> 
-      <div class="w3-panel mainPanel w3-card w3-display-container mainPanel" >
+      <div class="w3-panel mainPanel w3-card w3-display-container" >
         <p class="lilika">
           <b>
             {{ newsData[index].source}}

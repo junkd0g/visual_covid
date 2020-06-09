@@ -11,7 +11,7 @@
         Country Data
       </router-link>
       <router-link to="/compare">
-        Compare Countries' Data
+        Compare Data
       </router-link>
       <router-link to="/news">
         News
