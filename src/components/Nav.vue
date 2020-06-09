@@ -7,7 +7,7 @@
       <router-link to="/diagrams">
         Global Data
       </router-link>
-      <router-link to="/country">
+      <router-link to="/country/UK">
         Country Data
       </router-link>
       <router-link to="/compare">

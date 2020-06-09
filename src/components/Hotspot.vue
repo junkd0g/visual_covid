@@ -15,7 +15,6 @@
 
 <script>
   import { mdbLineChart, mdbContainer } from "mdbvue";
-  import axios from 'axios'
   import { isMobile } from 'mobile-device-detect';
   import FEData from '../lib/FEData.js';
   var fedata= new FEData();
@@ -34,23 +33,15 @@
         window.removeEventListener('resize', this.handleResize);
     },
     methods: {
-        requestWorld(){
-          axios.get('http://localhost:9080/api/hotspot')
-            .then(response  => (
-              this.worldData = response.data))
-          .catch(function (error) {   
-            console.log(error)
-          })
-        },
-        handleResize() {
-            if (isMobile == true) {
-                this.dimension.height = 280
-                this.dimension.width = 310
-            }else{
-                this.dimension.height = 400
-                this.dimension.width = 600
-            }
+      handleResize() {
+        if (isMobile == true) {
+          this.dimension.height = 280
+          this.dimension.width = 310
+        }else{
+          this.dimension.height = 400
+          this.dimension.width = 600
         }
+      }
     },
     props: {
         most: Array,

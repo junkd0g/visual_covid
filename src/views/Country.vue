@@ -118,7 +118,7 @@
       },
       data(){
         return {
-          v1 : 'UK',
+          v1 : this.$route.params.id ? this.$route.params.id :'UK',
           v2 : 'Italy',
           rData : {},
           info : {},
@@ -159,7 +159,6 @@
         }
       },
       mounted(){
-
         this.requestCurve(this.v1,this.v2)
 
         axios.get('http://localhost:9080/api/countries/all')

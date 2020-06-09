@@ -1,19 +1,19 @@
 <template>
   <div class="home">
     <navi/>
-    <Total />
+    <dashboard />
   </div>
 </template>
 
 <script>
-import Total from '@/components/Total.vue'
+import Dashboard from '@/components/Dashboard.vue'
 import Navi from '@/components/Nav'
 
 export default {
   name: 'Home',
   components: {
-    Total,
-    Navi
+    Navi,
+    Dashboard
   }
 } 
 </script>

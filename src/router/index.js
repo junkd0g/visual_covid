@@ -29,7 +29,7 @@ Vue.use(VueRouter)
     component: () => import('../views/TotalDiagramsView.vue'),
   },
   {
-    path: '/Country',
+    path: '/Country/:id',
     name: 'Country',
     component: () => import('../views/Country.vue'),
   }

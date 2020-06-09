@@ -3,12 +3,21 @@
   <div>
 
     <br>
-    <div>
-      <World />
-    </div>
-    <br><div>
-        <Hotspot />
+    <div class="box">
+      <div>
+        <World />
       </div>
+      <div>
+        <DesktopBriefCountry 
+          :key="sdeaths"
+          v-bind:countries="sdeaths"
+        />
+      </div>
+    </div>
+    <br>
+    <div>
+      <Hotspot />
+    </div>
     <div class="box">
 
       <div>
@@ -40,28 +49,6 @@
       </div>
     
     </div>
-      <div id="mobileStatiscalNumberID">
-        <div v-for="item in sdeaths" :key="item">
-          <div class="w3-container w3-content newsStand">
-            <div class="w3-panel w3-card w3-display-container mainPanel">
-              <p class="lilika"><b> {{ item.country }} </b></p>
-              Total covid-19 cases: <span class="gNumber"> {{ item.cases }} </span><br>
-              Today's covid-19 cases: <span class="gNumber"> {{ item.todayCases }} </span><br>
-              Total deaths associated with covid 19: <span class="gNumber"> {{ item.deaths }} </span><br>
-              Today's deaths associated with covid 19: <span class="gNumber"> {{ item.todayDeaths }} </span><br>
-              Recovered patients : <span class="gNumber"> {{ item.recovered }} </span><br>
-              Pantients active with covid-19: <span class="gNumber"> {{ item.active }} </span><br>
-              Pantients with critical condition : <span class="gNumber"> {{ item.critical }} </span><br>
-              Cases per one million people: <span class="gNumber"> {{ item.casesPerOneMillion }} </span><br>
-              Total covid-19 test: <span class="gNumber"> {{ item.tests }} </span><br>
-              Tests per one million people: <span class="gNumber"> {{ item.testsPerOneMillion }} </span><br>
-            </div>
-          </div>
-          <br>
-          <br>
-        </div>
-
-      </div>
   </div>
 
 </template>
@@ -72,25 +59,22 @@
   import Today from './TodayNews'
   import World from './WorldCalculate'
   import Hotspot from './HotspotCalculate'
+  import DesktopBriefCountry from './DesktopBriefCountry'
 
   import { isMobile } from 'mobile-device-detect';
-  import FEData from '../lib/FEData.js';
-
-  var fedata= new FEData();
 
   export default {
     components: {
       GeneralStat,
       Today,
       World,
-      Hotspot
+      Hotspot,
+      DesktopBriefCountry
     },
     data() {
       return {
-        fields : fedata.tableData(),
         newsData : {},
         sdeaths: [],
-        scases: [],
       }
     },
     created() {
