@@ -47,7 +47,7 @@
     methods: {
         requestWorld(){
           console.log(this.worldData)
-          axios.get('http://localhost:9080/api/hotspot')
+          axios.get('http://localhost:9080/api/hotspot/10')
             .then(response  => (
               this.worldData = response.data))
           .catch(function (error) {   

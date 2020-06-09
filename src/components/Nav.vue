@@ -5,13 +5,13 @@
         <i class="fa fa-home"></i>
       </router-link>
       <router-link to="/diagrams">
-        Global Diagrams
+        Global Data
       </router-link>
       <router-link to="/country">
         Country Data
       </router-link>
       <router-link to="/compare">
-        Compare Countries
+        Compare Countries' Data
       </router-link>
       <router-link to="/news">
         News
