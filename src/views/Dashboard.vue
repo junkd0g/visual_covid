@@ -9,7 +9,7 @@
       
       <div>
         <div>
-          <span class="modeText"> Update ammount of days you want to check: </span>
+          <span class="modeText"> Update amount of days you want to check: </span>
           <b-dropdown id="dropdown-1" :text="drowbownText" class="m-md-2">
             <b-dropdown-item  v-for="item in days" :key="item"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
           </b-dropdown>
@@ -77,6 +77,8 @@
           v-bind:countries="countriesData"
         />
       </div>
+      <div>
+      </div>
 
     </div>
 
@@ -109,7 +111,7 @@ export default {
       countriesData: [],
       worldData : {},
       days : [3, 5, 8, 10, 15, 20, 25, 30, 40, 50, 60, 70],
-      drowbownText : 3,
+      drowbownText : 10,
       title : "Countries with most cases for the last 3 days"
     }
   },
