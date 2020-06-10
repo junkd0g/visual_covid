@@ -4,6 +4,7 @@
       <router-link to="/" >
         <i class="fa fa-home"></i>
       </router-link>
+      <div>
       <router-link to="/diagrams">
         Global Data
       </router-link>
@@ -20,6 +21,8 @@
       <a href="javascript:void(0);" class="icon" v-on:click="navBar">
         <i class="fa fa-bars"></i>
       </a>
+
+      </div>
     </div>
   
     <router-view/>

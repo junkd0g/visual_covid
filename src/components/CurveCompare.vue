@@ -52,7 +52,6 @@
         }else{
           this.dimension.height = 300
           this.dimension.width = 600
-
         }
       }
     },
