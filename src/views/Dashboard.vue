@@ -9,7 +9,7 @@
       
       <div>
         <div>
-           <span class="modeText"> Update ammount of days you want to check: </span>
+          <span class="modeText"> Update ammount of days you want to check: </span>
           <b-dropdown id="dropdown-1" :text="drowbownText" class="m-md-2">
             <b-dropdown-item  v-for="item in days" :key="item"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
           </b-dropdown>

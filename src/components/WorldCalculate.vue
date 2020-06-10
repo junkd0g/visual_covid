@@ -1,16 +1,19 @@
 <template>
   <div>
+    <span class="modeText"> Update ammount of days you want to check: </span>
+    <b-dropdown id="dropdown-1" :text="worldDowbownText" class="m-md-2">
+      <b-dropdown-item  v-for="item in worldDowbownData" :key="item"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
+    </b-dropdown>
     <World 
-        :key="worldData"
-        v-bind:cases="worldData.casesDaily"
-        v-bind:deaths="worldData.deathsDaily"
-        v-bind:recovered="worldData.recoveredDaily"
+        :key="worldDowbownText"
+        v-bind:cases="worldData.casesDaily.slice(worldData.casesDaily.length - worldDowbownText, worldData.casesDaily.length)"
+        v-bind:deaths="worldData.deathsDaily.slice(worldData.casesDaily.length - worldDowbownText, worldData.casesDaily.length)"
+        v-bind:recovered="worldData.recoveredDaily.slice(worldData.casesDaily.length - worldDowbownText, worldData.casesDaily.length)"
         v-bind:desktopHeight=500
         v-bind:desktopWidth=1000
     />
   </div>
 </template>
-
 
 <script>
   import axios from 'axios'
@@ -22,7 +25,9 @@
     },
     data(){
         return{
-            worldData : {}
+            worldData : {},
+            worldDowbownText : 30,
+            worldDowbownData : ['All', 130, 110, 100, 90, 80, 70, 60, 50, 40, 30, 25, 20, 15, 10, 8, 5, 3],
         }
     },
     methods: {
@@ -34,6 +39,9 @@
           .catch(function (error) {   
             console.log(error)
           })
+        },
+        updateOne(item){
+          this.worldDowbownText = item
         }
     },
     mounted() {
