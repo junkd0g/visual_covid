@@ -4,7 +4,6 @@
       <router-link to="/" >
         <i class="fa fa-home"></i>
       </router-link>
-      <div>
       <router-link to="/diagrams">
         Global Data
       </router-link>
@@ -22,7 +21,6 @@
         <i class="fa fa-bars"></i>
       </a>
 
-      </div>
     </div>
   
     <router-view/>
