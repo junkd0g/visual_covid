@@ -77,9 +77,6 @@
           v-bind:countries="countriesData"
         />
       </div>
-      <div>
-      </div>
-
     </div>
 
   </div>

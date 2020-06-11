@@ -1,7 +1,7 @@
 <template>
-  <div class="outer">
-    <div class="w3-container w3-content newsStand">
-      <div class="w3-panel w3-card w3-display-container mainPanel">
+  <div class="dd">
+    <div class="w3-container w3-content newsStandBig">
+      <div class="w3-panel  w3-card w3-display-container mainPanel">
         <p class="lilika"><b> {{ countries[index].country }} </b></p>
         Total covid-19 cases: <span class="gNumber"> {{ countries[index].cases }} </span><br>
         Today's covid-19 cases: <span class="gNumber"> {{ countries[index].todayCases }} </span><br>
