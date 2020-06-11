@@ -85,6 +85,11 @@
     height: 400px;
 }
 
+.newsStandBig2{
+    width: 670px;
+    height: 600px;
+}
+
 .m-md-2 .dropdown-menu {
     max-height: 400px;
     overflow-y: scroll;
@@ -120,7 +125,12 @@ and (max-device-width : 800px) {
     .newsStandBig{
         width: 350px;
         height: 290px;  
-    }
+	}
+	
+	.newsStandBig2{
+		width: 350px;
+		height: 600px;
+	}
 
     .openLink{
         text-align:right;position: absolute;bottom: 0; right: 0;
@@ -257,6 +267,11 @@ and (max-device-width : 800px) {
 		width: 670px;
 		height: 400px;
 	}
+
+	.newsStandBig2{
+		width: 670px;
+		height: 600px;
+	}
 	
 	.m-md-2 .dropdown-menu {
 		max-height: 400px;
@@ -288,7 +303,11 @@ and (max-device-width : 800px) {
 			width: 350px;
 			height: 290px;  
 		}
-	
+
+		.newsStandBig2{
+			width: 350px;
+			height: 600px;
+		}
 		.openLink{
 			text-align:right;position: absolute;bottom: 0; right: 0;
 		}

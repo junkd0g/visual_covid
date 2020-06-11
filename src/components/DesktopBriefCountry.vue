@@ -1,6 +1,6 @@
 <template>
   <div class="dd">
-    <div class="w3-container w3-content newsStandBig">
+    <div class="w3-container w3-content newsStandBig2">
       <div class="w3-panel  w3-card w3-display-container mainPanel">
         <p class="lilika"><b> {{ countries[index].country }} </b></p>
         Total covid-19 cases: <span class="gNumber"> {{ countries[index].cases }} </span><br>
