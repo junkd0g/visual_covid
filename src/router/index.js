@@ -13,7 +13,7 @@ Vue.use(VueRouter)
   {
     path: '/Compare',
     name: 'Compare',
-    component: () => import('../views/CurveView.vue')
+    component: () => import('../views/Compare.vue')
   },
   {
     path: '/News',
@@ -21,9 +21,9 @@ Vue.use(VueRouter)
     component: () => import('../views/News.vue')
   },
   {
-    path: '/Diagrams',
+    path: '/GlobalData',
     name: 'Diagrams',
-    component: () => import('../views/TotalDiagramsView.vue'),
+    component: () => import('../views/GlobalData.vue'),
   },
   {
     path: '/Country/:id',

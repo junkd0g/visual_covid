@@ -43,6 +43,13 @@
         />
       </div>
 
+       <div>
+        <DesktopBriefCountry 
+          :key="countriesData"
+          v-bind:countries="countriesData"
+        />
+      </div>
+
       <div>
         <Today
           :key="newsData"
@@ -71,12 +78,6 @@
         <GeneralStat />
       </div>
 
-      <div>
-        <DesktopBriefCountry 
-          :key="countriesData"
-          v-bind:countries="countriesData"
-        />
-      </div>
     </div>
 
   </div>
