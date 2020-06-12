@@ -87,7 +87,7 @@
 
 .newsStandBig2{
     width: 670px;
-    height: 600px;
+    height: 650px;
 }
 
 .m-md-2 .dropdown-menu {
@@ -97,6 +97,10 @@
 
 .dd + .dd{
    margin-bottom:30px;
+}
+
+.newsStandBig2 + .newsStandBig2{
+	margin-bottom:30px;
 }
 
 #dropdown-1 + #dropdown-1{
@@ -128,7 +132,7 @@ and (max-device-width : 800px) {
 	}
 	
 	.newsStandBig2{
-		width: 350px;
+		width: 380px;
 		height: 600px;
 	}
 
@@ -270,7 +274,7 @@ and (max-device-width : 800px) {
 
 	.newsStandBig2{
 		width: 670px;
-		height: 600px;
+		height: 650px;
 	}
 	
 	.m-md-2 .dropdown-menu {
@@ -281,6 +285,7 @@ and (max-device-width : 800px) {
 	.dd + .dd{
 	   margin-bottom:50px;
 	}
+
 	
 	#dropdown-1 + #dropdown-1{
 		margin-left:20px;
@@ -305,7 +310,7 @@ and (max-device-width : 800px) {
 		}
 
 		.newsStandBig2{
-			width: 350px;
+			width: 380px;
 			height: 600px;
 		}
 		.openLink{

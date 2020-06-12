@@ -103,6 +103,13 @@ export default {
     Hotspot,
     DesktopBriefCountry
   },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   data() {
     return {
       newsData : {},

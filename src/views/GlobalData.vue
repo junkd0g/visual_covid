@@ -5,7 +5,7 @@
     <div id="diagrams" class="float-middle box">
 
       <div>
-        <div class="w3-container w3-content newsStandBig">
+        <div class="w3-container w3-content newsStandBig2">
           <div class="w3-panel w3-card w3-display-container mainPanel">
             <pie-diagram
               v-bind:cData="continentData" 
@@ -16,7 +16,7 @@
       </div>
 
       <div>
-        <div class="w3-container w3-content newsStandBig">
+        <div class="w3-container w3-content newsStandBig2">
           <div class="w3-panel w3-card w3-display-container mainPanel">
             <pie-diagram
               v-bind:cData="continentData" 
@@ -27,7 +27,7 @@
       </div>
 
        <div>
-        <div class="w3-container w3-content newsStandBig">
+        <div class="w3-container w3-content newsStandBig2">
           <div class="w3-panel w3-card w3-display-container mainPanel">
             <pie-diagram
               v-bind:cData="continentData" 
@@ -40,7 +40,7 @@
 
       <!-- Bar diagram which contains the 5 countries with the most deaths globally from 22 of January */ -->
       <div>
-        <div class="w3-container w3-content newsStandBig">
+        <div class="w3-container w3-content newsStandBig2">
           <div class="w3-panel w3-card w3-display-container mainPanel">
             <total-diagram
               v-bind:countries="[ sdeaths[0].country, sdeaths[1].country, sdeaths[2].country, sdeaths[3].country, sdeaths[4].country, sdeaths[5].country]" 
@@ -53,7 +53,7 @@
 
       <!--/* Bar diagram which contains the 5 countries with the most confirm cases globally from 22 of January */-->
       <div>
-        <div class="w3-container w3-content newsStandBig">
+        <div class="w3-container w3-content newsStandBig2">
           <div class="w3-panel w3-card w3-display-container mainPanel">
             <total-diagram
               v-bind:countries="[ scases[0].country, scases[1].country, scases[2].country, scases[3].country, scases[4].country, scases[5].country]" 
@@ -66,7 +66,7 @@
 
       <!--/* Bar diagram which contains the 5 countries with the most active cases globally */-->
       <div>
-        <div class="w3-container w3-content newsStandBig">
+        <div class="w3-container w3-content newsStandBig2">
           <div class="w3-panel w3-card w3-display-container mainPanel">
             <total-diagram
               v-bind:countries="[ active[0].country, active[1].country, active[2].country, active[3].country, active[4].country, active[5].country]" 
@@ -79,7 +79,7 @@
 
       <!--/* Bar diagram which contains the 5 countries with the most recovered patients globally */-->
       <div>
-        <div class="w3-container w3-content newsStandBig">
+        <div class="w3-container w3-content newsStandBig2">
           <div class="w3-panel w3-card w3-display-container mainPanel">
             <total-diagram
               v-bind:countries="[ recovered[0].country, recovered[1].country, recovered[2].country, recovered[3].country, recovered[4].country, recovered[5].country]" 
