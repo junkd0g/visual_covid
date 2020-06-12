@@ -3,6 +3,41 @@
     <navi/>
 
     <div id="diagrams" class="float-middle box">
+
+      <div>
+        <div class="w3-container w3-content newsStandBig">
+          <div class="w3-panel w3-card w3-display-container mainPanel">
+            <pie-diagram
+              v-bind:cData="continentData" 
+              v-bind:type="'Deaths'" 
+            />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="w3-container w3-content newsStandBig">
+          <div class="w3-panel w3-card w3-display-container mainPanel">
+            <pie-diagram
+              v-bind:cData="continentData" 
+              v-bind:type="'Cases'" 
+            />
+          </div>
+        </div>
+      </div>
+
+       <div>
+        <div class="w3-container w3-content newsStandBig">
+          <div class="w3-panel w3-card w3-display-container mainPanel">
+            <pie-diagram
+              v-bind:cData="continentData" 
+              v-bind:type="'Tests'" 
+            />
+          </div>
+        </div>
+      </div>
+
+
       <!-- Bar diagram which contains the 5 countries with the most deaths globally from 22 of January */ -->
       <div>
         <div class="w3-container w3-content newsStandBig">
@@ -63,15 +98,14 @@
 <script>
   import axios from 'axios'
   import TotalDiagram from '@/components/TotalDiagram'
+  import PieDiagram from '@/components/PieDiagram'
   import Navi from '@/components/Nav'
 
   export default {
     components: {
       TotalDiagram,
+      PieDiagram,
       Navi
-    },
-    methods: {
-      
     },
     data() {
       return {
@@ -79,10 +113,21 @@
         scases: [],
         recovered : [],
         active : [],
+        continentData : []
+      }
+    },
+    methods:{
+      requestContinentData(){
+        axios.get('http://localhost:9080/api/continent')
+          .then(response  => (
+            this.continentData = response.data))
+          .catch(function (error) {   
+            console.log(error)
+        });
       }
     },
     mounted(){
-
+        this.requestContinentData()
         axios.defaults.baseURL = 'http://localhost:9080/api/'
         axios.post(`sort`, {
             type: 'deaths'

@@ -21,8 +21,8 @@ Vue.use(VueRouter)
     component: () => import('../views/News.vue')
   },
   {
-    path: '/GlobalData',
-    name: 'Diagrams',
+    path: '/Diagrams',
+    name: 'GlobalData',
     component: () => import('../views/GlobalData.vue'),
   },
   {

@@ -110,7 +110,7 @@ export default {
       worldData : {},
       days : [3, 5, 8, 10, 15, 20, 25, 30, 40, 50, 60, 70],
       drowbownText : 10,
-      title : "Countries with most cases for the last 3 days"
+      title : "Countries with most cases for the last 10 days"
     }
   },
   methods: {
