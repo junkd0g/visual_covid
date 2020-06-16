@@ -16,11 +16,6 @@ Vue.use(VueRouter)
     component: () => import('../views/Compare.vue')
   },
   {
-    path: '/News',
-    name: 'News',
-    component: () => import('../views/News.vue')
-  },
-  {
     path: '/Diagrams',
     name: 'GlobalData',
     component: () => import('../views/GlobalData.vue'),

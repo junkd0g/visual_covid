@@ -13,9 +13,6 @@
       <router-link to="/compare">
         Compare Data
       </router-link>
-      <router-link to="/news">
-        News
-      </router-link>
       
       <a href="javascript:void(0);" class="icon" v-on:click="navBar">
         <i class="fa fa-bars"></i>
