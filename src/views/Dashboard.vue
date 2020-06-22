@@ -3,12 +3,12 @@
     <navi/>
     <div class="box">
 
-      <div>
+      <div class="dd">
         <World />
       </div>
       
-      <div>
-        <div>
+      <div class="dd">
+        <div >
           <span class="modeText"> Update amount of days you want to check: </span>
           <b-dropdown id="dropdown-1" :text="drowbownText" class="m-md-2">
             <b-dropdown-item  v-for="item in days" :key="item"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
@@ -28,7 +28,7 @@
         />
       </div>
 
-      <div>
+      <div class="dd">
         <Hotspot 
           :key="worldData"
           v-bind:most="worldData.mostDeaths.data"
@@ -43,39 +43,30 @@
         />
       </div>
 
-       <div>
+       <div class="dd">
+        <GeneralStat />
         <DesktopBriefCountry 
           :key="countriesData"
           v-bind:countries="countriesData"
         />
       </div>
 
-      <div>
+      <div class="dd">
         <Today
           :key="newsData"
           v-bind:pData="newsData.news.data"
           v-bind:label="'Latest covid-19 news'"
         />
-      </div>
-
-      <div>
-        <Today
+         <Today
           :key="newsData"
           v-bind:pData="newsData.vaccine.data"
           v-bind:label="'Latest covid-19 vaccine news'"
         />
-      </div>
-
-      <div>
         <Today
           :key="newsData"
           v-bind:pData="newsData.treament.data"
           v-bind:label="'Latest covid019 treatment news'"
         />
-      </div>
-
-      <div>
-        <GeneralStat />
       </div>
 
     </div>
