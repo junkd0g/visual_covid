@@ -126,6 +126,11 @@ and (max-device-width : 800px) {
         width: 350px;
         height: 290px;  
 	}
+
+	.newsStandSmall{
+		width: 350px;
+        height: 220px;
+	}
 	
 	.newsStandBig2{
 		width: 380px;
@@ -308,6 +313,10 @@ and (max-device-width : 800px) {
 		.newsStandBig2{
 			width: 380px;
 			height: 450px;
+		}
+		.newsStandSmall{
+			width: 350px;
+			height: 220px;
 		}
 		.openLink{
 			text-align:right;position: absolute;bottom: 0; right: 0;
