@@ -9,9 +9,6 @@
     background-color: #fff;
 }
 
-.newsStand{
-    width: 500px;
-}
 .backgroundColor{
     color: #fff;
 
@@ -76,11 +73,6 @@
     height: 400px;
 }
 
-.newsStandBig2{
-    width: 670px;
-    height: 450px;
-}
-
 .m-md-2 .dropdown-menu {
     max-height: 400px;
     overflow-y: scroll;
@@ -108,11 +100,6 @@
 and (min-device-width : 375px) 
 and (max-device-width : 800px) {
 
-    .newsStand{
-        width: 350px;
-        height: 290px;
-    }
-
     .newsStandBig{
         width: 350px;
         height: 290px;  
@@ -121,11 +108,6 @@ and (max-device-width : 800px) {
 	.newsStandSmall{
 		width: 350px;
         height: 220px;
-	}
-	
-	.newsStandBig2{
-		width: 380px;
-		height: 450px;
 	}
 
     .openLink{
@@ -201,10 +183,6 @@ and (max-device-width : 800px) {
 		color: #3366FF;
 	}
 	
-	.newsStand{
-		width: 500px;
-	}
-	
 	.newsStandSmall{
 		width: 500px;
 	}
@@ -252,11 +230,6 @@ and (max-device-width : 800px) {
 		width: 670px;
 		height: 400px;
 	}
-
-	.newsStandBig2{
-		width: 670px;
-		height: 450px;
-	}
 	
 	.m-md-2 .dropdown-menu {
 		max-height: 400px;
@@ -280,20 +253,11 @@ and (max-device-width : 800px) {
 	and (min-device-width : 375px) 
 	and (max-device-width : 800px) {
 	
-		.newsStand{
-			width: 350px;
-			height: 290px;
-		}
-	
 		.newsStandBig{
 			width: 350px;
 			height: 290px;  
 		}
 
-		.newsStandBig2{
-			width: 380px;
-			height: 450px;
-		}
 		.newsStandSmall{
 			width: 350px;
 			height: 220px;

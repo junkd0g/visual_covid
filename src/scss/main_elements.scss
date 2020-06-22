@@ -7,3 +7,28 @@
 .box>* {
     flex: 1 1 ;
 }
+
+.newsStand{
+    width: 500px;
+}
+
+.newsStandBig2{
+    width: 670px;
+    height: 450px;
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 800px) {
+
+    .newsStand{
+        width: 350px;
+        height: 290px;
+    }
+
+    .newsStandBig2{
+		width: 380px;
+		height: 450px;
+	}
+
+}
