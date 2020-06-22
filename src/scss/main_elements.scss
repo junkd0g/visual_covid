@@ -17,10 +17,32 @@
     height: 450px;
 }
 
+.newsStandBig{
+    width: 670px;
+    height: 400px;
+}
+
+.dd + .dd{
+    margin-bottom:50px;
+ }
+
+ #dropdown-1 + #dropdown-1{
+    margin-left:20px;
+}
+
+.m-md-2 .dropdown-menu {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 800px) {
 
+    .newsStandBig{
+        width: 350px;
+        height: 290px;  
+	}
     .newsStand{
         width: 350px;
         height: 290px;
