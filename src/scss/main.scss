@@ -75,28 +75,8 @@
 
 .marika2:hover{
     color: #3366FF;
-}   
-
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 800px) {
-
-	.newsStandSmall{
-		width: 350px;
-        height: 220px;
-	}
-  
-    .marika2{
-        font-size:28px;
-        color: #42b983;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    
-    .marika2:hover{
-        color: #3366FF;
-    }
 }
+
 @media(prefers-color-scheme: dark) {
 
 	.openLink{
@@ -158,10 +138,6 @@ and (max-device-width : 800px) {
 		color: #3366FF;
 	}
 	
-	.newsStandSmall{
-		width: 500px;
-	}
-	
 	.gNumber {
 	  color:  #cc0000;
 	  font-weight: bold;
@@ -195,24 +171,5 @@ and (max-device-width : 800px) {
 	.marika2:hover{
 		color: #3366FF;
 	}   
-	
-	@media only screen 
-	and (min-device-width : 375px) 
-	and (max-device-width : 800px) {
-		.newsStandSmall{
-			width: 350px;
-			height: 220px;
-		}
- 	  
-		.marika2{
-			font-size:28px;
-			color: #cc0000;
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-		
-		.marika2:hover{
-			color: #3366FF;
-		}
-	}
+
 }
