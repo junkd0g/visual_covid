@@ -26,5 +26,6 @@ export default {
 
 <style scoped>
   @import "./scss/main.scss";
+  @import "./scss/main_elements.scss";
   @import "./scss/main_header.scss";
 </style>
