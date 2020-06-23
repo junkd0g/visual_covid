@@ -17,6 +17,11 @@
     height: 400px;
 }
 
+.briefDiv{
+    width: 670px;
+    height: 400px;
+}
+
 .newsStandBig{
     width: 670px;
     height: 400px;
@@ -39,6 +44,11 @@
     width: 500px;
 }
 
+.inner {
+    width: 50%;
+    margin: 0 auto;
+}
+
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 800px) {
@@ -56,9 +66,14 @@ and (max-device-width : 800px) {
         height: 290px;
     }
 
+    .briefDiv{
+        width: 350px;
+		height: 350px;
+    }
+
     .newsStandBig2{
-		width: 350px;
-		height: 370px;
+		width: 380px;
+		height: 390px;
 	}
 
 }
