@@ -9,7 +9,7 @@
         </p>
         <p>  {{ newsData[index].title }} </p>
         <span class="marika3"><i class="fa fa-arrow-circle-left" v-on:click="updateBackwards"></i></span>
-       <span class="marika3"> <i class="fa fa-arrow-circle-right" v-on:click="updateForward"></i></span>
+        <span class="marika3"> <i class="fa fa-arrow-circle-right" v-on:click="updateForward"></i></span>
         <a class="w3-bar-item openLink" :href="newsData[index].url" target="_blank">
           <i class="fa">&#xf08e;</i>
         </a>

@@ -13,8 +13,8 @@
         Cases per one million people: <span class="gNumber"> {{ countries[index].casesPerOneMillion }} </span><br>
         Total covid-19 test: <span class="gNumber"> {{ countries[index].tests }} </span><br>
         Tests per one million people: <span class="gNumber"> {{ countries[index].testsPerOneMillion }} </span><br>
-        <i class="marika3 fa fa-arrow-circle-left" v-on:click="updateBackwards"></i>
-        <i class="fa fa-arrow-circle-right marika3" v-on:click="updateForward"></i>
+        <span class="marika3"><i class="fa fa-arrow-circle-left" v-on:click="updateBackwards"></i></span>
+        <span class="marika3"><i class="fa fa-arrow-circle-right" v-on:click="updateForward"></i></span>
         <b-dropdown id="dropdown-1" :text="v1" class="m-md-2">
           <b-dropdown-item  v-for="ditem in dropdownData" :key="ditem"  v-on:click="updateOne(ditem)">{{ ditem.country }} </b-dropdown-item>
         </b-dropdown>
