@@ -56,7 +56,7 @@
 }
 
 .marika3{
-    font-size: 44px;
+    font-size: 22px;
     color: #42b983;
     padding-left: 15px;
     padding-right: 15px;
@@ -87,6 +87,13 @@
 		text-align:right;position: absolute;bottom: 0; right: 0;
 	}
 
+	.marika3{
+		font-size:22px;
+		color: #cc0000;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
 	#app {
 		font-family: Avenir, Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
@@ -109,14 +116,6 @@
 	
 	}
 	
-	.statiscalNumberTable{
-		color: #ffffff;
-	}
-	
-	table, th, td {
-		color: #ffffff;
-	}   
-	
 	.mainPanel{
 		background-color: #141d26;
 		color: #ffffff;
@@ -127,13 +126,7 @@
 		color: #ffffff;
 	}
 	
-	.marika3{
-		font-size: 44px;
-		color: #cc0000;
-		padding-left: 15px;
-		padding-right: 15px;
-	
-	}
+
 	.marika3:hover{
 		color: #3366FF;
 	}

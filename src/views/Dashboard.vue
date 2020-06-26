@@ -29,6 +29,9 @@
       </div>
 
       <div class="dd">
+        <br>
+        <br>
+        <br>
         <Hotspot 
           :key="worldData"
           v-bind:most="worldData.mostDeaths.data"

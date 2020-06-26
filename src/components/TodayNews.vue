@@ -8,8 +8,8 @@
           <b> {{ newsData[index].source}} </b>
         </p>
         <p>  {{ newsData[index].title }} </p>
-        <i class="fa fa-arrow-circle-left marika3" v-on:click="updateBackwards"></i>
-        <i class="fa fa-arrow-circle-right marika3" v-on:click="updateForward"></i>
+        <span class="marika3"><i class="fa fa-arrow-circle-left" v-on:click="updateBackwards"></i></span>
+       <span class="marika3"> <i class="fa fa-arrow-circle-right" v-on:click="updateForward"></i></span>
         <a class="w3-bar-item openLink" :href="newsData[index].url" target="_blank">
           <i class="fa">&#xf08e;</i>
         </a>
