@@ -123,7 +123,6 @@ export default {
       })
     },
     requestWorld(days){
-      days =  days + 2
       axios.get('http://localhost:9080/api/hotspot/' + days)
         .then(response  => (
           this.worldData = response.data))
