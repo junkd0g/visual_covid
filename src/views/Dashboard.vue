@@ -22,7 +22,7 @@
           v-bind:country="worldData.mostCases.country"
           v-bind:countryTwo="worldData.secondCases.country"
           v-bind:countryThree="worldData.thirdCases.country"
-          v-bind:title="title"
+          v-bind:title="titleCases"
           v-bind:desktopHeight=350
           v-bind:desktopWidth=500
         />
@@ -37,7 +37,7 @@
           v-bind:country="worldData.mostDeaths.country"
           v-bind:countryTwo="worldData.secondDeaths.country"
           v-bind:countryThree="worldData.thirdDeaths.country"
-          v-bind:title="title"
+          v-bind:title="titleDeaths"
           v-bind:desktopHeight=350
           v-bind:desktopWidth=500
         />
@@ -108,7 +108,9 @@ export default {
       worldData : {},
       days : [3, 5, 8, 10, 15, 20, 25, 30, 40, 50, 60, 70],
       drowbownText : 10,
-      title : "Countries with most cases for the last 10 days"
+      titleCases : "Countries with most cases for the last 10 days",
+      titleDeaths : "Countries with most deaths for the last 10 days"
+
     }
   },
   methods: {
@@ -131,7 +133,8 @@ export default {
     },
     updateOne: function (item) {
       this.drowbownText = item
-      this.title =  "Countries with most cases for the last " + this.drowbownText + " days"
+      this.titleCases =  "Countries with most cases for the last " + this.drowbownText + " days"
+      this.titleDeaths =  "Countries with most deaths for the last " + this.drowbownText + " days"
       this.requestWorld(item)
     }
   },
