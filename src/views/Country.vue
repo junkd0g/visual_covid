@@ -104,6 +104,7 @@
         <div class="dd" v-if="specificDataCountry.data.length > 1">
           <p class="modeText"><b>General country's province data</b></p>
           <specific-data-country
+            :key="rData"
             v-bind:county="specificDataCountry.data"
           />
         </div>
@@ -149,6 +150,12 @@
           console.log(error);
         });
 
+        axios.get('http://localhost:9080/api/csse/' + this.v1)
+       .then(response => (this.specificDataCountry = response.data))
+        .catch(function (error) {
+          console.log(error)
+        });
+
         axios.post(`api/country`, {
           country : countryOnerq})
         .then(response  => (
@@ -174,12 +181,6 @@
         .catch(function (error) {   
           console.log(error)
        });
-
-      axios.get('http://localhost:9080/api/csse/' + this.v1)
-       .then(response => (this.specificDataCountry = response.data))
-        .catch(function (error) {
-          console.log(error)
-        });
 
     }
 
