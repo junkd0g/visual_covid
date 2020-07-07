@@ -48,7 +48,7 @@
 
        <div class="dd">
         <GeneralStat />
-        <DesktopBriefCountry 
+        <BriefCountry
           :key="countriesData"
           v-bind:countries="countriesData"
         />
@@ -83,7 +83,7 @@
   import GeneralStat from '@/components/GeneralStat'
   import Today from '@/components/TodayNews'
   import World from '@/components/WorldCalculate'
-  import DesktopBriefCountry from '@/components/DesktopBriefCountry'
+  import BriefCountry from '@/components/BriefCountry'
   import Hotspot from '@/components/Hotspot'
 
 
@@ -95,7 +95,7 @@ export default {
     Today,
     World,
     Hotspot,
-    DesktopBriefCountry
+    BriefCountry
   },
   created() {
     window.addEventListener('resize', this.handleResize);

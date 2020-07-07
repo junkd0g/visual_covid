@@ -100,6 +100,13 @@
             v-bind:countryTwoName="''"
           />
         </div>
+
+        <div class="dd" v-if="specificDataCountry.data.length > 1">
+          <p class="modeText"><b>General country's province data</b></p>
+          <specific-data-country
+            v-bind:county="specificDataCountry.data"
+          />
+        </div>
     </div>
 
   </div>
@@ -109,12 +116,14 @@
 <script>
   import CurveCompare from '@/components/CurveCompare'
   import Navi from '@/components/Nav'
+  import SpecificDataCountry from '@/components/SpecificDataCountry'
   import axios from 'axios'
 
   export default {
     components: {
       CurveCompare,
-      Navi
+      Navi,
+      SpecificDataCountry
     },
     data(){
       return {
@@ -123,6 +132,7 @@
         rData : {},
         info : {},
         infoCountry : {},
+        specificDataCountry : {},
         vc : [],
       }
     },
@@ -163,7 +173,15 @@
         .then(response => (this.info = response.data.countries))
         .catch(function (error) {   
           console.log(error)
+       });
+
+      axios.get('http://localhost:9080/api/csse/' + this.v1)
+       .then(response => (this.specificDataCountry = response.data))
+        .catch(function (error) {
+          console.log(error)
         });
-      }
+
     }
+
+  }
 </script>
