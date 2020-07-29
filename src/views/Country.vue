@@ -139,7 +139,7 @@
     },
     methods: {
       requestCurve(countryOnerq,countryTworq){
-        axios.defaults.baseURL = 'http://localhost:9080/'
+        axios.defaults.baseURL = 'http://54.246.200.221/'
         axios.post(`api/compare/all`, {
           countryOne : countryOnerq,
           countryTwo : countryTworq,
@@ -150,7 +150,7 @@
           console.log(error);
         });
 
-        axios.get('http://localhost:9080/api/csse/' + this.v1)
+        axios.get('http://54.246.200.221/api/csse/' + this.v1)
        .then(response => (this.specificDataCountry = response.data))
         .catch(function (error) {
           console.log(error)
@@ -176,7 +176,7 @@
     mounted(){
       this.requestCurve(this.v1,this.v2)
 
-      axios.get('http://localhost:9080/api/countries/all')
+      axios.get('http://54.246.200.221/api/countries/all')
         .then(response => (this.info = response.data.countries))
         .catch(function (error) {   
           console.log(error)

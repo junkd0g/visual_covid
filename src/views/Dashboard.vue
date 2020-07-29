@@ -118,7 +118,7 @@ export default {
   },
   methods: {
     requestNews(){
-      axios.get('http://localhost:9080/api/news/all')
+      axios.get('http://54.246.200.221/api/news/all')
         .then(response  => (
           this.newsData = response.data))
         .catch(function (error) {   
@@ -126,7 +126,7 @@ export default {
       })
     },
     requestWorld(days){
-      axios.get('http://localhost:9080/api/hotspot/' + days)
+      axios.get('http://54.246.200.221/api/hotspot/' + days)
         .then(response  => (
           this.worldData = response.data))
         .catch(function (error) {   
@@ -144,7 +144,7 @@ export default {
     this.requestNews()
     this.requestWorld(this.drowbownText)
 
-    axios.defaults.baseURL = 'http://localhost:9080/api/'
+    axios.defaults.baseURL = 'http://54.246.200.221/api/'
     axios.post(`sort`, {
       type: 'deaths'
     })

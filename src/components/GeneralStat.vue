@@ -26,7 +26,7 @@
       }
     },
     mounted(){
-      axios.get('http://localhost:9080/api/total')
+      axios.get('http://54.246.200.221/api/total')
         .then(response => (this.globalData = response.data))
         .catch(function (error) {   
            console.log(error);

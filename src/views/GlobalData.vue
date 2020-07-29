@@ -118,7 +118,7 @@
     },
     methods:{
       requestContinentData(){
-        axios.get('http://localhost:9080/api/continent')
+        axios.get('http://54.246.200.221/api/continent')
           .then(response  => (
             this.continentData = response.data))
           .catch(function (error) {   
@@ -128,7 +128,7 @@
     },
     mounted(){
         this.requestContinentData()
-        axios.defaults.baseURL = 'http://localhost:9080/api/'
+        axios.defaults.baseURL = 'http://54.246.200.221/api/'
         axios.post(`sort`, {
             type: 'deaths'
         })

@@ -33,7 +33,7 @@
     methods: {
         requestWorld(){
           console.log(this.worldData)
-          axios.get('http://localhost:9080/api/world')
+          axios.get('http://54.246.200.221/api/world')
             .then(response  => (
               this.worldData = response.data))
           .catch(function (error) {   
