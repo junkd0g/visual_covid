@@ -112,23 +112,27 @@ export default class FEData {
       {
         
         label: labelOne,
-        backgroundColor: "rgba(50, 102, 168, 0.1)",
-        borderColor: "rgba(50, 102, 168, 1)",
+        backgroundColor: "rgba(0, 102, 168, 0.1)",
+        borderColor: "rgba(0, 102, 255, 1)",
         borderWidth: 3.0,
+        fill :false,
         data: cases
       },
       {
         label: labelTwo,
-        backgroundColor: "rgba(161, 13, 25,0.3)",
-        borderColor: "rgba(161, 13, 25,1)",
+        backgroundColor: "rgba(157, 218, 225,1)",
+        borderColor: "rgba(157, 218, 225,1)",
         borderWidth: 2.0,
+        fill :false,
         data: deaths
       },
       {
         label: labelThree,
-        backgroundColor: "rgba(50, 168, 109,0.2)",
-        borderColor: "rgba(50, 168, 109,1)",
-        borderWidth: 1.0,
+        backgroundColor: "rgba(252, 93, 45, 1)",
+        borderColor: "rgba(252, 93, 45, 1)",
+        fill :false,
+
+        borderWidth: 3.0,
         data: recovered
       }
     ]
@@ -136,26 +140,24 @@ export default class FEData {
 
   worldLineChartOptions(){
     return {
-      responsive: false,
-      maintainAspectRatio: false,
-      scales: {
-        xAxes: [
-          {
-            gridLines: {
-              display: true,
-              color: "rgba(0, 0, 0, 0.1)"
-            }
-          }
-        ],
-        yAxes: [
-          {
-            gridLines: {
-              display: true,
-              color: "rgba(0, 0, 0, 0.1)"
-            }
-          }
-        ]
+      legend: {
+        display: false
+    },
+  scales: {
+   xAxes: [{
+      display: false,
+      gridLines: {
+         display: false
       }
+   }],
+   yAxes: [{
+     display: false,
+      gridLines: {
+         display: false
+      }
+   }]
+},
+responsive: true,
     }
   }
 
