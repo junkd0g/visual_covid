@@ -59,6 +59,7 @@
           labels: Array.from(Array(this.cases.length).keys()),
           datasets: fedata.worldDataSets(this.cases, this.deaths, this.recovered, "cases", "deaths", "recovered"),
         },
+        
         lineChartOptions: fedata.worldLineChartOptions()
       };
     }

@@ -2,18 +2,16 @@
 
   <div class="outer">                        
     <div class="w3-container w3-content newsStand">
-    <p class="modeText"> <b> Statistics Today </b> </p> 
-    <div class="w3-panel w3-card w3-display-container mainPanel">
       <br>
-      Total covid-19 cases: <span class="gNumber">{{ globalData.totalCases }} </span><br>
-      Total deaths associated with covid-19: <span class="gNumber"> {{ globalData.totalDeaths }} </span><br>
-      Today's covid-19 cases: <span class="gNumber">{{ globalData.todayTotalCases }} </span><br>
-      Today's deaths associated with covid-19: <span class="gNumber">{{ globalData.todayTotalDeaths }} </span><br>
-      Today's percentage of total cases: <span class="gNumber">{{ globalData.todayPerCentOfTotalCases }}% </span><br>
-      Today's percentage of total deaths:  <span class="gNumber">{{ globalData.todayPerCentOfTotalDeaths }}% </span><br><br>
+      <span class="font0">Total cases:</span> <br><span class="font1">{{ globalData.totalCases.toLocaleString() }} </span><br><br>
+      <span class="font0">Total deaths:</span><br> <span class="font1"> {{ globalData.totalDeaths.toLocaleString() }} </span><br><br>
+      <div class="row">
+        <div class="fiftyPer"> <span class="font0"> Today's cases: </span><br><span class="font3 blue">{{ globalData.todayTotalCases.toLocaleString() }} </span></div>
+        <div class="fiftyPer"><span class="font0 ">Today's deaths: </span><br><span class="font3 blue">{{ globalData.todayTotalDeaths.toLocaleString() }} </span></div>
+     </div>
     </div>
-   </div>
   </div>
+
 
 </template>
 
