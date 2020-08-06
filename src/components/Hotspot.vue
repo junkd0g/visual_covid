@@ -1,8 +1,9 @@
 <template>
   <div>
   <p class="modeText"><b> {{ title }}  </b></p>
+  <p class="modeText">Stats for the last 10 days</p>
     <mdb-container>
-        <mdb-line-chart
+        <mdb-bar-chart
           :data="lineChartData"
           :options="lineChartOptions"
           :width="dimension.width"
@@ -14,7 +15,7 @@
 
 
 <script>
-  import { mdbLineChart, mdbContainer } from "mdbvue";
+  import { mdbBarChart, mdbContainer } from "mdbvue";
   import { isMobile } from 'mobile-device-detect';
   import FEData from '../lib/FEData.js';
   var fedata= new FEData();
@@ -22,7 +23,7 @@
   export default {
     name: "ChartPage",
     components: {
-      mdbLineChart,
+      mdbBarChart,
       mdbContainer
     },
     created() {

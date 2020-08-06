@@ -2,52 +2,47 @@ export default class FEData {
 
   lineChartOptionsData(){
     return {
-      responsive: false,
-      maintainAspectRatio: false,
+      legend: {
+        display: true
+      },
       scales: {
-        xAxes: [
-          {
-            gridLines: {
-              display: true,
-              color: "rgba(0, 0, 0, 0.1)"
-            }
+        xAxes: [{
+          display: false,
+          gridLines: {
+            display: false
           }
-        ],
-        yAxes: [
-          {
-            gridLines: {
-              display: true,
-              color: "rgba(0, 0, 0, 0.1)"
-            }
+         }],
+        yAxes: [{
+          display: false,
+          gridLines: {
+            display: false
           }
-        ]
-      }
+        }]
+      },
+      responsive: true
     }
   }
 
   horizontalBarChartOptionsData() {
     return {
-      responsive: false,
-      maintainAspectRatio: false,
+      legend: {
+        display: true
+      },
       scales: {
-        xAxes: [
-          {
-            barPercentage: 1,
-            gridLines: {
-              display: true,
-              color: "rgba(0, 0, 0, 0.1)"
-            }
+        xAxes: [{
+          display: false,
+          gridLines: {
+            display: false
           }
-        ],
-        yAxes: [
-          {
-            gridLines: {
-              display: true,
-              color: "rgba(0, 0, 0, 0.1)"
-            }
+         }],
+        yAxes: [{
+          display: false,
+          gridLines: {
+            display: false
           }
-        ]
-      }
+        }]
+      },
+      responsive: true
     }
   }
 
@@ -59,20 +54,20 @@ export default class FEData {
           label: typeOfDiagram,
           data: deathsNumber,
           backgroundColor: [
-            "#cc0000",
-            "#6200ee",
-            "#3700b3",
-            "#045757",
-            "#f6c90e",
-            "#0a91ab"
+            "#0066FF",
+            "#F5BEAE",
+            "#15A7E5",
+            "#FFF500",
+            "#9FBFF0",
+            "#C1C8D8"
         ],
         borderColor: [
-          "#fff",
-          "#fff",
-          "#fff",
-          "#fff",
-          "#fff",
-          "#fff",
+          "#0066FF",
+          "#F5BEAE",
+          "#15A7E5",
+          "#FFF500",
+          "#9FBFF0",
+          "#C1C8D8"
         ],
         borderWidth: 1
       }
@@ -91,15 +86,15 @@ export default class FEData {
       labels: Array.from(Array(displayLength).keys()),
       datasets: [{
         label: countryOneName,
-        backgroundColor: "rgba(204, 0, 0, 0.1)",
-        borderColor: "rgba(204, 0, 0, 1.0)",
+        backgroundColor: "rgba(0,102,255,1)",
+        borderColor: "rgba(0,102,255,1)",
         borderWidth: 0.7,
         data : countryOneData
       },
       {
         label: countryTwoName,
-        backgroundColor: "rgba(151,187,205,0.2)",
-        borderColor: "rgba(151,187,205,1)",
+        backgroundColor: "rgba(245,190,174,1)",
+        borderColor: "rgba(245,190,174,1)",
         borderWidth: 0.8,
         data : countryTwoData
       }
@@ -112,24 +107,24 @@ export default class FEData {
       {
         
         label: labelOne,
-        backgroundColor: "rgba(0, 102, 168, 0.1)",
-        borderColor: "rgba(0, 102, 255, 1)",
+        backgroundColor: "rgba(0,102,255,1)",
+        borderColor: "rgba(0,102,255,1)",
         borderWidth: 3.0,
         fill :false,
         data: cases
       },
       {
         label: labelTwo,
-        backgroundColor: "rgba(157, 218, 225,1)",
-        borderColor: "rgba(157, 218, 225,1)",
+        backgroundColor: "rgba(193,200,216,1)",
+        borderColor: "rgba(193,200,216,1)",
         borderWidth: 2.0,
         fill :false,
         data: deaths
       },
       {
         label: labelThree,
-        backgroundColor: "rgba(252, 93, 45, 1)",
-        borderColor: "rgba(252, 93, 45, 1)",
+        backgroundColor: "rgba(245,190,174,1)",
+        borderColor: "rgba(245,190,174,1)",
         fill :false,
 
         borderWidth: 3.0,
@@ -141,23 +136,23 @@ export default class FEData {
   worldLineChartOptions(){
     return {
       legend: {
-        display: false
-    },
-  scales: {
-   xAxes: [{
-      display: false,
-      gridLines: {
-         display: false
-      }
-   }],
-   yAxes: [{
-     display: false,
-      gridLines: {
-         display: false
-      }
-   }]
-},
-responsive: true,
+        display: true
+      },
+      scales: {
+        xAxes: [{
+          display: false,
+          gridLines: {
+            display: false
+          }
+         }],
+        yAxes: [{
+          display: false,
+          gridLines: {
+            display: false
+          }
+        }]
+      },
+      responsive: true,
     }
   }
 

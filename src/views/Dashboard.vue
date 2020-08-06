@@ -13,7 +13,35 @@
       </div>
 
 
-      
+      <div class="dd">
+
+        <Hotspot 
+          :key="worldData"
+          v-bind:most="worldData.mostDeaths.data"
+          v-bind:second="worldData.secondDeaths.data"
+          v-bind:third="worldData.thirdDeaths.data"
+          v-bind:country="worldData.mostDeaths.country"
+          v-bind:countryTwo="worldData.secondDeaths.country"
+          v-bind:countryThree="worldData.thirdDeaths.country"
+          v-bind:title="'COUNTRIES WITH MOST DEATHS'"
+          v-bind:desktopHeight=350
+          v-bind:desktopWidth=500
+        />
+      </div>
+      <div  class="dd">
+        <Hotspot 
+          :key="worldData"
+          v-bind:most="worldData.mostCases.data"
+          v-bind:second="worldData.secondCases.data"
+          v-bind:third="worldData.thirdCases.data"
+          v-bind:country="worldData.mostCases.country"
+          v-bind:countryTwo="worldData.secondCases.country"
+          v-bind:countryThree="worldData.thirdCases.country"
+          v-bind:title="'COUNTRIES WITH MOST CASES'"
+          v-bind:desktopHeight=350
+          v-bind:desktopWidth=500
+        />
+      </div>
           
 
 
@@ -26,10 +54,9 @@
   import Navi from '@/components/Nav'
   import axios from 'axios'
   import GeneralStat from '@/components/GeneralStat'
-  //import Today from '@/components/TodayNews'
   import World from '@/components/WorldCalculate'
   //import BriefCountry from '@/components/BriefCountry'
-  //import Hotspot from '@/components/Hotspot'
+  import Hotspot from '@/components/Hotspot'
 
 
 export default {
@@ -37,9 +64,8 @@ export default {
   components: {
     Navi,
     GeneralStat,
-    //Today,
     World,
-    //Hotspot,
+    Hotspot,
     //BriefCountry
   },
   created() {

@@ -1,9 +1,5 @@
 <template>
   <div>
-    <span class="modeText"> Update amount of days you want to check: </span>
-    <b-dropdown id="dropdown-1" :text="worldDowbownText" class="m-md-2">
-      <b-dropdown-item  v-for="item in worldDowbownData" :key="item"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
-    </b-dropdown>
     <World 
         :key="worldDowbownText"
         v-bind:cases="worldData.casesDaily.slice(worldData.casesDaily.length - worldDowbownText, worldData.casesDaily.length)"

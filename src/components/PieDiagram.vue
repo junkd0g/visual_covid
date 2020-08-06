@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="center">
       <span class="modeText"> {{type}} across the globe </span>
       <mdb-container>
         <mdb-pie-chart
@@ -12,7 +11,6 @@
         />
       </mdb-container>
     </div>
-  </div>
 </template>
 
 
@@ -70,24 +68,41 @@
             {
               data: this.getData(),
               backgroundColor: [
-                "#F7464A",
-                "#46BFBD",
-                "#FDB45C",
-                "#949FB1",
-                "#4D5360"
+                "#0066FF",
+                "#15A7E5",
+                "#9FBFF0",
+                "#C1C8D8",
+                "#F5BEAE"
               ],
               hoverBackgroundColor: [
-                "#FF5A5E",
-                "#5AD3D1",
-                "#FFC870",
-                "#A8B3C5",
-                "#616774"
+                "#0066FF",
+                "#15A7E5",
+                "#9FBFF0",
+                "#C1C8D8",
+                "#F5BEAE"
               ]
             }
           ]
         },
         pieChartOptions: {
-          responsive: false,
+          legend: {
+        display: true
+      },
+      scales: {
+        xAxes: [{
+          display: false,
+          gridLines: {
+            display: false
+          }
+         }],
+        yAxes: [{
+          display: false,
+          gridLines: {
+            display: false
+          }
+        }]
+      },
+      responsive: true,
           maintainAspectRatio: false,
           plugins: {
             datalabels: {

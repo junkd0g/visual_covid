@@ -2,9 +2,8 @@
 
   <div>
     <div class="w3-container w3-content newsStandBig">
-      <div class="w3-panel w3-card w3-display-containermainPanel mainPanel">
         <mdb-container class="totalChar">
-          <mdb-line-chart
+          <mdb-bar-chart
             :data="lineChartData"
             :options="lineChartOptions"
             :width="dimension.width"
@@ -12,14 +11,13 @@
             :key="dimension"
           />
         </mdb-container>
-      </div>
     </div>
   </div>
 
 </template>
 
 <script>
-  import { mdbLineChart, mdbContainer } from "mdbvue";
+  import { mdbBarChart, mdbContainer } from "mdbvue";
   import { isMobile } from 'mobile-device-detect';
   import FEData from '../lib/FEData.js';
 
@@ -28,7 +26,7 @@
   export default {
     name: "ChartPage",
     components: {
-      mdbLineChart,
+      mdbBarChart,
       mdbContainer
     },
     props: {

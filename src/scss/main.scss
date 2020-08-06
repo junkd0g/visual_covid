@@ -49,12 +49,28 @@
     font-size: 48px;
 }
 
+.font4{
+	font-family: 'Inter', sans-serif; 
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 36px;
+}
+
 .yellow{
 	color: #FC5D2D;
 }
 
 .blue{
 	color: #0066FF;
+}
+
+.navGrey{
+	color: #808287;
+}
+
+.navGreyLight{
+	color: #BDC4D6;
 }
 
 
@@ -148,21 +164,11 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
-		background-color: #000000;
-	}
-	.body{
-		background-color: #000000;
-		color: white;
-	
+		background-color: #282a2f;
 	}
 	
 	.modeText{
 		color: #ffffff;
-	}
-	
-	.backgroundColor{
-		color: #000000;
-	
 	}
 	
 	.mainPanel{
