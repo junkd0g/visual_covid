@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 #app {
 	font-family: 'Inter', sans-serif;    
@@ -57,6 +57,29 @@
 	line-height: 36px;
 }
 
+.font5{
+	font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+color: #C1C8D8;
+}
+
+.font6{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	text-transform: uppercase;
+	color: #C1C8D8;
+}
+
 .yellow{
 	color: #FC5D2D;
 }
@@ -74,150 +97,16 @@
 }
 
 
-.openLink{
-	font-size:28px;
-	color:  #42b983;
-	padding-left: 15px;
-	padding-right: 15px;
-    text-align:right;position: absolute;bottom: 0; right: 0;
-}
-
-.backgroundColor{
-    color: #fff;
-}
-
-.mainPanel{
-    background-color: #fff;
-}
-
-.gNumber {
-  color: #42b983;
-  font-weight: bold;
-}
-
-.lilika{
-    font-size:18px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.newsPag{
-	font-size:18px;
-	color:  black;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.marika{
-    font-size:28px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-.marika:hover{
-    color: #3366FF;
-}
-
-.marika3{
-    font-size: 22px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-.marika3:hover{
-    color: #3366FF;
-}
-
-.marika2{
-    font-size:28px;
-    color: #42b983;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.marika2:hover{
-    color: #3366FF;
-}
-
 @media(prefers-color-scheme: dark) {
 
-	.openLink{
-		font-size:28px;
-		color:  #cc0000;
-		padding-left: 15px;
-		padding-right: 15px;
-		text-align:right;position: absolute;bottom: 0; right: 0;
-	}
-
-	.marika3{
-		font-size:22px;
-		color: #cc0000;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
 	#app {
-		font-family: Avenir, Helvetica, Arial, sans-serif;
+		font-family: 'Inter', sans-serif;    
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
+		color: #808287;
+		text-align: left;
 		background-color: #282a2f;
 	}
 	
-	.modeText{
-		color: #ffffff;
-	}
-	
-	.mainPanel{
-		background-color: #141d26;
-		color: #ffffff;
-	}
-	
-	.totalChar{
-		background-color: #141d26;
-		color: #ffffff;
-	}
-	
-
-	.marika3:hover{
-		color: #3366FF;
-	}
-	
-	.gNumber {
-	  color:  #cc0000;
-	  font-weight: bold;
-	}
-	
-	.lilika{
-		font-size:18px;
-		color:  #cc0000;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	.newsPag{
-		font-size:18px;
-		color:  white;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	
-	.marika{
-		font-size:28px;
-		color: #cc0000;
-		padding-left: 15px;
-		padding-right: 15px;
-	
-	}
-	.marika:hover{
-		color: #3366FF;
-	}
-	
-	.marika2:hover{
-		color: #3366FF;
-	}   
 
 }

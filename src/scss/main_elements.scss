@@ -1,3 +1,35 @@
+table {
+    max-width: 550px;
+    max-height: 260px;
+    overflow-y: scroll;
+    display: inline-block;
+}
+
+td:nth-child(1) { 
+    color:#0066FF; 
+}
+
+td { 
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #808287;
+}
+
+th{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #808287;
+}
+
 .box {
     display: flex;
     flex-direction: row;
@@ -8,16 +40,22 @@
     flex: 1 1 ;
 }
 
+.WorldStand{
+    height: 60%;
+}
+
+.HotSpotStand{
+    width: 40%;
+
+}
+
+/* ------------ */
+
 .newsStand{
     width: 500px;
 }
 
 .newsStandBig2{
-    width: 670px;
-    height: 400px;
-}
-
-.briefDiv{
     width: 670px;
     height: 400px;
 }
@@ -36,9 +74,10 @@
     margin-left:50px;
  }
 
-.dd + .dd{
-    margin-bottom:50px;
+.das + .das{
+    margin-bottom:150px;
  }
+
 
  #dropdown-1 + #dropdown-1{
     margin-left:20px;
@@ -49,9 +88,6 @@
     overflow-y: scroll;
 }
 
-.newsStandSmall{
-    width: 500px;
-}
 
 .inner {
     width: 50%;
@@ -62,10 +98,6 @@
 and (min-device-width : 375px) 
 and (max-device-width : 800px) {
 
-    .newsStandSmall{
-        width: 350px;
-    }
-
     .newsStandBig{
         width: 350px;
         height: 290px;  
@@ -74,12 +106,6 @@ and (max-device-width : 800px) {
         width: 350px;
         height: 290px;
     }
-
-    .briefDiv{
-        width: 350px;
-		height: 350px;
-    }
-
     .newsStandBig2{
 		width: 380px;
 		height: 390px;

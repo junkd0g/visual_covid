@@ -1,28 +1,10 @@
 <template>
-  <div class="dd">
-    <div class="w3-container w3-content briefDiv">
-      <div class="w3-panel  w3-card w3-display-container mainPanel">
-        <p class="lilika"><b> {{ countries[index].country }} </b></p>
-        Total covid-19 cases: <span class="gNumber"> {{ countries[index].cases }} </span><br>
-        Today's covid-19 cases: <span class="gNumber"> {{ countries[index].todayCases }} </span><br>
-        Total deaths associated with covid 19: <span class="gNumber"> {{ countries[index].deaths }} </span><br>
-        Today's deaths associated with covid 19: <span class="gNumber"> {{ countries[index].todayDeaths }} </span><br>
-        Recovered patients : <span class="gNumber"> {{ countries[index].recovered }} </span><br>
-        Pantients active with covid-19: <span class="gNumber"> {{ countries[index].active }} </span><br>
-        Pantients with critical condition : <span class="gNumber"> {{ countries[index].critical }} </span><br>
-        Cases per one million people: <span class="gNumber"> {{ countries[index].casesPerOneMillion }} </span><br>
-        Total covid-19 test: <span class="gNumber"> {{ countries[index].tests }} </span><br>
-        Tests per one million people: <span class="gNumber"> {{ countries[index].testsPerOneMillion }} </span><br>
-        <span class="marika3"><i class="fa fa-arrow-circle-left" v-on:click="updateBackwards"></i></span>
-        <span class="marika3"><i class="fa fa-arrow-circle-right" v-on:click="updateForward"></i></span>
-        <b-dropdown id="dropdown-1" :text="v1" class="m-md-2">
-          <b-dropdown-item  v-for="ditem in dropdownData" :key="ditem"  v-on:click="updateOne(ditem)">{{ ditem.country }} </b-dropdown-item>
-        </b-dropdown>
-        <a class="w3-bar-item openLink" :href="'/country/'+countries[index].country" target="_blank">
-           <i class="fa">&#xf08e;</i>
-        </a>
+  <div>
+      <div class="outer">                        
+        <div class="w3-container w3-content newsStand"> 
+          <b-table id="my-table" class="tsize table table-fixed" striped :items="countries" :fields="fields"/>
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -68,6 +50,33 @@
         dropdownData : [],
         index: 0,
         v1 : '',
+        fields: [
+          {
+            label: "",
+            key: 'country',
+            sortable: false
+          },
+          {
+            label: "TOTAL CASES",
+            key: 'cases',
+            sortable: true
+          },
+          {
+            label: "TOTAL DEATHS",
+            key: 'deaths',
+            sortable: true
+          },
+          {
+            label: "Cases 1/M",
+            key: 'casesPerOneMillion',
+            sortable: true,
+          },
+          {
+            label: "Tests 1/M",
+            key: 'testsPerOneMillion',
+            sortable: true,
+          }
+        ],
       };
     }
   };

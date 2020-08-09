@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <span class="font0"> World daily updates: </span>
-    <span class="font0"> Stats for the last 20 days </span>
-    <mdb-container>
+    <div class="WorldStand">
+
+    <div class="w3-container w3-content newsStand"> 
+      <span class="font6"> World daily updates: </span><br>
+      <span class="font5"> Stats for the last 20 days </span>
+    </div>
+
+    <mdb-container class="WorldStand">
         <mdb-bar-chart
           :data="lineChartData"
           :options="lineChartOptions"

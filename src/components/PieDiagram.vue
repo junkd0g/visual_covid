@@ -2,7 +2,7 @@
   <div>
       <span class="modeText"> {{type}} across the globe </span>
       <mdb-container>
-        <mdb-pie-chart
+        <mdb-doughnut-chart
           datalabels
           :data="pieChartData"
           :options="pieChartOptions"
@@ -15,12 +15,12 @@
 
 
 <script>
-  import { mdbPieChart, mdbContainer } from "mdbvue";
+  import { mdbDoughnutChart, mdbContainer } from "mdbvue";
   import { isMobile } from 'mobile-device-detect';
   export default {
     name: "ChartPage",
     components: {
-      mdbPieChart,
+      mdbDoughnutChart,
       mdbContainer
     },
     props: {

@@ -1,20 +1,15 @@
 <template>
   <div class="home">
     <navi/>
+    <div>
+      <GeneralStat />
+    </div>
+    <div>
+      <World />
+    </div>
+
     <div class="box">
-
-      <div class="dd">
-        <GeneralStat />
-      </div>
-
-
-      <div class="dd">
-        <World />
-      </div>
-
-
-      <div class="dd">
-
+      <div class="dd HotSpotStand">
         <Hotspot 
           :key="worldData"
           v-bind:most="worldData.mostDeaths.data"
@@ -28,7 +23,7 @@
           v-bind:desktopWidth=500
         />
       </div>
-      <div  class="dd">
+      <div  class="dd HotSpotStand">
         <Hotspot 
           :key="worldData"
           v-bind:most="worldData.mostCases.data"
@@ -42,11 +37,13 @@
           v-bind:desktopWidth=500
         />
       </div>
-          
-
-
     </div>
-
+    <div class="dd">
+        <BriefCountry 
+          :key="countriesData"
+          v-bind:countries="countriesData"
+          />
+      </div>
   </div>
 </template>
 
@@ -55,7 +52,7 @@
   import axios from 'axios'
   import GeneralStat from '@/components/GeneralStat'
   import World from '@/components/WorldCalculate'
-  //import BriefCountry from '@/components/BriefCountry'
+  import BriefCountry from '@/components/BriefCountry'
   import Hotspot from '@/components/Hotspot'
 
 
@@ -66,7 +63,7 @@ export default {
     GeneralStat,
     World,
     Hotspot,
-    //BriefCountry
+    BriefCountry
   },
   created() {
     window.addEventListener('resize', this.handleResize);
@@ -88,14 +85,6 @@ export default {
     }
   },
   methods: {
-    requestNews(){
-      axios.get('http://54.246.200.221/api/news/all')
-        .then(response  => (
-          this.newsData = response.data))
-        .catch(function (error) {   
-          console.log(error)
-      })
-    },
     requestWorld(days){
       axios.get('http://54.246.200.221/api/hotspot/' + days)
         .then(response  => (
@@ -112,7 +101,6 @@ export default {
     }
   },
   mounted(){
-    this.requestNews()
     this.requestWorld(this.drowbownText)
 
     axios.defaults.baseURL = 'http://54.246.200.221/api/'
