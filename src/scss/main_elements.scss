@@ -48,17 +48,15 @@ th{
     width: 40%;
 
 }
-
-/* ------------ */
-
 .newsStand{
     width: 500px;
 }
 
-.newsStandBig2{
-    width: 670px;
-    height: 400px;
+.countryMainData{
+    width: 50%;
+    height: 600px;
 }
+/* ------------ */
 
 .newsStandBig{
     width: 670px;
@@ -72,6 +70,11 @@ th{
 .fiftyPer + .fiftyPer{
     flex: 1; /* additionally, equal width */
     margin-left:50px;
+ }
+
+ .thirtyPer + .thirtyPer{
+    flex: 1; /* additionally, equal width */
+    margin-left:20px;
  }
 
 .das + .das{

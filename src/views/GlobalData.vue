@@ -65,17 +65,6 @@
         </div>
       </div>
 
-      <!--/* Bar diagram which contains the 5 countries with the most recovered patients globally */-->
-      <div>
-        <div class="w3-container w3-content newsStandBig2">
-            <total-diagram
-              v-bind:countries="[ recovered[0].country, recovered[1].country, recovered[2].country, recovered[3].country, recovered[4].country, recovered[5].country]" 
-              v-bind:deathsNumber="[ recovered[0].recovered, recovered[1].recovered, recovered[2].recovered, recovered[3].recovered, recovered[4].recovered, recovered[5].recovered]"
-              v-bind:typeOfDiagram= "'Covid-19 recovered patients'"
-            />
-        </div>
-      </div>
-
     </div>
   </div>
 
@@ -97,7 +86,6 @@
       return {
         sdeaths: [],
         scases: [],
-        recovered : [],
         active : [],
         continentData : []
       }
@@ -133,15 +121,6 @@
         .catch(function (error) {   
           console.log(error);
         });
-
-        axios.post(`sort`, {
-            type: 'recovered'
-        })
-        .then(response  => (this.recovered = response.data.data))
-        .catch(function (error) {   
-          console.log(error);
-        });
-
         axios.post(`sort`, {
             type: 'active'
         })
