@@ -1,6 +1,6 @@
 <template>
 
-     <div class="container">
+     <div>
       <span class="font0">Total cases:</span> <br><span class="font1">{{ globalData.totalCases.toLocaleString() }} </span><br><br>
       <span class="font0">Total deaths:</span><br> <span class="font1"> {{ globalData.totalDeaths.toLocaleString() }} </span><br><br>
       <div class="row">

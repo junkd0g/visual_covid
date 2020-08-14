@@ -6,8 +6,6 @@
         <mdb-bar-chart
           :data="lineChartData"
           :options="lineChartOptions"
-          :width="dimension.width"
-          :height="dimension.height"
         />
     </mdb-container>
   </div>
@@ -16,7 +14,6 @@
 
 <script>
   import { mdbBarChart, mdbContainer } from "mdbvue";
-  import { isMobile } from 'mobile-device-detect';
   import FEData from '../lib/FEData.js';
   var fedata= new FEData();
 
@@ -26,24 +23,7 @@
       mdbBarChart,
       mdbContainer
     },
-    created() {
-        window.addEventListener('resize', this.handleResize);
-        this.handleResize();
-    },
-    destroyed() {
-        window.removeEventListener('resize', this.handleResize);
-    },
-    methods: {
-      handleResize() {
-        if (isMobile == true) {
-          this.dimension.height = 280
-          this.dimension.width = 310
-        }else{
-          this.dimension.height = 400
-          this.dimension.width = 600
-        }
-      }
-    },
+
     props: {
         most: Array,
         second: Array,
@@ -58,10 +38,6 @@
     },
     data() {
       return {
-        dimension :{
-          height: 500,
-          width: 1100,
-        },
         worldData : {},
         lineChartData: {
           labels: Array.from(Array(this.most.length).keys()),

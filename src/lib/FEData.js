@@ -136,7 +136,10 @@ export default class FEData {
   worldLineChartOptions(){
     return {
       legend: {
-        display: true
+        display: true,
+        position: 'top',
+        align: 'left'
+
       },
       scales: {
         xAxes: [{
