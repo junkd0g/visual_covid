@@ -5,8 +5,6 @@
         v-bind:cases="worldData.casesDaily.slice(worldData.casesDaily.length - worldDowbownText, worldData.casesDaily.length)"
         v-bind:deaths="worldData.deathsDaily.slice(worldData.casesDaily.length - worldDowbownText, worldData.casesDaily.length)"
         v-bind:recovered="worldData.recoveredDaily.slice(worldData.casesDaily.length - worldDowbownText, worldData.casesDaily.length)"
-        v-bind:desktopHeight=500
-        v-bind:desktopWidth=1000
     />
   </div>
 </template>

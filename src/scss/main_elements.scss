@@ -1,5 +1,4 @@
 table {
-    max-width: 550px;
     max-height: 260px;
     overflow-y: scroll;
     display: inline-block;
@@ -30,88 +29,14 @@ th{
     color: #808287;
 }
 
-.box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.box>* {
-    flex: 1 1 ;
-}
-
-.WorldStand{
-    height: 60%;
-}
-
-.HotSpotStand{
-    width: 40%;
-
-}
-.newsStand{
-    width: 500px;
-}
-
-.countryMainData{
-    width: 50%;
-    height: 600px;
-}
-/* ------------ */
-
-.newsStandBig{
-    width: 670px;
-    height: 400px;
-}
-
-.row {
-    display: flex; /* equal height of the children */
-}
-
-.fiftyPer + .fiftyPer{
-    flex: 1; /* additionally, equal width */
-    margin-left:50px;
- }
-
- .thirtyPer + .thirtyPer{
-    flex: 1; /* additionally, equal width */
-    margin-left:20px;
- }
-
-.das + .das{
-    margin-bottom:150px;
- }
 
 
- #dropdown-1 + #dropdown-1{
-    margin-left:20px;
-}
 
-.m-md-2 .dropdown-menu {
-    max-height: 400px;
-    overflow-y: scroll;
-}
-
-
-.inner {
-    width: 50%;
-    margin: 0 auto;
-}
 
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 800px) {
 
-    .newsStandBig{
-        width: 350px;
-        height: 290px;  
-	}
-    .newsStand{
-        width: 350px;
-        height: 290px;
-    }
-    .newsStandBig2{
-		width: 380px;
-		height: 390px;
-	}
+
 
 }

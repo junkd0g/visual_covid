@@ -1,16 +1,18 @@
 <template>
 
-  <div class="outer">                        
-    <div class="w3-container w3-content newsStand">
-      <br>
+     <div class="container">
       <span class="font0">Total cases:</span> <br><span class="font1">{{ globalData.totalCases.toLocaleString() }} </span><br><br>
       <span class="font0">Total deaths:</span><br> <span class="font1"> {{ globalData.totalDeaths.toLocaleString() }} </span><br><br>
       <div class="row">
-        <div class="fiftyPer"> <span class="font0"> Today's cases: </span><br><span class="font3 blue">{{ globalData.todayTotalCases.toLocaleString() }} </span></div>
-        <div class="fiftyPer"><span class="font0 ">Today's deaths: </span><br><span class="font3 blue">{{ globalData.todayTotalDeaths.toLocaleString() }} </span></div>
-     </div>
+        <div class="col-3">
+          <span class="font0"> Today's cases: </span><br><span class="font3 blue">{{ globalData.todayTotalCases.toLocaleString() }} </span>
+        </div>
+        <div class="col-9">
+          <span class="font0 ">Today's deaths: </span><br><span class="font3 blue">{{ globalData.todayTotalDeaths.toLocaleString() }} </span>
+        </div>
+      </div>
+        
     </div>
-  </div>
 
 
 </template>

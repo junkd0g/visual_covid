@@ -1,7 +1,7 @@
 <template>
     <div class="WorldStand">
 
-    <div class="w3-container w3-content newsStand"> 
+    <div> 
       <span class="font6"> World daily updates: </span><br>
       <span class="font5"> Stats for the last 20 days </span>
     </div>
@@ -10,8 +10,6 @@
         <mdb-bar-chart
           :data="lineChartData"
           :options="lineChartOptions"
-          :width="dimension.width"
-          :height="dimension.height"
         />
     </mdb-container>
   </div>

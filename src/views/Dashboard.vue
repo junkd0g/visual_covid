@@ -1,15 +1,19 @@
 <template>
-  <div class="home">
+  <div>
     <navi/>
+    <div class="container">
     <div>
       <GeneralStat />
     </div>
+      
     <div>
       <World />
     </div>
 
-    <div class="box">
-      <div class="dd HotSpotStand">
+  
+
+    <div>
+      <div>
         <Hotspot 
           :key="worldData"
           v-bind:most="worldData.mostDeaths.data"
@@ -19,11 +23,9 @@
           v-bind:countryTwo="worldData.secondDeaths.country"
           v-bind:countryThree="worldData.thirdDeaths.country"
           v-bind:title="'COUNTRIES WITH MOST DEATHS'"
-          v-bind:desktopHeight=350
-          v-bind:desktopWidth=500
         />
       </div>
-      <div  class="dd HotSpotStand">
+      <div>
         <Hotspot 
           :key="worldData"
           v-bind:most="worldData.mostCases.data"
@@ -33,17 +35,16 @@
           v-bind:countryTwo="worldData.secondCases.country"
           v-bind:countryThree="worldData.thirdCases.country"
           v-bind:title="'COUNTRIES WITH MOST CASES'"
-          v-bind:desktopHeight=350
-          v-bind:desktopWidth=500
         />
       </div>
     </div>
-    <div class="dd">
+    <div>
         <BriefCountry 
           :key="countriesData"
           v-bind:countries="countriesData"
           />
       </div>
+  </div>
   </div>
 </template>
 
