@@ -1,31 +1,46 @@
 <template>
 
   <div>
-  
-    <navi/>
+      <navi/>
+  <div class="container kostja">
 
     <b-dropdown id="dropdown-1" size="lg" :text="v1" class="m-md-2">
       <b-dropdown-item  v-for="item in info" :key="item.position"  v-on:click="updateOne(item)">{{ item }} </b-dropdown-item>
     </b-dropdown>
 
       
-    <div class="w3-container w3-content countryMainData">
+    <div>
       <span class="font0">TOTAL CASES:</span> <br><span class="font1">{{ infoCountry.cases.toLocaleString()  }} </span><br><br>
       <span class="font0">TOTAL DEATHS</span><br> <span class="font1"> {{ infoCountry.deaths.toLocaleString() }} </span><br><br>
       <div class="row">
-        <div class="fiftyPer"> <span class="font0"> TODAY CASES </span><br><span class="font3 blue">{{ infoCountry.todayCases.toLocaleString() }} </span></div>
-        <div class="fiftyPer"><span class="font0 "> TODAY DEATHS </span><br><span class="font3 pink">{{ infoCountry.todayDeaths.toLocaleString() }} </span></div>
+        <div class="col-3">
+          <div class="fiftyPer"> <span class="font0"> TODAY CASES </span><br><span class="font3 blue">{{ infoCountry.todayCases.toLocaleString() }} </span></div>
+        </div>
+        <div class="col-9">  
+          <div class="fiftyPer"><span class="font0 "> TODAY DEATHS </span><br><span class="font3 pink">{{ infoCountry.todayDeaths.toLocaleString() }} </span></div>
+        </div>
       </div>
       <div class="row">
-        <div class="fiftyPer"> <span class="font0"> ACTIVE CASES: </span><br><span class="font3 navGreyLight">{{ infoCountry.active.toLocaleString()  }} </span></div>
-        <div class="fiftyPer"><span class="font0 "> CRITICAL CONDITION: </span><br><span class="font3 navGreyLight">{{ infoCountry.critical.toLocaleString() }} </span></div>
+        <div class="col-3">
+          <div class="fiftyPer"> <span class="font0"> ACTIVE CASES: </span><br><span class="font3 navGreyLight">{{ infoCountry.active.toLocaleString()  }} </span></div>
+        </div>
+        <div class="col-9">
+          <div class="fiftyPer"><span class="font0 "> CRITICAL CONDITION: </span><br><span class="font3 navGreyLight">{{ infoCountry.critical.toLocaleString() }} </span></div>
+        </div>
       </div>
       <div class="row">
-        <div class="thirtyPer"> <span class="font0"> TOTAL TESTS: </span><br><span class="font3 almostBlack">{{ infoCountry.tests.toLocaleString()  }} </span></div>
-        <div class="thirtyPer"><span class="font0 "> TEST / 1M </span><br><span class="font3 almostBlack">{{ infoCountry.testsPerOneMillion.toLocaleString() }} </span></div>
-        <div class="thirtyPer"><span class="font0 "> CASES / 1M </span><br><span class="font3 almostBlack">{{ infoCountry.casesPerOneMillion.toLocaleString() }} </span></div>
+        <div class="col-2">
+          <div class="thirtyPer"> <span class="font0"> TOTAL TESTS: </span><br><span class="font3v2 almostBlack">{{ infoCountry.tests.toLocaleString()  }} </span></div>
+        </div>
+        <div class="col-2">
+          <div class="thirtyPer"><span class="font0 "> TEST / 1M </span><br><span class="font3v2 almostBlack">{{ infoCountry.testsPerOneMillion.toLocaleString() }} </span></div>
+        </div>
+        <div class="col-2">
+          <div class="thirtyPer"><span class="font0 "> CASES / 1M </span><br><span class="font3v2 almostBlack">{{ infoCountry.casesPerOneMillion.toLocaleString() }} </span></div>
+        </div>
       </div>
     </div>
+    <br>
 
     <div class="box">
 
@@ -39,7 +54,7 @@
               v-bind:countryTwoName="''"
             />
         </div>
-
+        <br>
         <div class="dd">
           <p class="modeText"><b>Deaths per day</b></p>
           <curve-compare
@@ -50,7 +65,7 @@
             v-bind:countryTwoName="''"
           />
         </div>
-
+        <br>
         <div class="dd">
           <p class="modeText"><b>Cases from 22/01/2020</b></p>
           <curve-compare
@@ -61,7 +76,7 @@
             v-bind:countryTwoName="''"
           />
         </div>
-
+        <br>
         <div class="dd">
           <p class="modeText"><b>Cases per day</b></p>
           <curve-compare
@@ -72,7 +87,7 @@
             v-bind:countryTwoName="''"
           />
         </div>
-
+        <br>
         <div class="dd" v-if="specificDataCountry.data.length > 1">
           <p class="modeText"><b>General country's province data</b></p>
           <specific-data-country
@@ -81,7 +96,7 @@
           />
         </div>
     </div>
-
+    </div>
   </div>
 
 </template>
