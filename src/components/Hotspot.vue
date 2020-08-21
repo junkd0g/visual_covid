@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hotspot">
   <p class="modeText"><b> {{ title }}  </b></p>
   <p class="modeText">Stats for the last 10 days</p>
     <mdb-container>

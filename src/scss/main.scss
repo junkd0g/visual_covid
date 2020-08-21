@@ -9,8 +9,53 @@
     background-color: #fff;
 }
 
+table {
+    max-height: 260px;
+    overflow-y: scroll;
+    display: inline-block;
+}
+
+td:nth-child(1) { 
+    color:#0066FF; 
+}
+
+td { 
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #808287;
+}
+
+th{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #808287;
+}
+
 .kostja{
 	max-width:800px;
+}
+
+.hotspot{
+	max-width:	50%;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box>* {
+    flex: 1 1 ;
 }
 
 .font0{
@@ -19,7 +64,8 @@
 	font-family: 'Inter', sans-serif; 
 	color: #808287;
 	font-weight: 400;
-    font-size: 14px;
+	font-size: 14px;
+
 }
 
 .font1{
@@ -29,7 +75,7 @@
 	color: #808287;
 	line-height: 0.9;
 	font-weight: 600;
-    font-size: 96px;
+    font-size: 7vw;
 }
 
 .font2{
@@ -39,7 +85,7 @@
 	color: #808287;
 	line-height: 0.9;
 	font-weight: 600;
-    font-size: 60px;
+	font-size: 60px;
 }
 
 
@@ -50,7 +96,7 @@
 	color: #808287;
 	line-height: 0.9;
 	font-weight: 800;
-    font-size: 48px;
+    font-size: 4vw;
 }
 
 .font4{
@@ -63,15 +109,12 @@
 
 .font5{
 	font-family: Inter;
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-
-text-transform: capitalize;
-
-color: #C1C8D8;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: capitalize;
+	color: #C1C8D8;
 }
 
 .font6{
@@ -112,6 +155,15 @@ color: #C1C8D8;
 	background-color: red;
 }
 
+
+@media all and (max-device-width: 640px){
+
+}
+
+@media all and (max-device-width: 320px){
+
+}
+
 @media(prefers-color-scheme: dark) {
 
 	#app {
@@ -125,3 +177,13 @@ color: #C1C8D8;
 	
 
 }
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 800px) {
+
+
+
+}
+

@@ -2,18 +2,15 @@
   <div>
     <navi/>
     <div class="container kostja ">
-    <div>
-      <GeneralStat />
-    </div>
-      
-    <div>
-      <World />
-    </div>
-
-  
-
-    <div>
       <div>
+        <GeneralStat />
+      </div>
+      <br>
+      <div>
+        <World />
+      </div>
+      <br>
+      <div class="box">
         <Hotspot 
           :key="worldData"
           v-bind:most="worldData.mostDeaths.data"
@@ -24,8 +21,6 @@
           v-bind:countryThree="worldData.thirdDeaths.country"
           v-bind:title="'COUNTRIES WITH MOST DEATHS'"
         />
-      </div>
-      <div>
         <Hotspot 
           :key="worldData"
           v-bind:most="worldData.mostCases.data"
@@ -37,14 +32,13 @@
           v-bind:title="'COUNTRIES WITH MOST CASES'"
         />
       </div>
-    </div>
     <div>
         <BriefCountry 
           :key="countriesData"
           v-bind:countries="countriesData"
           />
       </div>
-  </div>
+    </div>
   </div>
 </template>
 
