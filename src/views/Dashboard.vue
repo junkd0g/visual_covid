@@ -1,7 +1,7 @@
 <template>
   <div>
     <navi/>
-    <div class="container kostja ">
+    <div class="container kostja">
       <div>
         <GeneralStat />
       </div>

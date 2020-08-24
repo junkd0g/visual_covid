@@ -9,6 +9,16 @@
     background-color: #fff;
 }
 
+#dropdown-1 + #dropdown-1{
+    margin-left:20px;
+}
+
+
+.m-md-2 .dropdown-menu {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
 table {
     max-height: 260px;
     overflow-y: scroll;
@@ -135,6 +145,12 @@ th{
 	line-height: 29px;
 	text-transform: uppercase;
 	color: #C1C8D8;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
 }
 
 .yellow{
