@@ -181,15 +181,6 @@ th{
 	background-color: red;
 }
 
-
-@media all and (max-device-width: 640px){
-
-}
-
-@media all and (max-device-width: 320px){
-
-}
-
 @media(prefers-color-scheme: dark) {
 
 	#app {
@@ -209,7 +200,9 @@ th{
 and (min-device-width : 375px) 
 and (max-device-width : 800px) {
 
-
+	.hotspot{
+		max-width: 95%;
+	}
 
 }
 
