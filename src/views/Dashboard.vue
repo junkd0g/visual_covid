@@ -32,6 +32,7 @@
           v-bind:title="'COUNTRIES WITH MOST CASES'"
         />
       </div>
+    <br>
     <div>
         <BriefCountry 
           :key="countriesData"
