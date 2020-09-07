@@ -61,13 +61,6 @@ export default {
     Hotspot,
     BriefCountry
   },
-  created() {
-    window.addEventListener('resize', this.handleResize);
-    this.handleResize();
-  },
-  destroyed() {
-    window.removeEventListener('resize', this.handleResize);
-  },
   data() {
     return {
       newsData : {},

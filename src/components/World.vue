@@ -26,13 +26,6 @@
       mdbBarChart,
       mdbContainer
     },
-    created() {
-        window.addEventListener('resize', this.handleResize);
-        this.handleResize();
-    },
-    destroyed() {
-        window.removeEventListener('resize', this.handleResize);
-    },
     props: {
       cases: Array,
       deaths: Array,
