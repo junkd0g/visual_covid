@@ -33,9 +33,6 @@
         countryTwo: String,
         countryThree: String,
     },
-    mounted() {
-        this.requestWorld()
-    },
     data() {
       return {
         worldData : {},
