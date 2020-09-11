@@ -204,5 +204,9 @@ and (max-device-width : 800px) {
 		max-width: 95%;
 	}
 
+	html,body{
+		overflow-x: hiddens;
+	}
+
 }
 

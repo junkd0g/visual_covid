@@ -12,7 +12,7 @@
             />
         </div>
       </div>
-
+      <br>
       <div>
         <div class="w3-container w3-content newsStandBig2">
             <pie-diagram
@@ -21,7 +21,7 @@
             />
         </div>
       </div>
-
+      <br>
        <div>
         <div class="w3-container w3-content newsStandBig2">
             <pie-diagram
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-
+      <br>
       <!-- Bar diagram which contains the 5 countries with the most deaths globally from 22 of January */ -->
       <div>
         <div class="w3-container w3-content newsStandBig2">
@@ -42,7 +42,7 @@
             />
         </div>
       </div>
-
+      <br>
       <!--/* Bar diagram which contains the 5 countries with the most confirm cases globally from 22 of January */-->
       <div>
         <div class="w3-container w3-content newsStandBig2">
@@ -53,7 +53,7 @@
             />
         </div>
       </div>
-
+      <br>
       <!--/* Bar diagram which contains the 5 countries with the most active cases globally */-->
       <div>
         <div class="w3-container w3-content newsStandBig2">
