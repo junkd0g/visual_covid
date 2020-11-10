@@ -22,21 +22,21 @@
       </div>
       <div class="row">
         <div class="col-3">
-          <div class="fiftyPer"> <span class="font0"> ACTIVE CASES: </span><br><span class="font3 navGreyLight">{{ infoCountry.active.toLocaleString()  }} </span></div>
+          <div class="fiftyPer"> <span class="font0dot1"> ACTIVE CASES: </span><br><span class="font3 navGreyLight">{{ infoCountry.active.toLocaleString()  }} </span></div>
         </div>
         <div class="col-9">
-          <div class="fiftyPer"><span class="font0 "> CRITICAL CONDITION: </span><br><span class="font3 navGreyLight">{{ infoCountry.critical.toLocaleString() }} </span></div>
+          <div class="fiftyPer"><span class="font0dot1 "> CRITICAL CONDITION: </span><br><span class="font3 navGreyLight">{{ infoCountry.critical.toLocaleString() }} </span></div>
         </div>
       </div>
       <div class="row">
         <div class="col-2">
-          <div class="thirtyPer"> <span class="font0"> TOTAL TESTS: </span><br><span class="font3v2 almostBlack">{{ infoCountry.tests.toLocaleString()  }} </span></div>
+          <div class="thirtyPer"> <span class="font0dot1"> TOTAL TESTS: </span><br><span class="font3v2 almostBlack">{{ infoCountry.tests.toLocaleString()  }} </span></div>
         </div>
         <div class="col-2">
-          <div class="thirtyPer"><span class="font0 "> TEST / 1M </span><br><span class="font3v2 almostBlack">{{ infoCountry.testsPerOneMillion.toLocaleString() }} </span></div>
+          <div class="thirtyPer"><span class="font0dot1 "> TEST / 1M </span><br><span class="font3v2 almostBlack">{{ infoCountry.testsPerOneMillion.toLocaleString() }} </span></div>
         </div>
         <div class="col-2">
-          <div class="thirtyPer"><span class="font0 "> CASES / 1M </span><br><span class="font3v2 almostBlack">{{ infoCountry.casesPerOneMillion.toLocaleString() }} </span></div>
+          <div class="thirtyPer"><span class="font0dot1 "> CASES / 1M </span><br><span class="font3v2 almostBlack">{{ infoCountry.casesPerOneMillion.toLocaleString() }} </span></div>
         </div>
       </div>
     </div>
